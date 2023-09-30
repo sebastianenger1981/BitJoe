@@ -1,0 +1,8 @@
+# mutella terminal-mode initialisation script
+# edit it to make mutella smarter during startup
+
+# for example set terminal size
+# (if automatic detection fails), or just do nothing
+
+version
+

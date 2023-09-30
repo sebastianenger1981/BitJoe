@@ -1,0 +1,62 @@
+
+
+
+http://billing.micropayment.de/call2pay/event/?accesskey=712da28a3bd0f9e7fca3e7bc0c10afef&action=init&account=12917&project=btjovf&projectcampaign=bjc2p&ip=127.0.0.1country=DE&project=btjocl&projectcampaign=bjc2p&action=init&currency=EUR&amount=100&freeparam=volumelow_call2pay_01607979247_1210840514&testmode=1
+
+
+
+
+http://billing.micropayment.de/call2pay/event/?
+accesskey=712da28a3bd0f9e7fca3e7bc0c10afef
+&action=init
+&testmode=1
+&project=btjovf
+&projectcampaign=bjc2p
+&account=12917
+&webmastercampain=bjc2p
+&sessionid=12121212121212
+&ip=127.0.0.1
+&country=DE
+&language=DE
+&amount=100
+&currency=EUR
+&freeparam=volumelow_call2pay_01607979247_1210840514
+
+
+
+
+
+http://webservices.micropayment.de/public/c2p/v2/?wsdl?accesskey=712da28a3bd0f9e7fca3e7bc0c10afef&action=INIT&project=bjpyfr&projectcampaign=bjc2p&account=12917&webmastercampain=bjc2p&sessionid=12121212121212&ip=127.0.0.1&country=DE&language=DE&amount=100&currency=EUR&freeparam=volumelow_call2pay_01607979247_1210840514
+
+
+
+Call2Pay API v.2.0
+
+http://webservices.micropayment.de/public/c2p/v2/
+http://webservices.micropayment.de/public/c2p/v2/?wsdl
+
+
+
+
+
+
+http://billing.micropayment.de/call2pay/event/?action=init&accesskey=0123abc&project=demo&sessionid=aabbccddeeff&ip=127.0.0.1&country=DE&amount=100&currency=EUR&title=10 Coins
+
+
+
+
+
+
+error=0
+status=INIT
+handle=1000abcdef
+expire=2007-01-15 12:00:00
+number=09005 000 111 22
+numberinfo=2,00 EUR/min aus dem deutschen Festnetz
+origin=BOTH
+amount=100
+currency=EUR
+mode=DIRECT
+tan=
+duration=30
+durationpart=0

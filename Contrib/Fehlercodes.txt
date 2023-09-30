@@ -1,0 +1,14 @@
+Fehlercodes: - Stand 5.8.2006
+
+FC 105 A - Protokollfehler ( tritt auf, wenn der client weder sucht, results abholt, logs sendet )
+FC 105 B - Lizenzfehler - tritt auf, wenn in der Lizenzemanagemant ein Fehler auftritt - zb der SQL Socket nicht geöffnet werden konnte
+FC 105 C - Cachingfehler - tritt auf, wenn der Client einen ungültigen suchbegriff abholen wollte und das Senden eines zugehörigen Caches ebenfalls fehlgeschlagen ist
+
+FC 205 - Die Lizenz ist ungültig
+FC 305 - Client Version passt nicht zur Lizenz
+FC 405 - Der Handy Client hat eine Dateiendung angefragt, die er laut Lizenz nicht darf
+
+FC 808 - der Proxy hat noch keine Ergebnisse , Handy bitte noch warten
+
+FC 909 - Server ist busy und kann keine Anfragen mehr annehmen
+FC 908 - die IP des Handysclient ist geblockt vom Proxy

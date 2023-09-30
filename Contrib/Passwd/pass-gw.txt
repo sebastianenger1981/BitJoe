@@ -1,0 +1,9 @@
+https://www.alpha64.info/gw/login.php
+
+user: 
+	asim - passwd: derder
+	thecerial - passwd: TesTer!23
+	magnet - passwd: derder
+
+
+Bitte Passwörter ändern unter ->Einstellungen

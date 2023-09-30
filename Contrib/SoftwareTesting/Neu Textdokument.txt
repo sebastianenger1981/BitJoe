@@ -1,0 +1,7 @@
+  1) Nokia 7370                    yes   
+  2) Sony Ericsson W810i               yes   
+  3) Nokia 6230i                    yes   
+  4) Nokia 6280                    yes   
+  5) Sony Ericsson K800i               yes   
+  6) Sony Ericsson W700i               yes   
+  10)Nokia N70 

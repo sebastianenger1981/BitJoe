@@ -1,0 +1,34 @@
+
+weboberfläche in php: Suchanfrage
+
+	1.) existiert ein cache?
+		Ja: lese txt cache
+		nein: -> anfrage an sql server - ergebnisse ?
+			ja: zeige sql ergebnisse und speichere cache
+			nein:
+				a.)suchanfrage wird an den phexproxy weitergereicht 
+				b.)ergebnisse werden in mysql db gespeichert
+				c.)ergebnisse werden als txt cache ähnlich zoozle gespeichert
+				-> wenn keine ergebnisse kommen dann einfach fakeergebnisse präsentieren ( zb usenext suche benutzen )
+	Ergebnisse anzeigen:
+	gefunden: Datum - Dateigröße: Size - Dateinamen - speedbewertung
+		-> diese datei fürs handy downloaden: -> BJ referer
+		
+
+Vorteil: 
++ Content generieren für google sitemaps
++ tägliches newsverzeichnis mit ergebnisse des vortages
++ user suchanfragen sammeln und auswerten
++ mit den gesammelten daten später eine eigene suche für handy downloads anbieten
++ crossverlinkung in zoozle + news möglich
++ zoozle handy suche als neue categorie
++ zoozle suchkeywords benützen um content zu generieren
++ fakeergebnisse von usenext benutzen
+
+search.bitjoe.com	-> englisches suchwebtemplate
+suche.bitjoe.de		-> deutsches webtemplate
+=> zoozle prinzip
+
+Nachteil:
+- Backup der sql / txt caches
+- separater webserver mit suchoberfläche und phexproxy drauf laufen

@@ -1,0 +1,63 @@
+
+featurewunsch:
+
+
+
+
+
+
+
+
+
+
+Erstens ist dies das Geltungsbedürfnis der Nutzer in Verbindung mit dem Wettbewerbgedanken und zweitens der daraus resultierenden Effekt des Weitererzählens.
+
+
+
+
+
+phex:
+session management: speichere was aktuell gesucht wurde und nach neustart lese die datei wieder ein, damit suchanfragen bedient werden können
+
+
+handy:
+multi sources download
+versucht nur 2 mal ergebnisse zu holen
+
+handy:
+5 sterne = 50 quellenpunkte
+1 stern = 10 quellenpunkt
+alles unter 10 quellenpunkte 1 stern
+
+
+handy+backend:
+neue filetypes: bei java: sis sisx 
+		Archive: zip, rar, ace, cab, 7z, gz, tar, bz2, rpm, deb
+
+phex:
+spam filter: send MD5 - jeder server der antwortet liefert spam aus!
+
+
+handy:
+beim download auf dem handy: wenn ein download gestartet wurde, und dann innerhalb von XXX sec keine daten kommen, dann nächste quelle versuchen
+beim fehlgeschlagenen download, fragen, ob die datei gelöscht werden soll
+beim gefehlgeschlagenden speichern execption abgangen
+
+
+
+30.1.2008: done
+
+"intelligent cut" - phex soll mittels gui den traffic output ans backend intelligent shapen: sprich output in gui auf zb 30K pro suchanfrage begrenzen. der phex soll dann nur 30kb ausgeben, allerdings soll er den content so  
+abschneiden, das zum letzten abschnitt vor dem cutten, sichergestellt wird, das zum eintrag gehörende daten wie peerhost, sha1, dateiname und fileid erhalten bleiben und dann erst abgeschnitten wird.
+
+
+
+
+############
+
+wenn wir das programm nicht verkauft bekommen dann basteln wir einfach ne eigene suchmaschine für gnutella, die dann intelligent die phex im hintergrund anfragt, die ergebnisse ordentlich formatiert und dann gibts unter
+jedem ergebnislink ein:" File hier downloaden" -> mit nem referer auf unseren website,die dann bj vertickt. die suche schön ordentlich und dann kommt geld in die kassen
+
+- dann auf der seite auch noch unseren angepassten phex anbieten - mit angepasst meine ich, dass das erste ergebnis immer ein bitjoe link ist-der rest is standart phex sources
+
+############

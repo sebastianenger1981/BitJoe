@@ -1,0 +1,33 @@
+Changes:
+2.1.0 Randomized the results from get, hostfile, and urlfile requests to return a 
+	random MAXHOSTS from the last MAXHOSTS*2 to prevent poisoning of the 
+	caches from commercial organizations implementing illegal tactics to 
+	try to protect their clients copyrights. Also added restrictions to 
+	prevent the script from hammering other caches with pings. Our script will 
+	not connect to the same URL more than once per hour now.
+2.0.0 The numbering scheme seems odd because I didn't know what I was doing
+	while populating the cvs tree on sourceforge, but it's the first release
+	cadidate. Added the stat page written by by Nicholas Venturella 
+	<nick2588[at]fastmail.fm>, then modified it to not only display more 
+	actual client names for the client codes, but also to link to those
+	client's web sites. Heavily improved the mysql data structure and
+	database queries to improve speed.
+0.5.10 turned off default errors and warnings in php
+0.5.9 fix to prevent shareaza bogus caches from spamming non-verified (lycos)
+	cache lists.
+0.5.8 used examples from php.net's documentation to get the sender's IP address
+	even when behind a transparent proxy server for lycos free users again.
+	Now ip updates work on lycos servers.
+0.5.7 learned how http requests really work (more than I ever wanted to know) and
+	now I've fixed the GET requests to work correctly
+0.5.6 added another link to the menu bar, and moved them into a define.
+	Implemented timeouts for fsock calls. define FSOCK_TIMEOUT in config.inc
+0.5.5 too quick on the release. now active host checking will make a gwc1 a
+	gwc1 even if the client says, "network=anythingelse"
+0.5.4 fixed bug where G2 clients speaking G2 but offering GWC1 caches were
+	being put into the gnutella2 network
+0.5.3 fixed some versioning stuff and moved config to a config file to make
+	administering multiple sites easier
+0.5.2 added the ability to disable url validation for lycos free website users
+0.5.1 added a link to Jon Atkins webcache scan report (thanks Frosty192)
+0.5.0 first beta release

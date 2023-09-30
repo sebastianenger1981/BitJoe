@@ -1,0 +1,12 @@
+MIDlet-1: Zeus,/de/dlcc/x65file/images/zeus32.png,de.dlcc.x65file.X65File
+MIDlet-Description: A file manager, viewer and editor
+MIDlet-Icon: /de/dlcc/x65file/images/zeus32.png
+MIDlet-Info-URL: http://www.blogplanet.net
+MIDlet-Jar-Size: 29821
+MIDlet-Jar-URL: Zeus.jar
+MIDlet-Name: Zeus
+MIDlet-Permissions: javax.microedition.io.Connector.file.read, javax.microedition.io.Connector.file.write
+MIDlet-Vendor: DLCC
+MIDlet-Version: 0.2
+MicroEdition-Configuration: CLDC-1.1
+MicroEdition-Profile: MIDP-2.0

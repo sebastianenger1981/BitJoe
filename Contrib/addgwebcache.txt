@@ -1,0 +1,1 @@
+ http://www.gnucleus.net/gcache/gcache.php?client=TEST&version=1.0&update=1&url=http://www.zoozle.net/cc/cc.php

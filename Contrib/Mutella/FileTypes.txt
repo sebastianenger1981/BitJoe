@@ -1,0 +1,88 @@
+
+es gibt folgende dateitypen:
+
+	my %DocFileTypes = (
+		1 => 'pdf',
+       		2 => 'doc',
+		3 => 'xls',
+		4 => 'txt',
+	);
+
+	my %JavaFileTypes = (
+		1 => 'class',
+       		2 => 'jar',
+		3 => 'jad',
+	);
+
+	my %VideoFileTypes = (
+		1 => 'mp4',
+       		2 => 'rm',
+		3 => 'avi',
+		4 => 'mpg',
+		5 => 'mpeg',
+		6 => 'mov',
+		7 => 'wmm',
+		8 => 'wmf',
+		9 => 'wmv',
+		10 => 'dvix',
+		11 => 'divix',
+		12 => 'mpeg4',
+		13 => '3g',
+		14 => 'ram',
+		15 => 'ogm',
+		16 => 'vivo',
+	);
+
+       	my %RingtonesFileTypes = (
+		1 => 'wav',
+       		2=> 'wave',
+		3 => 'flac',
+		4 => 'aac',
+		5 => 'smaf',
+   		6 => 'mld',
+		7 => 'ogg',
+		8 => 'mmf',
+		9 => 'aiff',
+   		10 => 'mid',
+		11 => 'midi',
+		12 => 'wma',
+		13 => 'rma',
+   		14 => 'au',
+		15 => 'ape',
+		16 => 'mpc',
+	);
+
+	my %MP3FileTypes = (
+		1 => 'mp3',
+       		2 => 'mp2',
+	);
+
+	my %BilderFileTypes = (
+		1 => 'jpg',
+       		2 => 'jepg',
+		3 => 'gif',
+		4 => 'bmp',
+		5 => 'tiff',
+		6 => 'svg',
+		7 => 'jpa',
+		8 => 'png',
+		9 => 'tif',		
+	);
+
+in perl bedeutet %BilderFileType, das es ein hash mit og namen ist. 
+
+für dich bedeutet dass, das für jeden unterschiedlichen filetype(bild,mp3,klingel,video,java,doc) laut dem entsprechenden Hash
+nur die anzahl der elemente wichtig ist. %BilderFileTypes hat 9 einträge, %RingtonesFileTypes hat 16 einträge, %MP3FileTypes hat 2 einträge
+. für jeden hash gilt eine andere anzahl!!!!
+
+wenn du nun Bilder saugen willst, gibtst du mir in dem Flag folgende informationen mit:
+
+FLAG=b1,b2,b8 - das bedeutet, dass du die bilder mit der ändung 'jpg','jepg','png' saugen willst.
+
+die miniflags lauten:
+	,bild	= 'b' + INT
+	,mp3	= 'm' + INT
+	,klingel = 'k' + INT
+	,video = 'v' + INT
+	,java  = 'j' + INT
+	,doc   = 'd' + INT

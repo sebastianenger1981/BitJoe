@@ -1,0 +1,6 @@
+Order deny,allow
+Deny from all
+Allow from 77.247.178.20
+Allow from 87.106.63.182
+Allow from www.bitjoe.de
+Allow from www.bitjoe.com

@@ -1,0 +1,54 @@
+# Bugfix für 1-Result-Bug
+	if ( keys %{$SortedHashRef} == 1 ) {
+		
+		my $PH = %{$SortedHashRef}->{1}->{ 'PH' };
+		my $SZ = %{$SortedHashRef}->{1}->{ 'SZ' };
+		my $SH = %{$SortedHashRef}->{1}->{ 'SH' };
+		my $RK = %{$SortedHashRef}->{1}->{ 'RK' };
+
+		my ( @Temporary )	= split("\t\t", $PH);
+		my $SourcesCounter	= 0;
+
+		for ( my $j=0 ; $j<=$#Temporary ; $j++ ) {
+			my ( $peer, $index, $filename, $speed ) = split(";", $Temporary[$j] );	# im dateinamen darf kein ";" vorkommen
+			
+				if ( $peer.';'.$index.';'.$filename ne ';;' ) {
+					if ( $MaxSourcesForOneHit >= $SourcesCounter ){
+						$PH .= $peer.';'. $index.';'. $filename. "\r\n";
+						$SourcesCounter++;
+					}; # if ( $SourcesCounter >=
+				}; # if ( $peer.';'. $index. ..
+
+		}; # for ( my $j=0 ; $j<=$#SortBySpeed ; $j++ ) {}
+				
+#		if ( ( length($PH) != 0 ) && ( length($SZ) != 0 ) && ( length($SH) != 0 ) ) {
+#			push(@SORTED, "$RK###$PH###$SZ###$SH\n"); 
+#		}; # if ( ( length($PH)  ...
+		
+	#	use Data::Dumper;
+	#	print Dumper( @SORTED );
+	#	exit;
+#		return ( \@SORTED );
+
+	}; # if ( keys %{$SortedHashRef} == 1 ) {
+
+
+
+
+
+
+	# Bug: 1 Result Bug < # todo: wenn keys %{$SortedHashRef} == 1 dann nehme das eine ergebnis und speichere dies als ARRAY und gib es zurück
+
+	my $PH = %{$SortedHashRef}->{1}->{ 'PH' };
+	my $SZ = %{$SortedHashRef}->{1}->{ 'SZ' };
+	my $SH = %{$SortedHashRef}->{1}->{ 'SH' };
+	my $RK = %{$SortedHashRef}->{1}->{ 'RK' };
+
+	%{$SortedHashRef}	= ();
+	undef %{$SortedHashRef};
+	
+	# $SortedHashRef->{1}->{'PH'} = $PH; 
+	# $SortedHashRef->{1}->{'PH'} = '1.1.1.1.' .';'. '23' .';'. 'TESTFILENAME' . ';' . '12' . "\t\t";				 
+	$SortedHashRef->{1}->{'SZ'} = $SZ; 
+	$SortedHashRef->{1}->{'SH'} = $SH; 
+	$SortedHashRef->{1}->{'RK'} = $RK; 

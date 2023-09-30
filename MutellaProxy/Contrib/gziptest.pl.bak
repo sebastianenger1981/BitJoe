@@ -1,0 +1,17 @@
+
+use IO::Compress::Gzip qw(gzip $GzipError) ;
+
+$input = "TESTSTRING";
+print "comprimiere: $input \n";
+
+#my $status = gzip $input => $output [	-BinModeIn	=> 1,
+#										-Level		=> Z_BEST_COMPRESSION,
+#									 ] 
+#       or die "gzip failed: $GzipError\n";
+
+ my $z = new IO::Compress::Gzip $output [,OPTS]
+        or die "gzip failed: $GzipError\n";
+		
+
+print "compressed= |$output| \n";
+print "Status=$status\n";

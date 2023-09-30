@@ -1,0 +1,14 @@
+cache muss ein timeout eingebaut werden, siehe php zoozle redesign search.function.inc.php
+
+
+
+ips die nicht erreichbar sind blockieren den mutella ... fixen
+spam blocker
+memory consumption ( bei vielen anfragen, geht das schnell in die GB )
+zuverlässigkeit bei der kommunikation über den unix socket verbessern
+resume funktion nach absturz
+bessere logging funktionen
+filtern von 127 und 192 ip adressen, und adressen die sonst nicht erreichbar sind
+results bei denen die textlänge > 100 zeichen ist niedriger priorisieren
+nicht mehr aktuelle results entfernen 
+

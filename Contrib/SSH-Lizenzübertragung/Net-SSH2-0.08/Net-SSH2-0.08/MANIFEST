@@ -1,0 +1,17 @@
+Changes
+Makefile.PL
+MANIFEST
+ppport.h
+README
+SSH2.xs
+typemap
+t/Net-SSH2.t
+lib/Net/SSH2.pm
+lib/Net/SSH2/Channel.pm
+lib/Net/SSH2/SFTP.pm
+lib/Net/SSH2/File.pm
+lib/Net/SSH2/Dir.pm
+lib/Net/SSH2/Listener.pm
+fallback/const-c.inc
+fallback/const-xs.inc
+META.yml                                 Module meta-data (added by MakeMaker)

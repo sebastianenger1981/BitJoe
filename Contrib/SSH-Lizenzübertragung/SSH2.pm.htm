@@ -1,0 +1,508 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html><head>
+
+ 
+  <link rel="stylesheet" href="SSH2.pm-Dateien/style.css" type="text/css">
+  <link rel="alternate" type="application/rss+xml" title="RSS 1.0" href="http://search.cpan.org/uploads.rdf"><title>Net::SSH2 - Support for the SSH 2 protocol via libSSH2. - search.cpan.org</title></head><body id="cpansearch">
+<center><div class="logo"><a href="http://search.cpan.org/"><img src="SSH2.pm-Dateien/cpan-10.jpg" alt="CPAN"></a></div></center>
+<div class="menubar">
+ <a href="http://search.cpan.org/">Home</a>
+� <a href="http://search.cpan.org/author/">Authors</a>
+� <a href="http://search.cpan.org/recent">Recent</a>
+� <a href="http://log.perl.org/cpansearch/">News</a>
+� <a href="http://search.cpan.org/mirror">Mirrors</a>
+� <a href="http://search.cpan.org/faq.html">FAQ</a>
+� <a href="http://search.cpan.org/feedback">Feedback</a>
+</div>
+<form method="get" action="/search" name="f" class="searchbox">
+<input name="query" value="" size="35" type="text">
+<br>in <select name="mode">
+ <option value="all">All</option>
+ <option value="module">Modules</option>
+ <option value="dist">Distributions</option>
+ <option value="author">Authors</option>
+</select>&nbsp;<input value="CPAN Search" type="submit">
+</form>
+
+
+ <a name="_top"></a>
+ 
+ <div class="path">
+  <a href="http://search.cpan.org/%7Edbrobins/">David Robins</a> &gt;
+  <a href="http://search.cpan.org/%7Edbrobins/Net-SSH2-0.08/">Net-SSH2-0.08</a> &gt;
+  Net::SSH2
+ </div>
+
+<div style="float: right;">Download: <a href="http://search.cpan.org/CPAN/authors/id/D/DB/DBROBINS/Net-SSH2-0.08.tar.gz">Net-SSH2-0.08.tar.gz</a>
+<p><a href="http://www.annocpan.org/%7EDBROBINS/Net-SSH2-0.08/lib/Net/SSH2.pm">Annotate this POD
+</a>
+</p></div>
+  Module Version:  0.08 &nbsp;
+  <a href="http://search.cpan.org/src/DBROBINS/Net-SSH2-0.08/lib/Net/SSH2.pm">Source</a> &nbsp;
+ <div class="pod">
+<a name="___top"></a>
+<div class="pod">
+<div class="toc">
+<div class="indexgroup">
+<ul class="indexList indexList1">
+  <li class="indexItem indexItem1"><a href="#NAME">NAME</a>
+  </li><li class="indexItem indexItem1"><a href="#SYNOPSIS">SYNOPSIS</a>
+  </li><li class="indexItem indexItem1"><a href="#DESCRIPTION">DESCRIPTION</a>
+  <ul class="indexList indexList2">
+    <li class="indexItem indexItem2"><a href="#new">new</a>
+    </li><li class="indexItem indexItem2"><a href="#banner_%28_text_%29">banner ( text )</a>
+    </li><li class="indexItem indexItem2"><a href="#error">error</a>
+    </li><li class="indexItem indexItem2"><a href="#method_%28_type_%5B%2C_values..._%5D_%29">method ( type [, values... ] )</a>
+    </li><li class="indexItem indexItem2"><a href="#connect_%28_%5Bhandle_%7C_host_%5B%2C_port%5D%5D_%29">connect ( [handle | host [, port]] )</a>
+    </li><li class="indexItem indexItem2"><a href="#disconnect_%28_%5Bdescription_%5B%2C_reason_%5B%2C_language%5D%5D%5D_%29">disconnect ( [description [, reason [, language]]] )</a>
+    </li><li class="indexItem indexItem2"><a href="#hostkey_%28_hash_type_%29">hostkey ( hash type )</a>
+    </li><li class="indexItem indexItem2"><a href="#auth_list_%28_%5Busername%5D_%29">auth_list ( [username] )</a>
+    </li><li class="indexItem indexItem2"><a href="#auth_ok">auth_ok</a>
+    </li><li class="indexItem indexItem2"><a href="#auth_password_%28_username_%5B%2C_password_%5B%2C_callback_%5D%5D_%29">auth_password ( username [, password [, callback ]] )</a>
+    </li><li class="indexItem indexItem2"><a href="#auth_publickey_%28_username%2C_public_key%2C_private_key_%5B%2C_password_%5D_%29">auth_publickey ( username, public key, private key [, password ] )</a>
+    </li><li class="indexItem indexItem2"><a href="#auth_hostbased_%28_username%2C_public_key%2C_private_key%2C_hostname%2C_%5B%2C_local_username_%5B%2C_password_%5D%5D_%29">auth_hostbased ( username, public key, private key, hostname, [, local username [, password ]] )</a>
+    </li><li class="indexItem indexItem2"><a href="#auth_keyboard_%28_username%2C_password_%7C_callback_%29">auth_keyboard ( username, password | callback )</a>
+    </li><li class="indexItem indexItem2"><a href="#auth_%28_..._%29">auth ( ... )</a>
+    </li><li class="indexItem indexItem2"><a href="#channel_%28_%5Btype%2C_%5Bwindow_size%2C_%5Bpacket_size%5D%5D%5D_%29">channel ( [type, [window size, [packet size]]] )</a>
+    </li><li class="indexItem indexItem2"><a href="#tcpip_%28_host%2C_port_%5B%2C_shost%2C_sport_%5D_%29">tcpip ( host, port [, shost, sport ] )</a>
+    </li><li class="indexItem indexItem2"><a href="#listen_%28_port_%5B%2C_host_%5B%2C_bound_port_%5B%2C_queue_size_%5D%5D%5D_%29">listen ( port [, host [, bound port [, queue size ]]] )</a>
+    </li><li class="indexItem indexItem2"><a href="#scp_get_%28_remote_%5B%2C_local_%5D_%29">scp_get ( remote [, local ] )</a>
+    </li><li class="indexItem indexItem2"><a href="#scp_put_%28_local_%5B%2C_remote_%5D_%29">scp_put ( local [, remote ] )</a>
+    </li><li class="indexItem indexItem2"><a href="#sftp">sftp</a>
+    </li><li class="indexItem indexItem2"><a href="#public_key">public_key</a>
+    </li><li class="indexItem indexItem2"><a href="#poll_%28_timeout%2C_arrayref_of_hashes_%29">poll ( timeout, arrayref of hashes )</a>
+  </li></ul>
+  </li><li class="indexItem indexItem1"><a href="#SEE_ALSO">SEE ALSO</a>
+  </li><li class="indexItem indexItem1"><a href="#AUTHOR">AUTHOR</a>
+  </li><li class="indexItem indexItem1"><a href="#COPYRIGHT_AND_LICENSE">COPYRIGHT AND LICENSE</a>
+</li></ul>
+</div>
+</div>
+
+<h1><a class="u" href="#___top" title="click to go to top of document" name="NAME">NAME <img alt="^" src="SSH2.pm-Dateien/up.gif"></a></h1>
+
+<p>Net::SSH2 - Support for the SSH 2 protocol via libSSH2.</p>
+
+<h1><a class="u" href="#___top" title="click to go to top of document" name="SYNOPSIS">SYNOPSIS <img alt="^" src="SSH2.pm-Dateien/up.gif"></a></h1>
+
+<pre>  use Net::SSH2;
+
+  my $ssh2 = Net::SSH2-&gt;new();
+
+  $ssh2-&gt;connect('example.com') or die;
+
+  if ($ssh2-&gt;auth_keyboard('fizban')) {
+      my $chan = $ssh2-&gt;channel();
+      $chan-&gt;exec('program');
+
+      my $sftp = $ssh2-&gt;sftp();
+      my $fh = $sftp-&gt;open('/etc/passwd') or die;
+      print $_ while &lt;$fh&gt;;
+  }</pre>
+
+<h1><a class="u" href="#___top" title="click to go to top of document" name="DESCRIPTION">DESCRIPTION <img alt="^" src="SSH2.pm-Dateien/up.gif"></a></h1>
+
+<p><code>Net::SSH2</code> is a perl interface to the libssh2 (<a href="http://www.libssh2.org/" class="podlinkurl">http://www.libssh2.org</a>)
+library. It supports the SSH2 protocol (there is no support for SSH1)
+with all of the key exchanges, ciphers, and compression of libssh2.</p>
+
+<p>Unless otherwise indicated, methods return a true value on success
+and false on failure; use the error method to get extended error
+information.</p>
+
+<p>The typical order is to create the SSH2 object, set up the
+connection methods you want to use, call connect, authenticate with one
+of the <code>auth</code> methods, then create channels on the connection to perform commands.</p>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="new">new</a></h2>
+
+<p>Create new SSH2 object.</p>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="banner_(_text_)">banner ( text )</a></h2>
+
+<p>Set the SSH2 banner text sent to the remote host (prepends required "SSH-2.0-").</p>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="error">error</a></h2>
+
+<p>Returns the last error code; returns false if no error. In list context, returns (code, error name, error string).</p>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="method_(_type_[,_values..._]_)">method ( type [, values... ] )</a></h2>
+
+<p>Sets or returns a method preference; for get, pass in the type only;
+to set, pass in either a list of values or a comma-separated string.
+Values can only be queried after the session is connected.</p>
+
+<p>The following methods can be set or queried:</p>
+
+<dl>
+<dt><a name="KEX">KEX</a></dt>
+
+<dd>
+<p>Key exchange method names. Supported values:</p>
+
+<dl>
+<dt><a name="diffie"></a><a name="diffie-hellman-group1-sha1">diffie-hellman-group1-sha1</a></dt>
+
+<dd>
+<p>Diffie-Hellman key exchange with SHA-1 as hash, and Oakley Group 2 (see RFC 2409).</p>
+
+</dd><dt><a name="diffie"></a><a name="diffie-hellman-group14-sha1">diffie-hellman-group14-sha1</a></dt>
+
+<dd>
+<p>Diffie-Hellman key exchange with SHA-1 as hash, and Oakley Group 14 (see RFC 3526).</p>
+
+</dd><dt><a name="diffie"></a><a name="diffie-hellman-group-exchange-sha1">diffie-hellman-group-exchange-sha1</a></dt>
+
+<dd>
+<p>Diffie-Hellman key exchange with SHA-1 as hash, using a
+safe-prime/generator pair (chosen by server) of arbitrary strength
+(specified by client) (see IETF draft secsh-dh-group-exchange).</p>
+</dd>
+</dl>
+
+</dd><dt><a name="HOSTKEY">HOSTKEY</a></dt>
+
+<dd>
+<p>Public key algorithms. Supported values:</p>
+
+<dl>
+<dt><a name="ssh"></a><a name="ssh-dss">ssh-dss</a></dt>
+
+<dd>
+<p>Based on the Digital Signature Standard (FIPS-186-2).</p>
+
+</dd><dt><a name="ssh"></a><a name="ssh-rsa">ssh-rsa</a></dt>
+
+<dd>
+<p>Based on PKCS#1 (RFC 3447).</p>
+</dd>
+</dl>
+
+</dd><dt><a name="CRYPT_CS">CRYPT_CS</a></dt>
+
+<dd>
+<p>Encryption algorithm from client to server. Supported algorithms:</p>
+
+<dl>
+<dt><a name="aes256"></a><a name="aes256-cbc">aes256-cbc</a></dt>
+
+<dd>
+<p>AES in CBC mode, with 256-bit key.</p>
+
+</dd><dt><a name="rijndael"></a><a name="rijndael-cbc@lysator.liu.se">rijndael-cbc@lysator.liu.se</a></dt>
+
+<dd>
+<p>Alias for aes256-cbc.</p>
+
+</dd><dt><a name="aes192"></a><a name="aes192-cbc">aes192-cbc</a></dt>
+
+<dd>
+<p>AES in CBC mode, with 192-bit key.</p>
+
+</dd><dt><a name="aes128"></a><a name="aes128-cbc">aes128-cbc</a></dt>
+
+<dd>
+<p>AES in CBC mode, with 128-bit key.</p>
+
+</dd><dt><a name="blowfish"></a><a name="blowfish-cbc">blowfish-cbc</a></dt>
+
+<dd>
+<p>Blowfish in CBC mode.</p>
+
+</dd><dt><a name="arcfour">arcfour</a></dt>
+
+<dd>
+<p>ARCFOUR stream cipher.</p>
+
+</dd><dt><a name="cast128"></a><a name="cast128-cbc">cast128-cbc</a></dt>
+
+<dd>
+<p>CAST-128 in CBC mode.</p>
+
+</dd><dt><a name="3des"></a><a name="3des-cbc">3des-cbc</a></dt>
+
+<dd>
+<p>Three-key 3DES in CBC mode.</p>
+
+</dd><dt><a name="none">none</a></dt>
+
+<dd>
+<p>No encryption.</p>
+</dd>
+</dl>
+
+</dd><dt><a name="CRYPT_SC">CRYPT_SC</a></dt>
+
+<dd>
+<p>Encryption algorithm from server to client. See <a href="http://search.cpan.org/perldoc?CRYPT_CS" class="podlinkpod">CRYPT_CS</a> for supported algorithms.</p>
+
+</dd><dt><a name="MAC_CS">MAC_CS</a></dt>
+
+<dd>
+<p>Message Authentication Code (MAC) algorithms from client to server. Supported values:</p>
+
+<dl>
+<dt><a name="hmac"></a><a name="hmac-sha1">hmac-sha1</a></dt>
+
+<dd>
+<p>SHA-1 with 20-byte digest and key length.</p>
+
+</dd><dt><a name="hmac"></a><a name="hmac-sha1-96">hmac-sha1-96</a></dt>
+
+<dd>
+<p>SHA-1 with 20-byte key length and 12-byte digest length.</p>
+
+</dd><dt><a name="hmac"></a><a name="hmac-md5">hmac-md5</a></dt>
+
+<dd>
+<p>MD5 with 16-byte digest and key length.</p>
+
+</dd><dt><a name="hmac"></a><a name="hmac-md5-96">hmac-md5-96</a></dt>
+
+<dd>
+<p>MD5 with 16-byte key length and 12-byte digest length.</p>
+
+</dd><dt><a name="hmac"></a><a name="hmac-ripemd160">hmac-ripemd160</a></dt>
+
+<dd>
+<p>RIPEMD-160 algorithm with 20-byte digest length.</p>
+
+</dd><dt><a name="hmac"></a><a name="hmac-ripemd160@openssh.com">hmac-ripemd160@openssh.com</a></dt>
+
+<dd>
+<p>Alias for hmac-ripemd160.</p>
+
+</dd><dt><a name="none">none</a></dt>
+
+<dd>
+<p>No encryption.</p>
+</dd>
+</dl>
+
+</dd><dt><a name="MAC_SC">MAC_SC</a></dt>
+
+<dd>
+<p>Message Authentication Code (MAC) algorithms from server to client. See <a href="http://search.cpan.org/perldoc?MAC_SC" class="podlinkpod">MAC_SC</a> for supported algorithms.</p>
+
+</dd><dt><a name="COMP_CS">COMP_CS</a></dt>
+
+<dd>
+<p>Compression methods from client to server. Supported values:</p>
+
+<dl>
+<dt><a name="zlib">zlib</a></dt>
+
+<dd>
+<p>The "zlib" compression method as described in RFC 1950 and RFC 1951.</p>
+
+</dd><dt><a name="none">none</a></dt>
+
+<dd>
+<p>No compression</p>
+</dd>
+</dl>
+
+</dd><dt><a name="COMP_SC">COMP_SC</a></dt>
+
+<dd>
+<p>Compression methods from server to client. See <a href="http://search.cpan.org/perldoc?COMP_CS" class="podlinkpod">COMP_CS</a> for supported compression methods.</p>
+</dd>
+</dl>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="connect_(_[handle_|_host_[,_port]]_)">connect ( [handle | host [, port]] )</a></h2>
+
+<p>Accepts a handle over which to conduct the SSH 2 protocol. The handle may be:</p>
+
+<dl>
+<dt><a name="an"></a><a name="an_IO::*_object">an <code>IO::*</code> object
+</a></dt><dt><a name="a"></a><a name="a_glob_reference">a glob reference
+</a></dt><dt><a name="an"></a><a name="an_integer_file_descriptor">an integer file descriptor
+</a></dt><dt><a name="a"></a><a name="a_host_name_and_port">a host name and port</a></dt>
+</dl>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="disconnect_(_[description_[,_reason_[,_language]]]_)">disconnect ( [description [, reason [, language]]] )</a></h2>
+
+<p>Send a clean disconnect message to the remote server. Default values are empty strings for description and language, and <code>SSH_DISCONNECT_BY_APPLICATION</code> for the reason.</p>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="hostkey_(_hash_type_)">hostkey ( hash type )</a></h2>
+
+<p>Returns a hash of the host key; note that the key is raw data and may contain nulls or control characters. The type may be:</p>
+
+<dl>
+<dt><a name="MD5"></a><a name="MD5_(16_bytes)">MD5 (16 bytes)
+</a></dt><dt><a name="SHA1"></a><a name="SHA1_(20_bytes)">SHA1 (20 bytes)</a></dt>
+</dl>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="auth_list_(_[username]_)">auth_list ( [username] )</a></h2>
+
+<p>Get a list (or comma-separated string in scalar context) of authentication methods supported by the server; or returns <code>undef</code>. If <code>undef</code> is returned and <a href="http://search.cpan.org/perldoc?auth_ok" class="podlinkpod">auth_ok</a> is true, the server accepted an unauthenticated session for the given username.</p>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="auth_ok">auth_ok</a></h2>
+
+<p>Returns true iff the session is authenticated.</p>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="auth_password_(_username_[,_password_[,_callback_]]_)">auth_password ( username [, password [, callback ]] )</a></h2>
+
+<p>Authenticate using a password (PasswordAuthentication must be enabled in sshd_config or equivalent for this to work.)</p>
+
+<p>If the password has expired, if a callback code reference was given, it's called as <code>callback($self, $username)</code> and should return a password. If no callback is provided, LIBSSH2_ERROR_PASSWORD_EXPIRED is returned.</p>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="auth_publickey_(_username,_public_key,_private_key_[,_password_]_)">auth_publickey ( username, public key, private key [, password ] )</a></h2>
+
+<p>Note that public key and private key are names of files containing the keys!</p>
+
+<p>Authenticate using keys and an optional password.</p>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="auth_hostbased_(_username,_public_key,_private_key,_hostname,_[,_local_username_[,_password_]]_)">auth_hostbased ( username, public key, private key, hostname, [, local username [, password ]] )</a></h2>
+
+<p>Host-based authentication using an optional password. The local username defaults to be the same as the remote username.</p>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="auth_keyboard_(_username,_password_|_callback_)">auth_keyboard ( username, password | callback )</a></h2>
+
+<p>Authenticate using "keyboard-interactive". Takes either a password, or a callback code reference which is invoked as <code>callback-&gt;(self, username, name, instruction, prompt...)</code> (where each prompt is a hash with <code>text</code> and <code>echo</code>
+keys, signifying the prompt text and whether the user input should be
+echoed, respectively) which should return an array of responses.</p>
+
+<p>If only a username is provided, the default callback will handle standard interactive responses; <a href="http://search.cpan.org/perldoc?Term%3A%3AReadKey" class="podlinkpod">Term::ReadKey</a> is required.</p>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="auth_(_..._)">auth ( ... )</a></h2>
+
+<p>This is a general, prioritizing authentication mechanism that can
+use any of the previous methods. You provide it some parameters and
+(optionally) a ranked list of methods you want considered (defaults to
+all). It will remove any unsupported methods or methods for which it
+doesn't have parameters (e.g. if you don't give it a public key, it
+can't use publickey or hostkey), and try the rest, returning whichever
+one succeeded or a false value if they all failed. If a parameter is
+passed with an undef value, a default value will be supplied if
+possible. The parameters are:</p>
+
+<dl>
+<dt><a name="rank">rank</a></dt>
+
+<dd>
+<p>An optional ranked list of methods to try. The names should be the names of the <a href="http://search.cpan.org/%7Edbrobins/Net-SSH2-0.08/lib/Net/SSH2.pm" class="podlinkpod">Net::SSH2</a> <code>auth</code> methods, e.g. 'keyboard' or 'publickey', with the addition of 'keyboard-auto' for automated 'keyboard-interactive'.</p>
+
+</dd><dt><a name="username">username
+</a></dt><dt><a name="password">password
+</a></dt><dt><a name="publickey">publickey
+</a></dt><dt><a name="privatekey">privatekey</a></dt>
+
+<dd>
+<p>As in the methods, publickey and privatekey are filenames.</p>
+
+</dd><dt><a name="hostname">hostname
+</a></dt><dt><a name="local_username">local_username
+</a></dt><dt><a name="interact">interact</a></dt>
+
+<dd>
+<p>If this is set to a true value, interactive methods will be considered.</p>
+
+</dd><dt><a name="cb_keyboard">cb_keyboard</a></dt>
+
+<dd>
+<p><a href="http://search.cpan.org/perldoc?auth_keyboard" class="podlinkpod">auth_keyboard</a> callback.</p>
+
+</dd><dt><a name="cb_password">cb_password</a></dt>
+
+<dd>
+<p><a href="http://search.cpan.org/perldoc?auth_password" class="podlinkpod">auth_password</a> callback.</p>
+</dd>
+</dl>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="channel_(_[type,_[window_size,_[packet_size]]]_)">channel ( [type, [window size, [packet size]]] )</a></h2>
+
+<p>Creates and returns a new channel object. The default type is "session". See <a href="http://search.cpan.org/%7Edbrobins/Net-SSH2-0.08/lib/Net/SSH2/Channel.pm" class="podlinkpod">Net::SSH2::Channel</a>.</p>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="tcpip_(_host,_port_[,_shost,_sport_]_)">tcpip ( host, port [, shost, sport ] )</a></h2>
+
+<p>Creates a TCP connection from the remote host to the given
+host:port, returning a new channel. Binds to shost:sport (default
+127.0.0.1:22).</p>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="listen_(_port_[,_host_[,_bound_port_[,_queue_size_]]]_)">listen ( port [, host [, bound port [, queue size ]]] )</a></h2>
+
+<p>Sets up a TCP listening port on the remote host. Host defaults to
+0.0.0.0; if bound port is provided, it should be a scalar reference in
+which the bound port is returned. Queue size specifies the maximum
+number of queued connections allowed before the server refuses new
+connections.</p>
+
+<p>Returns a new Net::SSH2::Listener object.</p>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="scp_get_(_remote_[,_local_]_)">scp_get ( remote [, local ] )</a></h2>
+
+<p>Retrieve a file with scp; local path defaults to basename of remote. <code>local</code> may be an IO object (e.g. IO::File, IO::Scalar).</p>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="scp_put_(_local_[,_remote_]_)">scp_put ( local [, remote ] )</a></h2>
+
+<p>Send a file with scp; remote path defaults to same as local. <code>local</code> may be an IO object instead of a filename (but it must have a valid stat method).</p>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="sftp">sftp</a></h2>
+
+<p>Return SecureFTP interface object (see <a href="http://search.cpan.org/%7Edbrobins/Net-SSH2-0.08/lib/Net/SSH2/SFTP.pm" class="podlinkpod">Net::SSH2::SFTP</a>).</p>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="public_key">public_key</a></h2>
+
+<p>Return public key interface object (see <a href="http://search.cpan.org/perldoc?Net%3A%3ASSH2%3A%3APublicKey" class="podlinkpod">Net::SSH2::PublicKey</a>).</p>
+
+<h2><a class="u" href="#___top" title="click to go to top of document" name="poll_(_timeout,_arrayref_of_hashes_)">poll ( timeout, arrayref of hashes )</a></h2>
+
+<p>Pass in a timeout in milliseconds and an arrayref of hashes with the following keys:</p>
+
+<dl>
+<dt><a name="handle">handle</a></dt>
+
+<dd>
+<p>May be a <a href="http://search.cpan.org/%7Edbrobins/Net-SSH2-0.08/lib/Net/SSH2/Channel.pm" class="podlinkpod">Net::SSH2::Channel</a> or <a href="http://search.cpan.org/%7Edbrobins/Net-SSH2-0.08/lib/Net/SSH2/Listener.pm" class="podlinkpod">Net::SSH2::Listener</a> object, integer file descriptor, or perl file handle.</p>
+
+</dd><dt><a name="events">events</a></dt>
+
+<dd>
+<p>Requested events. Combination of LIBSSH2_POLLFD_* constants (with
+the POLL prefix stripped if present), or an arrayref of the names
+('in', 'hup' etc.).</p>
+
+</dd><dt><a name="revents">revents</a></dt>
+
+<dd>
+<p>Returned events. Returns a hash with the (lowercased) names of the
+received events ('in', 'hup', etc.) as keys with true values, and a <code>value</code> key with the integer value.</p>
+</dd>
+</dl>
+
+<p>Returns undef on error, or the number of active objects.</p>
+
+<h1><a class="u" href="#___top" title="click to go to top of document" name="SEE_ALSO">SEE ALSO <img alt="^" src="SSH2.pm-Dateien/up.gif"></a></h1>
+
+<p><a href="http://search.cpan.org/%7Edbrobins/Net-SSH2-0.08/lib/Net/SSH2/Channel.pm" class="podlinkpod">Net::SSH2::Channel</a>, <a href="http://search.cpan.org/%7Edbrobins/Net-SSH2-0.08/lib/Net/SSH2/Listener.pm" class="podlinkpod">Net::SSH2::Listener</a>, <a href="http://search.cpan.org/%7Edbrobins/Net-SSH2-0.08/lib/Net/SSH2/SFTP.pm" class="podlinkpod">Net::SSH2::SFTP</a>, <a href="http://search.cpan.org/%7Edbrobins/Net-SSH2-0.08/lib/Net/SSH2/File.pm" class="podlinkpod">Net::SSH2::File</a>, <a href="http://search.cpan.org/%7Edbrobins/Net-SSH2-0.08/lib/Net/SSH2/Dir.pm" class="podlinkpod">Net::SSH2::Dir</a>.</p>
+
+<p>LibSSH2 documentation at <a href="http://www.libssh2.org/" class="podlinkurl">http://www.libssh2.org</a>.</p>
+
+<p>IETF Secure Shell (secsh) working group at <a href="http://www.ietf.org/html.charters/secsh-charter.html" class="podlinkurl">http://www.ietf.org/html.charters/secsh-charter.html</a>.</p>
+
+<p><a href="http://search.cpan.org/perldoc?Net%3A%3ASSH%3A%3APerl" class="podlinkpod">Net::SSH::Perl</a>.</p>
+
+<h1><a class="u" href="#___top" title="click to go to top of document" name="AUTHOR">AUTHOR <img alt="^" src="SSH2.pm-Dateien/up.gif"></a></h1>
+
+<p>David B. Robins, &lt;dbrobins@cpan.org&gt;</p>
+
+<h1><a class="u" href="#___top" title="click to go to top of document" name="COPYRIGHT_AND_LICENSE">COPYRIGHT AND LICENSE <img alt="^" src="SSH2.pm-Dateien/up.gif"></a></h1>
+
+<p>Copyright (C) 2005, 2006 by David B. Robins; all rights reserved.</p>
+
+<p>This library is free software; you can redistribute it and/or modify
+it under the same terms as Perl itself, either Perl version 5.8.0 or,
+at your option, any later version of Perl 5 you may have available.</p>
+
+</div>
+
+
+</div>
+<div class="footer">
+hosted by <a href="http://www.perl.org/siteinfo.html">perl.org</a>, hardware provided by<br>
+<a href="http://www.bizrate.com/"><img src="SSH2.pm-Dateien/bizrate_logo.png"></a>
+</div>
+<!-- Fri Jul 14 11:02:27 2006 GMT (0.174753904342651) @x15 -->
+ 
+</body></html>

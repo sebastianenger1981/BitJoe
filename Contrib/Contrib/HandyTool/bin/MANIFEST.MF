@@ -1,0 +1,21 @@
+MIDlet-1: HandyTool, icons\HandyTool.png, HandyTool
+MIDlet-Certificate-1-1: MIIBwjCCASsCBD5kVv0wDQYJKoZIhvcNAQEEBQAwKDETMB
+ EGA1UEBhMKTXkgQ29tcGFueTERMA8GA1UEChMIbXlzZXJ2ZXIwHhcNMDMwMzA0MDczNDI
+ xWhcNMDUxMTI5MDczNDIxWjAoMRMwEQYDVQQGEwpNeSBDb21wYW55MREwDwYDVQQKEwht
+ eXNlcnZlcjCBnzANBgkqhkiG9w0BAQEFAAOBjQAwgYkCgYEAoEvqmiVc6/36bdw7u/vpZ
+ J8Bm7jhq0tYUlwrZUjFdHOVwtUJdQ19OS97O0gmf/agPAoHG3D2tMiY8bOgsdPoSYLY9d
+ l9n0w6SSmrg/zjNHGBXnLYqgAmKFX15zKAtTWtKOmlOwpvBPRu7tOBoe8w4Tzi30BoBBo
+ DMScBbcSUmF0CAwEAATANBgkqhkiG9w0BAQQFAAOBgQBqesRoiwfhBYbBueDvX1h6dWgS
+ QaxEHkonAVcHGAXwNw7nt+LwioZ1XBYvdAANsc64JG0bnI2fJz6jiDJVxf0lPycvjp0Az
+ SmhtqLSqOIG7Aag2BvsjpVy0H7TSighWtoeSnTefchvY8bcWf37Rlqy93wZKEoLayC/bm
+ Kx+3GpSA==
+MIDlet-Jar-RSA-SHA1: EqusgU9RmLCfrr6aj6liDVglUkF5GARTBe/toknxw+fA8rj5f
+ ZqOCoiFJhdZr6Qy9H8G3DEEqO8NQHwMLrGghVw3avoAOhyr/If7Bqc/byqRpVU8uxWWyc
+ Qo+r2rq5PX/avTrWxy2eW900wZKk69zFeYudaZHzb//TuIqiIvPtM=
+MIDlet-Name: FileMidlet
+MIDlet-Permissions: javax.microedition.io.Connector.file.read,javax.mi
+ croedition.io.Connector.file.write
+MIDlet-Vendor: Unknown
+MIDlet-Version: 1.0
+MicroEdition-Configuration: CLDC-1.0
+MicroEdition-Profile: MIDP-2.0

@@ -1,0 +1,49 @@
+  Argument        Description
+  --------        -----------
+
+  -key            The encryption/decryption key (required)
+
+  -cipher         The cipher algorithm (defaults to Crypt::DES)
+
+  -salt           Enables OpenSSL-compatibility. If equal to a value
+                    of "1" then causes a random salt to be generated
+                    and used to derive the encryption key and IV. Other
+                    true values are taken to be the literal salt.
+
+  -iv             The initialization vector (IV)
+
+  -header         What type of header to prepend to ciphertext. One of
+                    'salt'   -- use OpenSSL-compatible salted header
+                    'randomiv' -- Randomiv-compatible "RandomIV" header
+                    'none'   -- prepend no header at all
+
+  -padding        The padding method, one of "standard", "space",
+                     "onesandzeroes", or "null". (default "standard")
+
+  -literal_key    If true, the key provided by "key" is used directly
+                      for encryption/decryption.  Otherwise the actual
+                      key used will be a hash of the provided key.
+                      (default false)
+
+  -pcbc           Whether to use the PCBC chaining algorithm rather than
+                    the standard CBC algorithm (default false).
+
+  -keysize        Force the cipher keysize to the indicated number of bytes.
+
+  -blocksize      Force the cipher blocksize to the indicated number of bytes.
+
+  -insecure_legacy_decrypt
+                  Allow decryption of data encrypted using the "RandomIV" header
+                    produced by pre-2.17 versions of Crypt::CBC.
+
+  -add_header     [deprecated; use -header instread]
+                   Whether to add the salt and IV to the header of the output
+                    cipher text.
+
+  -regenerate_key [deprecated; use literal_key instead]
+                  Whether to use a hash of the provided key to generate
+                    the actual encryption key (default true)
+
+  -prepend_iv     [deprecated; use add_header instead]
+                  Whether to prepend the IV to the beginning of the
+                    encrypted stream (default true)

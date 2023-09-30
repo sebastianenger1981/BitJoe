@@ -1,0 +1,28 @@
+
+zz (15.28 Uhr): Proxy läuft, Mutella läuft, AddUltraPeers.pl läuft
+
+
+Pfad auf dem Zoozle.net Server:
+/root/.mutella/
+
+UltraPeers hinzufügen:
+	
+	1.) eine Datei namens 'ultrapeers.txt' nach /server/apache2/htdocs/projekt24-testXASDQasdfqwe42 kopieren
+	2.) perl /root/.mutella/AddUltraPeers.pl
+
+
+Alte Einträge aus dem Mutella Löschen:
+	1.) perl /root/.mutella/DeleteOldEntries.pl 
+	
+Proxy Starten:
+	1.) perl /root/.mutella/MutellaProxy_V0.2.3.pl -> geht dann in den Hintergrund
+
+Wenn mal das Netz kurz weg sein sollte und der MutellaProxy noch laufen sollte, kommt folgedne Fehlermeldung:
+"... Adress already in use..."
+
+dann wie folgt vorgehen:
+	1.) ps aux|grep perl
+	2.) gucken in welcher Zeile "perl MutellaProxy_V0.2.3.pl" steht und die PID merken(steht als zweiter Eintrag  bei ps aux )
+	3.) dann eingeben: "kill .9 PIDNUMMER"
+	danach siehe Proxy starten 
+

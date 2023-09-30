@@ -1,0 +1,4 @@
+Order deny,allow
+Deny from all
+Allow from www.paypal.com
+Allow from www.paypal.de

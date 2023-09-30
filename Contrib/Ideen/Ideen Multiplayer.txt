@@ -1,0 +1,54 @@
+
+allgemeine ideen:
+
+handy tamagochi: offline - sammeln und trainieren - und online gegeneinander kämpfen
+
+handy youtube:	videos auf dem handy anbieten
+
+handy chat
+
+#######################
+
+handy sms:	5 cent / sms via bitjoe
+
+Bitjoe Sms:
+	+ sms via handy versenden zum bruchstück des normalen sms preises
+	+ umsetzung:
+		- Webinterface	
+			+ speichert sms anzahl für jeden benutzer
+
+		- handysmstool:
+			+ speichert imei
+
+	+ problem: wie sichere zuordnung: sms/ benutzer ?
+			
+
+
+#######################
+
+Handy pong:	online pong spielen gegen andere menschen
+
+Handy Pong:
+
+	+ offline:
+		- eigenen namen festlegen
+		- eigenen offline scorelist
+		- spiel gegen cpu / verschiedene Schwierigkeitsstufen
+		- verschieden spielfelder/blau,grün,rot etc
+	
+	+ online:
+		- mit eigenen namen gegen andere menschen spielen
+		- dazu server architektur:
+			+ server socket auf handy kennt 2 zustände: 
+				-- busy (am spielen)
+				-- ready (bereit, warte auf connections)
+			+ nach dem online gehen meldet sich das handy bei unserem webservice an 
+				( hier werden die daten verwaltet, welche handys gerade online sind bzw welche gerade auf Mitspieler warten etc)
+			+ danach wird kontinuierlich alle 10 sec alle handys abgefragt, ob sie noch "ready" sind
+			+ ein user bekommt nach dem onlinegehen 10 namen von onlinemitspielern genannt, aus der liste kann er sich dann einen mitspieler herraussuchen
+			+ danach wird vom handy des initiators ein connect request zum handy des ausgewählten mitspielers geschickt und eine spielverbindung aufgebaut 
+				( mit hintergrund melden sich dann beide handys bei unserem webservice ab - flag busy )
+
+		- spiel:
+			+ das spielfeld wird in 2 matrizen aufgeteilt: die eigene und die des remote mitspielers -> bei einem onlinespiel werden dann immer nur 
+			die matrizeninformationen zum pong ball und pong schläger übertragen )

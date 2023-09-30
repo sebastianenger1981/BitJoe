@@ -1,0 +1,49 @@
+Revision history for Perl extension Net::SSH2.
+
+Developer/maintainer: David B. Robins <dbrobins@cpan.org>.
+Project started 2005-10-23 in Redmond, Washington, USA.
+
+0.08  2006-05-06  dbr  (svn revision 46)
+        - Fix refcount bug (objects not destroyed) (Stephen Clouse).
+
+0.07  2006-03-17  dbr  (svn revision 44)
+        - Remove incorrect statement that poll with timeout of 0 will block.
+        - Fix scp_put read size (fix by Pier Hegeman, rt.cpan.org #17370).
+        - Fix Win32 check (rt.cpan.org #17656).
+        - Fix scp_get buffer overrun (Rutger Ovidus, rt.cpan.org #16886).
+        - Update Net::SSH2 SYNOPSIS (thanks to Roy Smith).
+        - NOTE: CPAN alias AWA (Vandana Awasthi) released an unauthorized
+          "0.07" version of Net::SSH2; you can recognize it because it says
+
+          0.06 in the changelog.  I have not been able to contact AWA.
+
+0.06  2006-01-14  dbr  (svn revision 42)
+        - Win32 modifications (thanks to Eric Lam for research and patches).
+        - Use MAXPATHLEN instead of PATH_MAX; add some casts (thanks to
+          bug report from Freddy Soderlund).
+        - Update exec documentation to clarify that it runs a single command
+          and closes the channel (thanks to Mike Schmidt).
+        - Use '' for tied PRINT output separator if undefined (stop warnings).
+
+0.05  2005-11-11  dbr  (svn revision 40)
+        - More C89 fixes (-ansi -pedantic); thanks to Chuck Carson for testing.
+        - Remove "inline" (Solaris cc doesn't like it) (rt.cpan.org #15707).
+        - Various minor cleanups.
+
+0.04  2005-11-07  dbr  (svn revision 38)
+        - Fix c89 compile errors and warnings (-Wall).
+        - Make example/read.pl available as first sample script.
+        - Add public key objects (libssh2 0.12+ only).
+
+0.03  2005-11-02  dbr  (svn revision 36)
+        - Use poll in Net::SSH2::Channel::GETC (250 ms timeout).
+        - Change SCP interface; don't return a channel.
+
+0.02  2005-11-01  dbr  (svn revision 35)
+        - Add tie support to Net::SSH2::File objects.
+
+0.01  2005-11-01  dbr  (svn revision 30)
+        - First alpha release with full SSH2/SFTP support (uses libSSH2).
+        - Original version; created by h2xs 1.23 with options
+            -A -n Net::SSH2 -b 5.8.0.
+

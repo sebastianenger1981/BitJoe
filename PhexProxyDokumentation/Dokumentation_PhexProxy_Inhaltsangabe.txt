@@ -1,0 +1,170 @@
+					Dokumentation PhexProxy
+
+
+	1.)Beschreibung Backend
+		1.1.)Phex
+		1.2.)BitJoe Paris
+		1.3.)BitJoe Distributed Paris
+
+	2.)BitJoe Paris.pl
+		
+		2.1.)Programminterne Abschnitte 
+			2.1.1.)Abschnitt IPBlocker
+			2.1.2.)Abschnitt LoadCheck
+			2.1.3.)Abschnitt Entschlüsselung Handynachricht
+			2.1.4.)Abschnitt Licence Check
+		
+		2.2.)Programminteren Funktionen
+			2.2.1.)CheckStatusFlag()
+			2.2.2.)FindFunction()
+			2.2.3.)ResultFunction()
+			2.2.4.)DownloadStartFunction
+			2.2.5.)DownloadEndFunction
+			2.2.6.)LicenceFunction
+			2.2.7.)ErrorFunction
+
+		2.3.)Programmexterne BitJoe Module
+			2.3.1.)IO.pm
+				2.3.1.1.)readSocket()
+				2.3.1.2.)writeSocket()
+				2.3.1.3.)CreatePhexConnection()
+				2.3.1.4.)CreateProxySocket()
+				2.3.1.5.)CreateHandyDistributedSocket()
+				2.3.1.6.)CreateSocketToParis()
+				2.3.1.7.)readRandomBytes()
+				2.3.1.8.)ReadFileIntoArray()
+				2.3.1.10.)ReadFileIntoScalar()
+				2.3.1.11.)WriteFile()
+			
+			2.3.2.)Gzip.pm
+				2.3.2.1.)decompress_string_zlib()
+				2.3.2.2.)compress_string_zlib()
+				2.3.2.3.)compress_zlib()
+				2.3.2.4.)decompress_zlib()
+				2.3.2.5.)compress_gzipprog()
+				2.3.2.6.)decompress_gzipprog()
+				2.3.2.7.)compress_string_gzipprog()
+
+			2.3.3.)Time.pm
+
+				2.3.3.1.)GetValid8DayDateForLicence()
+				2.3.3.2.)GetCurrentTimeStamp()
+				2.3.3.3.)MySQLDateTime()
+				2.3.3.4.)SimpleMySQLDateTime()
+
+			2.3.4.)Phex.pm
+				2.3.4.1.)readToken()
+				2.3.4.2.)find()
+				2.3.4.3.)result()
+				2.3.4.4.)del()
+
+			2.3.5.)Logging.pm
+				2.3.5.1.)LogToFileInitDistr()
+				2.3.5.2.)LogToFileGetResultsDistr()
+				2.3.5.3.)LogToFileStartDownloadDistr()
+				2.3.5.4.)LogToFileFinishDownloadDistr()
+				2.3.5.5.)LogToFileInvalidLicenceDistr()
+				2.3.5.6.)LogToFileInit()
+				2.3.5.7.)LogToFileGetResults()
+				2.3.5.8.)LogToFileStartDownload()
+				2.3.5.9.)LogToFileFinishDownload()
+				2.3.5.10.)LogToFileInvalidLicence()
+				2.3.5.11.)LogToSql()
+		
+			2.3.6.)PhexSortRank.pm
+				2.3.6.1.)PhexSortRank()
+					2.3.6.1.1.)Abschnitt For-Content-Splitter
+					2.3.6.1.2.)Abschnitt For-Double SortedHashRefResults
+					2.3.6.1.3.)Abschnitt While-Ergebniszusammenstellung
+					2.3.6.1.4.)Abschnitt Sortierung
+				2.3.6.2.)GetKeyWordMatching()
+				2.3.6.3.)GetSpeedPoints()
+		
+			2.3.7.)CheckSum.pm
+				 2.3.7.1.)MD5ToHEX()
+				 2.3.7.2.)MD4ToHEX()
+				 2.3.7.3.)SHA1ToHEX()
+
+			2.3.8.)ResultCache.pm
+				2.3.8.1.)readCache()
+				2.3.8.2.)writeCache()
+
+			2.3.9.)CryptoLibrary.pm
+				2.3.9.1.)GetPrivateCryptoKeyFromDatabase()
+				2.3.9.2.)Encrypt()
+				2.3.9.3.)Decrypt()
+				2.3.9.4.)CreateCryptoObject()
+				2.3.9.5.)SimpleRandom()
+				2.3.9.6.)URandom()
+				2.3.9.7.)SimpleURandom()
+				2.3.9.8.)GenerateTemporaryKey()
+				2.3.9.9.)ShuffleArrayAdvanced()
+				2.3.9.10.)ShuffleArray()
+
+			2.3.10.)LicenceManagement.pm
+				2.3.10.1.)CheckLicence()
+
+			2.3.11.)LicenceGenerator.pm
+				2.3.11.1.)GenerateALLLicenceForToday()
+				2.3.11.2.)GenerateKombiJavaMP3LicenceForToday()
+				2.3.11.3.)GenerateKombiKlingelDocuLicenceForToday()
+				2.3.11.4.)GenerateKombiBilderVideoLicenceForToday()
+				2.3.11.5.)GenerateDocuLicenceForToday()
+				2.3.11.6.)GenerateJavaLicenceForToday()
+				2.3.11.7.)GenerateVideoLicenceForToday()
+				2.3.11.8.)GenerateKlingelLicenceForToday()
+				2.3.11.9.)GenerateMP3LicenceForToday()
+				2.3.11.10.)GenerateBildLicenceForToday()
+				2.3.11.11.)AddLicenceToSQL()
+				2.3.11.12.)GenerateLicence()
+				2.3.11.13.)SaveLicenceSQLToFile()
+				2.3.11.14.)SaveCryptoSQLToFile()
+
+			2.3.12.)LicenceTransfer.pm
+				2.3.12.1.)EncryptLicenceForTransfer()
+				2.3.12.2.)DecryptLicence()
+				2.3.12.3.)TransferEncryptedContent()
+				2.3.12.4.)CheckIfEncryptedFileExists()
+				2.3.12.5.)SendCheckSumOfFiles()
+				2.3.12.6.)InstallLicenceToDataBase()
+				2.3.12.7.)TestInstalledLicence()
+
+			2.3.13.)SQL.pm
+				2.3.13.1.)SQLConnect()
+
+			2.3.15.)SortArray.pm
+				2.3.15.1.)Discard_Duplicates()
+				2.3.15.2.)Sort_Table()
+
+			2.3.16.)Mail.pm
+				2.3.16.1.)SendNoHandyClientSocketMail()
+				2.3.16.2.)SendProxyDownMail()
+				2.3.16.3.)SendMail()
+			
+			2.3.17.)Filter.pm
+				2.3.17.1.)SpamFilter()
+				2.3.17.2.)SizeFilter()
+
+			2.3.18.)IPFilter.pm
+				2.3.18.1.)IPBlocker()
+				2.3.18.2.)SimpleFilter()
+				2.3.18.3.)AdvancedFilter()
+				2.3.18.4.)ReloadFilter()
+				2.3.18.5.)GenerateIPAdressesFromRange()
+
+			2.3.19.)FileTypes.pm
+
+			2.3.20.)Daemon.pm
+			
+	3.)BitJoe DistributedParis.pl
+		3.1.)Programminterne Abschnitte 
+			3.1.1.)Abschnitt Verbindungsaufbau
+			3.1.2.)Abschnitt Entschlüsselung Handynachricht
+			3.1.3.)Abschnitt Licence Check
+			3.1.4.)Abschnitt Suchanfrage stellen
+			3.1.5.)Abschnitt Ergebiss abholen
+			3.1.6.)Abschnitt Ergebniszusammenführung
+			3.1.7.)Abschnitt Ergebniszusammenführung-Ergebnisparsing
+			3.1.8.)Abschnitt Ergebniszusammenführung-Integration
+			3.1.9.)Abschnitt Ergebnis Sortierung
+			3.1.10.)Abschnitt Abschlussausführungen

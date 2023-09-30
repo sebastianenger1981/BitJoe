@@ -1,0 +1,121 @@
+
+
+bittorrent client für handy :
+die suche findet auf dem handy statt ( crypt, gzip )
+die ergebnisse kommen vom server ( crypt, gzip )
+ein download wird angestoßen und auf dem server geladen
+nach beendigung des downloades wird dem user eine sms geschickt, dass sein download fertig ist: im handy wird sich die letzte (n) suchanfragen mit id gemerkt
+und dann im handy der download vom server angestoßen
+
+
+-----------
+
+virales marketing:
+bitjoe tshirts drucken: "vorne der character + webseite in rot und "Schluss mit teuren Handy Abos"
+hinten: bitjoe.de - jeden monat soviele klingeltöne saugen, wie du willst" + webseite
+
+----------
+
+
+bj sms schreiben über bluethoth sodas man in einem gewissen rahmen nachrichten via bluethooth schreiben kann ohne dafür was zu zahlen ....
+
+--------------#
+#
+
+
+
+weboberfläche in php: Suchanfrage
+
+	1.) existiert ein cache?
+		Ja: lese txt cache
+		nein: -> anfrage an sql server - ergebnisse ?
+			ja: zeige sql ergebnisse und speichere cache
+			nein:
+				a.)suchanfrage wird an den phexproxy weitergereicht 
+				b.)ergebnisse werden in mysql db gespeichert
+				c.)ergebnisse werden als txt cache ähnlich zoozle gespeichert
+				-> wenn keine ergebnisse kommen dann einfach fakeergebnisse präsentieren ( zb usenext suche benutzen )
+	Ergebnisse anzeigen:
+	gefunden: Datum - Dateigröße: Size - Dateinamen - speedbewertung
+		-> diese datei fürs handy downloaden: -> BJ referer
+		
+
+Vorteil: 
++ Content generieren für google sitemaps
++ tägliches newsverzeichnis mit ergebnisse des vortages
++ user suchanfragen sammeln und auswerten
++ mit den gesammelten daten später eine eigene suche für handy downloads anbieten
++ crossverlinkung in zoozle + news möglich
++ zoozle handy suche als neue categorie
++ zoozle suchkeywords benützen um content zu generieren
++ fakeergebnisse von usenext benutzen
+
+search.bitjoe.com	-> englisches suchwebtemplate
+suche.bitjoe.de		-> deutsches webtemplate
+=> zoozle prinzip
+
+Nachteil:
+- Backup der sql / txt caches
+- separater webserver mit suchoberfläche und phexproxy drauf laufen
+
+
+--------------
+
+allgemeine ideen:
+
+handy tamagochi: offline - sammeln und trainieren - und online gegeneinander kämpfen
+
+handy youtube:	videos auf dem handy anbieten
+
+handy chat
+
+#######################
+
+handy sms:	5 cent / sms via bitjoe
+
+Bitjoe Sms:
+	+ sms via handy versenden zum bruchstück des normalen sms preises
+	+ umsetzung:
+		- Webinterface	
+			+ speichert sms anzahl für jeden benutzer
+
+		- handysmstool:
+			+ speichert imei
+
+	+ problem: wie sichere zuordnung: sms/ benutzer ?
+			
+
+
+#######################
+
+Handy pong:	online pong spielen gegen andere menschen
+
+Handy Pong:
+
+	+ offline:
+		- eigenen namen festlegen
+		- eigenen offline scorelist
+		- spiel gegen cpu / verschiedene Schwierigkeitsstufen
+		- verschieden spielfelder/blau,grün,rot etc
+	
+	+ online:
+		- mit eigenen namen gegen andere menschen spielen
+		- dazu server architektur:
+			+ server socket auf handy kennt 2 zustände: 
+				-- busy (am spielen)
+				-- ready (bereit, warte auf connections)
+			+ nach dem online gehen meldet sich das handy bei unserem webservice an 
+				( hier werden die daten verwaltet, welche handys gerade online sind bzw welche gerade auf Mitspieler warten etc)
+			+ danach wird kontinuierlich alle 10 sec alle handys abgefragt, ob sie noch "ready" sind
+			+ ein user bekommt nach dem onlinegehen 10 namen von onlinemitspielern genannt, aus der liste kann er sich dann einen mitspieler herraussuchen
+			+ danach wird vom handy des initiators ein connect request zum handy des ausgewählten mitspielers geschickt und eine spielverbindung aufgebaut 
+				( mit hintergrund melden sich dann beide handys bei unserem webservice ab - flag busy )
+
+		- spiel:
+			+ das spielfeld wird in 2 matrizen aufgeteilt: die eigene und die des remote mitspielers -> bei einem onlinespiel werden dann immer nur 
+			die matrizeninformationen zum pong ball und pong schläger übertragen )
+
+
+<---------------------
+
+

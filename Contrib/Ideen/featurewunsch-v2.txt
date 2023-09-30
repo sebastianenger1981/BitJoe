@@ -1,0 +1,4 @@
+
+
+was toll wäre, wenn man im phex nachfragen kann, ob eine ID schon vorhanden ist. sprich zuerst übergebe ich dem phex eine suchanfrage und dann teste ich hinterher, ob die suchanfrage angekommen ist mit "exits TOKEN ID" ? ( yes / no )
+

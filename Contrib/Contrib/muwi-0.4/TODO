@@ -1,0 +1,6 @@
+TODO for mutellad and muwi
+==========================
+
+* port mutellad and muwi to the cygwin runtime environment.
+* add password protection to the cgi. For now you can solve this with .htaccess
+

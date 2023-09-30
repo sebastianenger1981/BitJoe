@@ -1,0 +1,189 @@
+[Version]
+CurrentVersion = 0.4.5
+
+[Bandwidth]
+BandwidthConnects = 2000
+BandwidthDownload = 100
+BandwidthTotal = 1e+05
+BandwidthUpload = 3000
+
+[Connections]
+EnableUltrapeerMode = false
+ForceUltrapeerMode = false
+LeafModeConnects = 500
+MaxConnPerSubnetA = -1
+MaxConnPerSubnetB = 400
+MaxConnPerSubnetC = 200
+MaxConnections = 5000
+MaxIncomingConns = -1
+MaxLeaves = 16
+MinConnections = 5000
+QuietMode = false
+
+[HostServers]
+AutoConnectSrv1 = connect1.gnutellanet.com
+AutoConnectSrv2 = connect2.gnutellanet.com
+AutoConnectSrv3 = connect3.gnutellanet.com
+AutoConnectSrv4 = connect4.gnutellanet.com
+
+[GWebCaches]
+GWebCache1 = http://www.gnucleus.net/gcache/gcache.php
+GWebCache2 = http://www.alpha64.info/alpha64/skulls.php
+GWebCache3 = http://galvatron.dyndns.org:59009/gwcache
+GWebCache4 = http://gcachw.xolox.nl/gwebcache/
+GWebCache5 = http://bootstrap.gtkg.net/
+GWebCache6 = http://galvatron.dyndns.org:59009/gwcache
+GWebCache7 = http://kisama.ath.cx:8080/
+GWebCache8 = http://gwcrab.sarcastro.com:8001/
+GWebCache9 = http://t.az.is.teh.r0x0r.gtkg.de/
+GWebCache10 = http://loot.alumnigroup.org/
+GWebCache11 = http://dvtci.com/gwcii.php
+GWebCache12 = http://mcache.firstlight.dk/mcache.php
+GWebCache13 = http://wefucktheworld.xolox.nl/gwebcache/default.asp
+GWebCache14 = http://reukiodo.dyndns.org/gwebcache/gwcii.php
+GWebCache15 = http://galvatron.dyndns.org:59009/gwcache
+GWebCache16 = http://tribaldance.ibiza.bishopston.net:3558/
+GWebCache17 = http://bobsmith.kicks-ass.org/gwebcache/gcache.php
+GWebCache18 = http://amccool.dyndns.org/gwebcache/gwebcache-0.7.5/gcache.php
+GWebCache19 = http://bicou.hd.free.fr/g2/gwcii.php
+GWebCache20 = http://cache.kicks-ass.net:8000/
+GWebCache21 = http://cache.mynapster.com/index.php
+GWebCache22 = http://dlaikar.de/gcache-mac/gcache.php
+GWebCache23 = http://gwc.gwc.niet.net/gwc/gcache.cgi
+GWebCache24 = http://dlaikar.de/gcache/gcache.php
+GWebCache25 = http://dlaikar.de/gcache2/gcache.php
+GWebCache26 = http://firebird.shacknet.nu:8888/cash.php
+GWebCache27 = http://foxy1.cjb.net/cgi-bin/gcache.cgi
+GWebCache28 = http://foxy1.cjb.net/gwcii.php
+GWebCache29 = http://g2.cameltoetgp.net/gcache/perlgcache.cgi
+GWebCache30 = http://g2cache.theg2.net/gwcache/lynnx.asp
+GWebCache31 = http://g2wc.markushenn.de/gwcii.php
+GWebCache32 = http://galvatron.dyndns.org:59009/gwcache
+GWebCache33 = http://gcache.cloppy.net/
+GWebCache34 = http://gcache.mikama.eu.org/
+GWebCache35 = http://www.struggle.ca/gcache/gcache.php
+GWebCache36 = http://goeg.dk/Gnutella/gcache.php
+GWebCache37 = http://grupaprojektor.host.sk/gcache.php
+GWebCache38 = http://gwc.awyeaGWebCache15
+GWebCache39 = http://gwc.gwc.niet.net/gwc/gcache.cgi
+GWebCache40 = http://gwcii.julianfamily.org/gwcii.php
+GWebCache41 = http://gwebcache.bearshare.net/
+GWebCache42 = http://gwebcache.dnsalias.org/cgi-bin/perlgcache.cgi
+GWebCache43 = http://gwebcache.h45h.com/gwcii.php
+GWebCache44 = http://gwc1.mager.org:8081/GWebCache/req
+ GWebCache45 = http://gwebcache.bearshare.net/gcache.php
+GWebCache46 = http://gwebcache1.limewire.com/gwebcache/cgi-bin/perlgcache.cgi
+GWebCache47 = http://gwebcache3.jonatkins.org.uk/perlgcache.cgi
+GWebCache48 = http://huithome.xs4all.nl/gwebcache/lynnx.aspx
+GWebCache49 = http://invalidsubdomain.toddenrentieren.net/gcache.php
+GWebCache50 = http://gzip.bounceme.net/gwcii.php
+GWebCache51 = http://heypete.safepages.com/gc/gc.php
+GWebCache52 = http://ipoh1.org/gwebcache
+GWebCache53 = http://ipoh1.org/gwebcache/gwcii.php
+GWebCache54 = http://kunkie.europe.webmatrixhosting.net/lynnx.aspx
+GWebCache55 = http://mckeowbc.servebeer.com/gcache.php
+GWebCache56 = http://jum.dyndns.org:9006/GWebCache/req
+GWebCache57 = http://mac.gc.dlaikar.de/
+GWebCache58 = http://mikama.host.sk/gcache.php
+GWebCache59 = http://move.along.move.along.there.is.nothing.to.see.here.at.bishopston.net:3558/
+GWebCache60 = http://mute-net.sourceforge.net/cgi-bin/perlgcache.cgi
+GWebCache61 = http://paladin.teamunix.de/gwebcache/gwcii.php
+GWebCache62 = http://static.zabox.com/gwc/gwcii.php
+GWebCache63 = http://tv2knet.basm.be/gcache.php
+GWebCache64 = http://www.bearguru.com/gcache/gcache.asp
+GWebCache65 = http://www.blackfedora.com/gcache/perlgcache.cgi
+GWebCache67 = http://www.easwww.xolox.nl/gwebcache/default.asp
+GWebCache68 = http://www.easypublish.net/gwebcache/gcache.asp
+GWebCache69 = http://sunflame.homelinux.net/cgi-bin/cache/perlgcache.cgi
+GWebCache70 = http://uui.upce.cz/perlgcache.cgi
+GWebCache71 = http://www.gbwebpro.com/guo/lynn/cache/lynn.asp
+GWebCache72 = http://www.goeg.dk/Gnutella/gcache.php
+GWebCache73 = http://www.kinnee.net/cgi-bin/perlgcache.cgi
+GWebCache74 = http://www.pietroam.net/script/gnutella/phpgnucacheII/gwcii.php
+GWebCache75 = http://www.spiderplayer.net/gwebcache.aspx
+GWebCacheFollowRedirect = true
+
+[LocalHost]
+AcceptRemoteIpHeader = true
+DynDnsFirewall = 
+Firewall = false
+ForceIP = 0.0.0.0
+ForcePort = 0
+LocalIP = 85.214.39.76
+LocalPort = 6346
+ReachableForPush = true
+SaveStatePeriod = 10
+SpeedDynamic = 1575
+SpeedStatic = 0
+
+[Paths]
+DownloadPath = ~/mutella
+SharePath = 
+
+
+[RemoteUI]
+AllowedRemoteNets = {127.0.0.1}
+RemoteDefSortOrder = size
+RemoteDir = /remote
+RemoteEnable = false
+RemoteLogAccess = true
+RemoteMaxResInGrp = 4
+RemotePass = 
+RemoteSettings = true
+RemoteTemplatePath = /usr/share/mutella/remote/template
+RemoteUICharset = ISO-8859-1
+RemoteUser = 
+
+[SearchFilters]
+BlackList = 
+BlackListActive = true
+WordFilter = 
+WordFilterActive = true
+
+[SearchOptions]
+GroupStrict = false
+MaxFileSize = 2097152
+MaxResults = 30000
+MaxSearches = 5000
+MinFileSize = 1
+RequeryPeriod = 5
+SaveSearches = true
+StrictSearch = false
+
+[ShareOptions]
+MaxReplies = 5600
+ReplyFilePath = true
+ReplyIfAvail = true
+ShareDotFiles = false
+ShareDownloadDir = true
+ShareFilter = 
+
+[SocketUI]
+SocketEnable = true
+SocketEnableExec = false
+SocketPath = /server/mutella/socket
+
+[TerminalUI]
+ColorScheme = /server/mutella/termclr
+MaxResultsDisplayed = 1000
+Paginate = true
+ShowGroups = true
+StartupScript = /server/mutella/termrc
+UseANSIColor = true
+
+[Timeouts]
+ConnectTimeout = 30
+PushTimeout = 60
+SpeedTimeout = 60
+TransferTimeout = 60
+
+[TransferOptions]
+MaxDownloads = 20
+MaxPerFileUploads = 3
+MaxPerHostDownloads = 2
+MaxPerHostUploads = 2
+MaxUploads = 10
+MinDownloadSpeed = -1
+MinUploadSpeed = -1
+RetryDelay = 10
+WhiteList = 

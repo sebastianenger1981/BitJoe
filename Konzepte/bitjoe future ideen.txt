@@ -1,0 +1,5 @@
+
+
+jsr 120 - tell-a-friend mittels mms vom user handy aus senden , inhalt der mms ist die bitjoe software ( mit zugriff aufs telefonbuch ) - mms max größe ist 100kb
+update check einbauen
+

@@ -1,0 +1,48 @@
+INSTALLATION:
+Requires: PHP4, MYSQL 4.0+
+
+No real exciting installation procedures.  Create a database in mysql
+(in the mysql client, do "CREATE DATABASE gcache" where gcache is the
+name you desire to call it). Then run the schema to create the tables
+(mysql gcache <phpgnucacheii.schema). I usually like to add user
+access to this database so that I don't have root doing anything. 
+(in mysql do "use gcache" or whatever you named it, then do
+"GRANT ALL ON * TO apache IDENTIFIED BY 'secretpassword';")
+
+If you know what your doing, and can afford to be a little risque with
+your database, use the expert.phpgnucacheii.schema. It helps make things
+run about 20% faster.
+
+Then put the php script where you want it and edit the config info at 
+the top.
+
+I STRONGLY SUGGEST you use a CNAME to your web server such as 
+gwcii.yourwebsite.org. Even though the files exists on 
+www.yourwebsite.org, if you ever want to take it down again all you'll
+have to do is delete the CNAME.
+
+CONFIGURATION:
+
+Not a lot here to configure...
+
+In the config/config.inc file, edit:
+MY_URL: set that to what you want the rest of the world to know you as.
+MYSQL_SERVER: your sql server...
+MYSQL_LOGIN: your sql login... such as apache.
+MYSQL_PASSWORD: your sql password (beginning to see a pattern?)
+MYSQL_DATABASE: your sql database name
+MAX_HOSTS: the maximum hosts or urls to reply with to a get, urlfile, or hostfile request.
+MAX_AGE: the maximum age that any entry in the host/url table should be in minutes.
+URL_VALIDATION: by default, this script validates each url request with a ping submission 
+                to that cache. Some free php sites (like lycos) disable features that make
+                that possible. Set this to false if your php server doesn't have fsockopen.
+DEFAULT_NET: if you're hosting for a specific network, you may want to change this.
+FSOCK_TIMEOUT: timeout for trying to validate an url. On _most_ networks, 10 seconds should be a big plenty.
+DELAYED_WRITE: if your mysql installation support this, it makes sql transactions MUCH faster.
+
+* Run the populate.client.php script to populate the client database. (either run "php populate.client.php" or just use the url.
+
+Latest versions should be around at http://gwcii.sourceforge.net
+I can be reached at joe+gcii@julianfamily.org
+
+Thanks for helping out the network!

@@ -1,0 +1,19 @@
+----------------------------------------------------
+
+1.) Verschlüsselung Proxy<->Handy testen
+2.) Verteilung der Lizenzdaten - SQL - :
+	
+	[Lizenzserver T=0 ]
+	d- 1.) Lizenzkey erstellen
+	d- 2.) Lizenzdaten verschlüsseln
+	d- 3.) Verschlüsselte Lizenzdaten via SSH verschicken (Aufbau der verschlüsselten Datei: Inhalt-verschlüsselt, Name: SQL-12-07-06.txt)
+	d- 4.) Verschicke den MD5 Wert der verschlüsselten Nachricht an eine eMailAdresse
+	
+	[Proxyserver - nimmt verschlüsselte Lizenzdaten entgegen]
+	d- 5.) Prüfe, ob verschlüsselte Datei vorhanden ist / Prüfe ob, Dateiname gleich dem aktuellem Datum [ T+1 ]
+	d- 5.1.) Verschicke den MD5 Wert der verschlüsselten Nachricht , die der ProxyServer bekommen hat, an eine eMailAdresse
+	d- 5.2.) Wenn die verschlüsselte Datei nicht vorhanden ist, dann schicke eMail
+	d- 6.) Entschlüsselung des Inhaltes
+	d- 7.) SQL Update auf dem ProxyServer mit den Lizenzdaten aus der übertragenen Datei [T=22]
+	- 8.) Prüfe mittels SQL, ob die Daten korrekt installiert wurden, wenn nicht eMail ( select * from Lizenze where DATE = Cur_DATE() );
+	

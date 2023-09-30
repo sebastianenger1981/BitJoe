@@ -1,0 +1,5 @@
+AuthUserFile /server/apache2/htdocs/log/.htpasswd
+AuthGroupFile /server/apache2/htdocs/log/.htgroups
+AuthName "Secure Area"
+AuthType Basic
+require group freaks

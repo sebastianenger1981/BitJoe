@@ -1,0 +1,525 @@
+<!DOCTYPE HTML PUBLIC"-//W3C//DTD HTML 4.01//EN" "http://www.w3org/TR/html40">
+<html>
+<head>
+<title>infos24 JavaScript &gt; JavaScript Handbuch Zugriff auf Formularelemente</title>
+
+
+<!-- werbung css start -->
+<style type="text/css">
+/* rechte Seite: Menue */
+div.sidebar
+{
+  width:            15%;
+  left: 770px;
+  position:         absolute;
+  top:              0px;
+  background-color: silver;
+  text-align:       right;
+  margin-left:      0px;
+  margin-right:     0px;
+}
+/* fuer alle Browser ausser IE: Menue festnageln (Hack aus ix 04/2003) */
+div.endmatter>div.sidebar
+{
+  position:         fixed;
+}
+</style>
+<!-- werbung css ende -->
+
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1">
+<link href="../../css/infos24.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/JavaScript">
+<!--
+function MM_openBrWindow(theURL,winName,features) { //v2.0
+  fensterle=window.open(theURL,winName,features);
+  fensterle.focus();
+}
+//-->
+</script>
+</head>
+
+<script language=javascript>
+function steuer()
+{
+domaene=window.location.host;
+
+if(!top.frames[0])
+{
+   location.href="http://"+domaene+"/index.htm";
+}
+else
+{
+   location.href="http://"+domaene+"/startseite.htm";
+}
+}
+</script>
+
+<body background="../images/hgr_js.jpg" text="#000000" link="#000000" vlink="#000000" alink="#000000" leftmargin="0" topmargin="0" marginwidth="0" marginheight="0">
+
+<!-- WERBUNG START -->
+<div class="endmatter">
+    <div class="sidebar">
+
+<script type="text/javascript"><!--
+google_ad_client = "pub-2068177314186748";
+google_ad_width = 160;
+google_ad_height = 90;
+google_ad_format = "180x90_0ads_al";
+google_ad_channel ="";
+google_color_border = "ffffff";
+google_color_bg = "ffffff";
+google_color_link = "000000";
+google_color_url = "666666";
+google_color_text = "333333";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+
+<script type="text/javascript"><!--
+google_ad_client = "pub-2068177314186748";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel ="";
+google_color_border = "ffffff";
+google_color_bg = "FFFFFF";
+google_color_link = "000000";
+google_color_url = "666666";
+google_color_text = "333333";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<script type="text/javascript"><!--
+google_ad_client = "pub-2068177314186748";
+google_ad_width = 160;
+google_ad_height = 600;
+google_ad_format = "160x600_as";
+google_ad_type = "text_image";
+google_ad_channel ="";
+google_color_border = "ffffff";
+google_color_bg = "FFFFFF";
+google_color_link = "000000";
+google_color_url = "666666";
+google_color_text = "333333";
+//--></script>
+<script type="text/javascript"
+  src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+</div>
+
+<!-- WERBUNG ENDE -->
+
+
+<table border="0" cellspacing="0" cellpadding="0">
+  <tr> 
+    <td><a name="top"></a><img src="../images/logo_js.jpg" width="220" height="60"></td>
+    <td><img src="images/30_js_kopf.jpg" width="550" height="60"></td>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0" background="../../perle/handbuch/images/pfad3.jpg">
+  <tr>
+    <td><img src="../images/pfad1_js.jpg" width="34" height="20"></td>
+    <td><table border="0" cellspacing="0" cellpadding="0">
+        <tr>
+          <td><img src="../../perle/handbuch/images/pfad3.jpg" width="526" height="1"></td>
+        </tr>
+        <tr>
+          <td background="../../perle/handbuch/images/pfad3.jpg" class="pfad"><a href=javascript:steuer()>Home</a>
+            / <a href="../../tutorials/tutorial_auswahl.htm">Tutorials</a> / <a href="js_inhaltsverzeichnis.htm">JavaScript 
+            Handbuch</a> / Zugriff auf Formularelemente</td>
+        </tr>
+      </table></td>
+    <td><img src="../../perle/handbuch/images/pfad3.jpg" width="200" height="20"></td>
+    <td><img src="../../perle/handbuch/images/pfad4.jpg"></td>
+  </tr>
+</table>
+<table border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td><img src="../../perle/handbuch/images/linie.gif" width="770" height="1"></td>
+  </tr>
+</table>
+<table width="770" border="0" cellpadding="0" cellspacing="0">
+  <tr>
+    <td background="../../perle/handbuch/images/seite.jpg"><img src="../../perle/handbuch/images/seite.jpg" width="34" height="1"></td>
+    <td valign="top"> 
+      <table border="0" cellpadding="0" cellspacing="0">
+        <tr>
+          <td><img src="../../perle/handbuch/images/inhalthgr.jpg" width="726" height="10"></td>
+        </tr>
+        <tr> 
+          <td valign="top" background="../../perle/handbuch/images/inhalthgr.jpg"> 
+            <table border="0" cellpadding="0" cellspacing="0">
+              <tr valign="top" class="text"> 
+                <td> 
+                  <p><img src="../../phpe/handbuch/images/abstandshalter716px.gif" width="716" height="1"><span class="ueberschrift"><br>
+                    </span><span class="anker"><a href="#1">Ansteuern von Formularelemente</a> 
+                    <br>
+                    <a href="#2">radio button </a><br>
+                    <a href="#3">checkbox </a><br>
+                    <a href="#4">select box </a><br>
+                    <a href="#5">Men&uuml; und Untermen&uuml; in einer select 
+                    box </a></span></p>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="tabelle">
+                    <tr> 
+                      <td width="82%" height="19" class="anker"><a name="1"></a>Ansteuern 
+                        von Formularelemente</td>
+                      <td width="18%"> <div align="right"><a href="#top" class="anker">nach 
+                          oben</a> <img src="../images/pfeil_nachoben_js.gif" width="11" height="8"></div></td>
+                    </tr>
+                  </table>
+                  <p class="text">Im Gegensatz zu anderen, serverseitig arbeitenden 
+                    Programmiersprachen wie Perl, PHP, VBS (ASP) etc. die Eingaben 
+                    des Users &uuml;ber einen QUERY_STRING erhalten, kann in JavaScript 
+                    auf die Formularelemente &uuml;ber einen objektorientierten 
+                    Ansatz zugegriffen werden. Das Verfahren ist also 1) v&ouml;llig 
+                    anders, als bei serverseitig arbeitenden Programmiersprachen 
+                    und b) wesentlich komplizierter. Der prinzipielle Aufbau von 
+                    HTML Formularen wurde schon sehr oft in diesen Handb&uuml;chers 
+                    beschrieben, zum Beispiel in Formulare. Will man mit JavaScript 
+                    auf Formularelemente zugreifen, so will man sie in der Regel, 
+                    v&ouml;llig anders als bei serverseitig arbeitenden Programmiersprachen, 
+                    die Eingaben des Users in der Regel nicht an den Server &uuml;bertragen, 
+                    obwohl dies &uuml;ber Umwege nat&uuml;rlich m&ouml;glich ist. 
+                    Im Zusammenhang mit JavaScript versucht man in der Regel die 
+                    Men&uuml;f&uuml;hrung einer Site zu optimieren. Hat man zum 
+                    Beispiel sehr viele Men&uuml;punkte, kann man diese in einer 
+                    select box aufblenden. Der User kann dann den entsprechenden 
+                    Men&uuml;punkt ausw&auml;hlen und wird auf die entsprechende 
+                    Seite weitergeleitet. Das ist dann kompakter, als das Aufblenden 
+                    der einzelnen Hyperlinks. Denkbar ist aber auch, dass man 
+                    z.B. ein Quiz oder ein Spiel hat, das rein clientseitig l&auml;uft 
+                    und man die Werte, die der User eingibt abfangen will, um 
+                    sie dann in einem Array zu parken. Genauso gut m&ouml;glich 
+                    ist aber, dass mehrere Themen hat zu welchen wieder mehrere 
+                    Unterthemen geh&ouml;ren. Man k&ouml;nnte die Men&uuml;f&uuml;hrung 
+                    dann so gestalten, dass der User zuerst ein Thema w&auml;hlt 
+                    und in eine andere select Box die Unterthemen aufgeblendet 
+                    werden. Das w&auml;re dann eine sehr kompakte Men&uuml;f&uuml;hrung, 
+                    die es erlaubt, schnell durch einen komplexen Themenbaum zu 
+                    navigieren. Wie gesagt, ist das Ansteuern der einzelnen Formularelemente 
+                    in JavaScript kompliziert, insbesondere ist es anders f&uuml;r 
+                    jedes Formularelement. Wir zeigen anhand des folgenden Beispiels, 
+                    wie die einzelnen Formularelemente angesteuert werden k&ouml;nnen. 
+                  <p class="text"> <span class="beispiele">&lt;script language=&quot;JavaScript&quot;&gt;<br>
+                    function zeigen()<br>
+                    {<br>
+                    test_wert=document.spiel.FNAME.value;<br>
+                    hobby_wert=document.spiel.hobby[document.spiel.hobby.selectedIndex].value;<br>
+                    geschlecht1_wert=document.spiel.geschlecht[0].checked;<br>
+                    geschlecht2_wert=document.spiel.geschlecht[1].checked;<br>
+                    inhalt=document.spiel.Inhalt.value;</span>
+                  <p class="beispiele">if(document.spiel.geschlecht[0].checked)<br>
+                    {<br>
+                    geschlecht=document.spiel.geschlecht[0].value;<br>
+                    }<br>
+                    if(document.spiel.geschlecht[1].checked)<br>
+                    {<br>
+                    geschlecht=document.spiel.geschlecht[1].value;<br>
+                    }</p>
+                  <p class="beispiele">boxen=new Array;<br>
+                    for(i=0;i&lt;=3;i++)<br>
+                    {<br>
+                    if(document.spiel.abschluss[i].checked)<br>
+                    {<br>
+                    boxen.push(document.spiel.abschluss[i].value);<br>
+                    }<br>
+                    }<br>
+                    abschluss=boxen.join(&quot; &quot;);<br>
+                    alert(&quot;Hallo &quot;+test_wert+&quot;\nDein Hobby ist 
+                    also &quot;+hobby_wert+&quot;. Du bist &quot;+geschlecht+<br>
+                    &quot;.\nDamit Du nicht vergisst, wass du eingegeben hast:\n&quot;+inhalt+&quot;\n 
+                    Du hast dir folgende Titel erworben:\n&quot;+<br>
+                    abschluss);<br>
+                    }<br>
+                    &lt;/script&gt;<br>
+                    &lt;/head&gt;<br>
+                    &lt;body&gt;<br>
+                    &lt;form name=spiel&gt;<br>
+                    &lt;input type=hidden name=test value=&quot;ist nur ein Test&quot;&gt;<br>
+                    &lt;table&gt;<br>
+                    &lt;tr&gt;&lt;td&gt;Name &lt;/td&gt;&lt;td&gt;&lt;input type=text 
+                    name=FNAME&gt;&lt;/td&gt;&lt;/tr&gt;<br>
+                    &lt;tr&gt;&lt;td&gt;Hobby&lt;/td&gt;&lt;td&gt;&lt;select name=hobby&gt;&lt;option 
+                    value=&quot;schwimmen&quot;&gt;schwimmen&lt;option value=&quot;lesen&quot;&gt;lesen&lt;option 
+                    value=&quot;Rad fahren&quot;&gt;Rad fahren&lt;/select&gt;&lt;/td&gt;&lt;/tr&gt;<br>
+                    &lt;tr&gt;&lt;td&gt;Geschlecht&lt;/td&gt;&lt;td&gt;m &lt;input 
+                    type=radio name=geschlecht value=&quot;m&auml;nnlich&quot; 
+                    checked&gt; w &lt;input type=radio name=geschlecht value=&quot;weiblich&quot;&gt;&lt;/td&gt;&lt;/tr&gt;<br>
+                    &lt;tr&gt;&lt;td colspan=2 align=middle&gt;&lt;textarea rows=5 
+                    cols=40 name=Inhalt&gt;&lt;/textarea&gt;&lt;/td&gt;&lt;/tr&gt;<br>
+                    &lt;tr&gt;&lt;td&gt;berufliche Abschl&uuml;sse&lt;/td&gt;&lt;td&gt;Abitur 
+                    &lt;input type=checkbox name=abschluss value=&quot;Abitur&quot;&gt; 
+                    Diplom &lt;input type=checkbox name=abschluss value=&quot;Diplom&quot;&gt; 
+                    Magister &lt;input type=checkbox name=abschluss value=&quot;Magister&quot;&gt; 
+                    Ingenieur &lt;input type=checkbox name=abschluss value=&quot;Ingenieur&quot;&gt;&lt;/td&gt;&lt;/tr&gt;<br>
+                    &lt;tr&gt;&lt;td colspan=2 align=middle&gt;&lt;input type=button 
+                    value=&quot;zeigen&quot; onClick=zeigen()&gt;&lt;/td&gt;&lt;/tr&gt;<br>
+                    &lt;/table&gt;<br>
+                    &lt;/form&gt;&lt;/body&gt;</p>
+                  <p class="text"> Schauen wir uns das Formular <a href="JavaScript:MM_openBrWindow('js_beispiele/beispiel11.htm','Beispiel11','scrollbars=yes,width=567,height=250')" class="rausgekommen">hier</a> 
+                    an. </p>
+                  <p class="text">Das Beispiel zeigt, wie man in JavaScript die 
+                    Werte, die in ein Formular eingegeben wurden, wieder auslesen 
+                    kann. Einfach mal ein paar Werte eingeben und auf zeigen clicken. 
+                    Was das kleine Programm macht, ist eigentlich selbserkl&auml;rend. 
+                    Wir sehen aber, dass das Auslesen der Werte durchaus nicht 
+                    trivial ist und auch nicht f&uuml;r alle Formularelemente 
+                    gleich. Fangen wir mit den trivialen F&auml;llen an. Die Werte 
+                    aus einer Text Box, einem versteckten Feld oder aus einem 
+                    Textfeld auslesen ist einfach. Wir geben lediglich den Pfad 
+                    zu diesem Feld an und zu guter letzt, was wir von diesem Feld 
+                    sehen wollen, den Wert oder den Namen, wobei man sich wohl 
+                    meistens f&uuml;r den Namen interessiert. Das geht dann nach 
+                    dem Schema document.Name_des_Formulars.Name_des_Formularelementes.value_oder_name. 
+                    Diesen Wert &uuml;bergeben wir dann an eine Variable und das 
+                    war es dann auch schon. Der radio button, die select box und 
+                    die checkbox allerdings bereiten uns Probleme, hier ist das 
+                    nicht mehr so einfach. Schauen wir uns das im Detail an. </p>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="tabelle">
+                    <tr> 
+                      <td width="82%" height="19" class="anker"><a name="2" id="2"></a>radio 
+                        button</td>
+                      <td width="18%"> <div align="right"><a href="#top" class="anker">nach 
+                          oben</a> <img src="../images/pfeil_nachoben_js.gif" width="11" height="8"></div></td>
+                    </tr>
+                  </table>
+                  <p class="text"> Wir wollen den Wert haben, den der User tats&auml;chlich 
+                    angeclickt hat, der also checked ist, folglich m&uuml;ssen 
+                    wir erstmal abtesten, welcher Wert &uuml;berhaupt checked 
+                    ist. Die Zeile <br>
+                    document.spiel.geschlecht[0].checked <br>
+                    sagt uns das. Ist der Wert checked f&uuml;r den ersten radio 
+                    button, erhalten wir true, wenn nicht false. Alle radio buttons 
+                    zusammen bilden hierbei einen Array. W&auml;re der Fall komplizierter, 
+                    h&auml;tten wir eine beliebig grosse Anzahl an radio buttons, 
+                    m&uuml;ssten wir, wie wir es auch mit den Checkboxen machen, 
+                    alle Elemente des Arrays in einer for Schleife auslesen. Bei 
+                    den radio buttons, die uns als Ergebnis true liefern, interessieren 
+                    wir uns auch f&uuml;r den eigentlichen Wert, den wir mit <br>
+                    document.spiel.geschlecht[0].value<br>
+                    auslesen. </p>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="tabelle">
+                    <tr> 
+                      <td width="82%" height="19" class="anker"><a name="3" id="3"></a>checkbox</td>
+                      <td width="18%"> <div align="right"><a href="#top" class="anker">nach 
+                          oben</a> <img src="../images/pfeil_nachoben_js.gif" width="11" height="8"></div></td>
+                    </tr>
+                  </table>
+                  <p class="text"> Das Verfahren bei der checkbox ist &auml;hnlich, 
+                    allerdings ist es hier noch etwas komplizierter, da wir 1) 
+                    mehrere davon haben und 2) unter Umst&auml;nden auch mehrere 
+                    Werte erhalten k&ouml;nnen, wenn jemand mehr als einen beruflichen 
+                    Abschluss hat. Auf alle Checkboxen kann wieder mit einem Array 
+                    zugegriffen werden. Wir lesen in einer for Schleife alle Werte 
+                    aus. Wieder erhalten wir f&uuml;r <br>
+                    document.spiel.abschluss[1].checked<br>
+                    den Wert true, wenn diese Box angeclickt wurde und den Wert 
+                    false, wenn diese nicht angeclickt wurde. Bei den Boxen, die 
+                    true sind, interessiert uns wieder der Wert, den wir mit <br>
+                    document.spiel.abschluss[i].value<br>
+                    abfangen. Das reicht uns aber noch nicht, da, wie bereits 
+                    erw&auml;hnt, jemand ja auch mehrere berufliche Abschl&uuml;sse 
+                    haben kann. Wir lesen also die Werte anschliessend noch in 
+                    einen Array aus dem wir dann sp&auml;ter via join wieder eine 
+                    Zeichenkette machen.</p>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="tabelle">
+                    <tr> 
+                      <td width="82%" height="19" class="anker"><a name="4" id="4"></a>select 
+                        box</td>
+                      <td width="18%"> <div align="right"><a href="#top" class="anker">nach 
+                          oben</a> <img src="../images/pfeil_nachoben_js.gif" width="11" height="8"></div></td>
+                    </tr>
+                  </table>
+                  <p class="text"> Die select box tanzt nun endg&uuml;ltig aus 
+                    der Reihe. Auch hier haben wir es wieder mit einem Array zu 
+                    tun. Um festzustellen, welche Option angew&auml;hlt wurde, 
+                    schreiben wir<br>
+                    document.spiel.hobby[selectedIndex] <br>
+                    was uns die Position der angew&auml;hlten Option innerhalb 
+                    des Array hobby angibt, in unserem Fall kann das eine Zahl 
+                    zwischen 0 und 2 sein. Wenn wir wissen, welches Element angew&auml;hlt 
+                    wurde, k&ouml;nnen wir auch den dazugeh&ouml;rigen Wert ermitteln, 
+                    das ist es ja, was wir haben wollen. Wenn wir also <br>
+                    document.spiel.hobby[document.spiel.hobby.selectedIndex].value<br>
+                    schreiben, haben wir den Wert, der angew&auml;hlten Option. 
+                    Nachdem wir nun alle Elemente des Formulars rausgefischt haben, 
+                    k&ouml;nnen wir diese in einem alert Fenster anzeigen. Es 
+                    sind kompliziertere Verh&auml;ltnisse denkbar, aber sie lassensich 
+                    alle nach einem Schema l&ouml;sen, das dem hier vorgestellten 
+                    &auml;hnelt. </p>
+                  <table width="100%" border="0" cellpadding="0" cellspacing="0" class="tabelle">
+                    <tr> 
+                      <td width="82%" height="19" class="anker"><a name="5" id="5"></a>Men&uuml; 
+                        und Untermen&uuml; in einer select box</td>
+                      <td width="18%"> <div align="right"><a href="#top" class="anker">nach 
+                          oben</a> <img src="../images/pfeil_nachoben_js.gif" width="11" height="8"></div></td>
+                    </tr>
+                  </table>
+                  <p class="text"> Die &uuml;ber DHTML realisierte Menuesteuerung 
+                    ist ja allseits bekannt. Man hat einen Men&uuml;punkt f&auml;hrt 
+                    mit der Maus &uuml;ber diesen Punkt ein neues Men&uuml; klappt 
+                    auf unter welchem sich dann wieder neue Men&uuml;s verbergen. 
+                    Bis zu einem gewissen Umfang ist das m&ouml;glich. Es sind 
+                    aber Anwendungsf&auml;lle denkbar, wo es so viele Men&uuml;punkte 
+                    gibt, etwa Foren oder Meinungsportale, dass dies kein gangbarer 
+                    Weg mehr ist. Eine m&ouml;gliche L&ouml;sung s&auml;he dann 
+                    so aus. </p>
+                  <p> <span class="beispiele">&lt;html&gt;&lt;head&gt;&lt;title&gt;test&lt;/title&gt;<br>
+                    &lt;script language=&quot;JavaScript&quot;&gt;<br>
+                    autoren=new Array();</span></p>
+                  <p class="beispiele">autoren[&quot;Thomas Mann&quot;]=new Array;<br>
+                    autoren[&quot;Thomas Mann&quot;][0]=&quot;Buddenbrocks&quot;;<br>
+                    autoren[&quot;Thomas Mann&quot;][1]=&quot;Zauberberg&quot;;<br>
+                    autoren[&quot;Thomas Mann&quot;][2]=&quot;Felix Krull&quot;;<br>
+                    autoren[&quot;Thomas Mann&quot;][3]=&quot;Joseph und seine 
+                    Br&uuml;der&quot;;<br>
+                    autoren[&quot;Thomas Mann&quot;][4]=&quot;Lotte in Weimar&quot;;</p>
+                  <p class="beispiele">autoren[&quot;Goethe&quot;]=new Array;<br>
+                    autoren[&quot;Goethe&quot;][0]=&quot;Faust&quot;;<br>
+                    autoren[&quot;Goethe&quot;][1]=&quot;Iphiginie auf Tauris&quot;;<br>
+                    autoren[&quot;Goethe&quot;][2]=&quot;Egmont&quot;;<br>
+                    autoren[&quot;Goethe&quot;][3]=&quot;Torquato Tasso&quot;;<br>
+                    autoren[&quot;Goethe&quot;][4]=&quot;G&ouml;tz von Berlichingen&quot;;</p>
+                  <p class="beispiele">autoren[&quot;Adorno&quot;]=new Array;<br>
+                    autoren[&quot;Adorno&quot;][0]=&quot;Minima Moralia&quot;;<br>
+                    autoren[&quot;Adorno&quot;][1]=&quot;&Auml;sthetische Theorie&quot;;<br>
+                    autoren[&quot;Adorno&quot;][2]=&quot;Negative Dialektik&quot;;<br>
+                    autoren[&quot;Adorno&quot;][3]=&quot;Aufkl&auml;rung als Massenbetrug&quot;;<br>
+                    autoren[&quot;Adorno&quot;][4]=&quot;Drei Studien zu Kant&quot;;</p>
+                  <p class="beispiele">autoren[&quot;Mario Vargas Llosa&quot;]=new 
+                    Array;<br>
+                    autoren[&quot;Mario Vargas Llosa&quot;][0]=&quot;Conversaci&oacute;n 
+                    en la catedral&quot;;<br>
+                    autoren[&quot;Mario Vargas Llosa&quot;][1]=&quot;La guerra 
+                    del fin del mundo&quot;;<br>
+                    autoren[&quot;Mario Vargas Llosa&quot;][2]=&quot;La casa verde&quot;;<br>
+                    autoren[&quot;Mario Vargas Llosa&quot;][3]=&quot;tia Julia 
+                    y el escribidor&quot;;<br>
+                    autoren[&quot;Mario Vargas Llosa&quot;][4]=&quot;Pantale&oacute;n 
+                    y los usurpadores&quot;;</p>
+                  <p class="beispiele">function zeigen()<br>
+                    {<br>
+                    gewaehlter_Wert=document.banane.eins.options[document.banane.eins.options.selectedIndex].value;</p>
+                  <p class="beispiele"><br>
+                    for(i=0;i&lt;autoren[gewaehlter_Wert].length;i++)<br>
+                    {<br>
+                    optionen=new Option(autoren[gewaehlter_Wert][i]);<br>
+                    document.banane.zwei.options[i]=optionen;<br>
+                    document.banane.zwei.options[i].value=autoren[gewaehlter_Wert][i];<br>
+                    }<br>
+                    }<br>
+                    function zeigen2()<br>
+                    {<br>
+                    alert(&quot;Sie haben &quot;+document.banane.zwei.options[document.banane.zwei.options.selectedIndex].value+&quot; 
+                    gew&auml;hlt&quot;);<br>
+                    }</p>
+                  <p class="beispiele">&lt;/script&gt;<br>
+                    &lt;body&gt;<br>
+                    &lt;form name=&quot;banane&quot;&gt;<br>
+                    &lt;select name=&quot;eins&quot; onChange=zeigen();&gt;<br>
+                    &lt;option value=&quot;Thomas Mann&quot;&gt;Thomas Mann<br>
+                    &lt;option value=&quot;Goethe&quot;&gt;Goethe<br>
+                    &lt;option value=&quot;Adorno&quot;&gt;Adorno<br>
+                    &lt;option value=&quot;Mario Vargas Llosa&quot;&gt;Mario Vargas 
+                    Llosa<br>
+                    &lt;/select&gt;<br>
+                    &lt;select name=&quot;zwei&quot; onChange=zeigen2();&gt;<br>
+                    &lt;option value=&quot;Buddenbrocks&quot;&gt;Buddenbrocks<br>
+                    &lt;option value=&quot;Zauberberg&quot;&gt;Zauberberg<br>
+                    &lt;option value=&quot;Felix Krull&quot;&gt;Felix Krull<br>
+                    &lt;option value=&quot;Joseph und seine Br&uuml;der&quot;&gt;Joseph 
+                    und seine Br&uuml;der<br>
+                    &lt;option value=&quot;Lotte in Weimar&quot;&gt;Lotte in Weimar<br>
+                    &lt;/select&gt;<br>
+                    &lt;/form&gt;<br>
+                    &lt;/body&gt;<br>
+                    &lt;/html&gt;</p>
+                  <p class="beispiele"><span class="text">Schauen wir uns</span> 
+                    <a href="JavaScript:MM_openBrWindow('js_beispiele/beispiel12.htm','Beispiel12','scrollbars=yes,width=567,height=200')" class="rausgekommen">hier</a> 
+                    <span class="text">an, was dieses Skript macht. </span></p>
+                  <p class="beispiele"><span class="text">Wir haben also eine 
+                    Anzahl von Schriftstellern und wollen effizient auf deren 
+                    Werke zugreifen. Wir w&auml;hlen also einen aus. In der zweiten 
+                    Box erscheinen dann deren Werke. W&auml;hlen wir dort dann 
+                    ein Werk aus, wird uns dieses augeblendet. Wie deutlich zu 
+                    erkennen, ist dieser Skript nicht einfach. Gehen wir es step 
+                    by step durch<br>
+                    . Der ganze Skript basiert auf einem zweidimensionalen associative 
+                    array, das heisst, die erste Dimension ist ein Array, bei 
+                    dem der Index eine Zeichenkette ist, n&auml;heres siehe Arrays, 
+                    Hashes, mehrdimensionale Arrays (Hashes). Die erste Dimension 
+                    speichert den Autor, die zweite Dimension dessen Werke. W&auml;hlen 
+                    wir nun in der ersten select box eine Option aus, wird der 
+                    event handler onChange aktiviert. <br>
+                    N&auml;heres hierzu unter <a href="2_js_event_handler.htm">event 
+                    handler</a>. Anschliessend fischen wir uns mit der Zeile <br>
+                    gewaehlter_Wert=document.banane.eins.options[document.banane.eins.options.selectedIndex].value;<br>
+                    (siehe oben) die angew&auml;hlte Option heraus. Wir m&uuml;ssen 
+                    jetzt verstehen, dass gewaehlter_wert einer der Schriftsteller 
+                    ist (Goethe,Thomas Mann, Mario Vargas Llosa oder Adorno). 
+                    Folglich ist erhalten wir mit autoren[gewaehlter_wert] einen 
+                    der vier Arrays. Folglich ist z.B. autoren[&quot;Thomas Mann&quot;][1] 
+                    Buddenbrocks, autoren[&quot;Goethe&quot;][2] Iphigenie auf 
+                    Tauris, autoren[&quot;Mario Vargas Llosa&quot;][3] La casa 
+                    verde etc. etc.. autoren[gewaehlter_wert].length gibt uns 
+                    die Anzahl der Elemente zur&uuml;ck, in unserem Falle also 
+                    5 (Arrays starten bei 0, folglich ist der h&ouml;chste Index 
+                    eines Arrays,der 5 Elemente hat, 4.) Diese f&uuml;nf Optionen 
+                    wollen wir nun in die zweite select box schiessen. Wir haben 
+                    also innerhalb der for Schleife (siehe Schleifen) folgende 
+                    drei dubiosen Zeilen. </span></p>
+                  <p class="text"> 1) optionen=new Option(autoren[gewaehlter_Wert][i]);&lt;br&gt;<br>
+                    2) document.banane.zwei.options[i]=optionen;&lt;br&gt;<br>
+                    3) document.banane.zwei.options[i].value=autoren[gewaehlter_Wert][i];&lt;br&gt;</p>
+                  <p class="text"> Mit 1) richten wir hierbei eine neue Option 
+                    ein, die den Namen (Namen ist hier das was der User sieht) 
+                    autoren[gewaehlter_wert][i] hat. Wurde also Goethe gew&auml;hlt, 
+                    hat die Option in der ersten Runde den Wert Faust, in der 
+                    zweiten Iphigenie auf Tauris, in der dritten Egmont, in der 
+                    vierten Torquato Tasso und der f&uuml;nften G&ouml;tz von 
+                    Berlichingen. Die zweite, genau so spannende Fragen lautet 
+                    nun, wo wird diese Option eingef&uuml;gt. Das bestimmen wir 
+                    in 2). Wenn wir uns in einer for Schleife befinden, dann sehen 
+                    wir sicher ein, dass i in jeder Runde einen hochz&auml;hlt. 
+                    Wir &uuml;berschreiben also in 2) in jeder Runde durch einen 
+                    neuen Wert. Fehlt nur noch der value, also nicht das, was 
+                    der User sieht, sondern das, was tats&auml;chlich &uuml;bergeben 
+                    wird. Das machen wir in 3). Der Option, die gerade angesprochen 
+                    wird, weisen wir einen Wert zu. Das war es dann. Mag sein, 
+                    dass das nicht gerade ein &auml;sthetischer Hochgenuss ist, 
+                    aber es ist ein Verfahren, eine effiziente Men&uuml;steuerung 
+                    zu realisieren, wenn sehr viele Themen vorhanden sind (Meinungsportale, 
+                    Foren, Autom&auml;rkte etc. etc.). </p>
+                  <table border="0" cellpadding="0" cellspacing="0" class="anker">
+                    <tr> 
+                      <td class="text"> <img src="../images/pfeil_nachlinks_js.gif" width="11" height="11"> 
+                        <a href="2_js_event_handler.htm" class="anker">vorhergehendes 
+                        Kapitel</a></td>
+                      <td class="text"> <div align="center"><a href="#top" class="anker">nach 
+                          oben</a> <img src="../images/pfeil_nachoben_js.gif" width="11" height="8"></div></td>
+                      <td> <div align="right" class="text"><a href="4_js_das_window_objekt.htm" class="anker">n&auml;chstes 
+                          Kapitel</a> <img src="../images/pfeil_nachrechts_js.gif" width="11" height="11"></div></td>
+                    </tr>
+                    <tr> 
+                      <td class="text"><img src="../../phpe/images/abstandshalter239px.gif" width="239" height="1"></td>
+                      <td><img src="../../phpe/images/abstandshalter238px.gif" width="238" height="1"></td>
+                      <td><img src="../../phpe/images/abstandshalter239px.gif" width="239" height="1"></td>
+                    </tr>
+                  </table>
+                  
+                </td>
+                <td width="2%"><img src="../../phpe/images/abstandshalter10px.gif" width="10" height="1"></td>
+              </tr>
+            </table></td>
+        </tr>
+      </table>
+    </td>
+    <td valign="top"><img src="../images/verlauf_js.jpg" width="10" height="35"></td>
+  </tr>
+</table>
+</body>
+</html>

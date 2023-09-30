@@ -1,0 +1,89 @@
+
+
+Project settings saved
+Building "BitJoe"
+ProGuard, version 3.6
+Reading program jar [G:\Programme\WTK22\apps\BitJoe\bin\BitJoe.jar]
+Reading library jar [G:\Programme\WTK22\lib\wma20.jar]
+Reading library jar [G:\Programme\WTK22\lib\j2me-ws.jar]
+Reading library jar [G:\Programme\WTK22\lib\jsr75.jar]
+Reading library jar [G:\Programme\WTK22\lib\jsr082.jar]
+Reading library jar [G:\Programme\WTK22\lib\jsr184.jar]
+Reading library jar [G:\Programme\WTK22\lib\mmapi.jar]
+Reading library jar [G:\Programme\WTK22\lib\midpapi20.jar]
+Reading library jar [G:\Programme\WTK22\lib\wma11.jar]
+Reading library jar [G:\Programme\WTK22\lib\cldcapi11.jar]
+Preparing output jar [C:\Dokumente und Einstellungen\TheCerial\Lokale Einstellungen\Temp\BitJoe.jar]
+  Copying resources from program jar [G:\Programme\WTK22\apps\BitJoe\bin\BitJoe.jar]
+Note: duplicate definition of library class [javax.microedition.media.Control]
+Note: duplicate definition of library class [javax.microedition.media.Controllable]
+Note: duplicate definition of library class [javax.microedition.media.Player]
+Note: duplicate definition of library class [javax.microedition.media.MediaException]
+Note: duplicate definition of library class [javax.microedition.media.PlayerListener]
+Note: duplicate definition of library class [javax.microedition.media.Manager]
+Note: duplicate definition of library class [javax.microedition.media.control.ToneControl]
+Note: duplicate definition of library class [javax.microedition.media.control.VolumeControl]
+Note: duplicate definition of library class [javax.microedition.media.protocol.DataSource]
+Note: duplicate definition of library class [javax.wireless.messaging.BinaryMessage]
+Note: duplicate definition of library class [javax.wireless.messaging.Message]
+Note: duplicate definition of library class [javax.wireless.messaging.MessageConnection]
+Note: duplicate definition of library class [javax.wireless.messaging.MessageListener]
+Note: duplicate definition of library class [javax.wireless.messaging.TextMessage]
+id= null
+Keine SearchReplyMessage bekommen
+Wrote g:\Programme\WTK22\apps\BitJoe\bin\BitJoe.jar
+Wrote g:\Programme\WTK22\apps\BitJoe\bin\BitJoe.jad
+Build complete
+m : 0
+b : 0
+k : 0
+file_family_last_index : 1
+v : 0
+j : 0
+d : 0
+dir_last : root1/
+
+
+
+ich startete bj, drückte run, und wählte dann videos und paris aus, danach der fehler
+
+
+
+Execution completed.
+541471606 bytecodes executed
+60359 thread switches
+762 classes in the system (including system classes)
+12902 dynamic objects allocated (522248 bytes)
+20 garbage collections (170476 bytes collected)
+Running with storage root DefaultColorPhone
+STARTSCREEN SAGT -> : OK SEARCHSCREEN
+Keine SearchReplyMessage bekommen
+ProxyCon.doSearch()
+java.lang.SecurityException: Application not authorized to access the restricted API
+	at com.sun.midp.security.SecurityToken.checkForPermission(+331)
+	at com.sun.midp.security.SecurityToken.checkForPermission(+15)
+	at com.sun.midp.midletsuite.MIDletSuiteImpl.checkForPermission(+20)
+	at com.sun.midp.dev.DevMIDletSuiteImpl.checkForPermission(+28)
+	at com.sun.midp.dev.DevMIDletSuiteImpl.checkForPermission(+7)
+	at com.sun.midp.io.ConnectionBaseAdapter.checkForPermission(+67)
+	at com.sun.midp.io.j2me.socket.Protocol.checkForPermission(+17)
+	at com.sun.midp.io.ConnectionBaseAdapter.openPrim(+6)
+	at com.sun.midp.io.j2me.socket.Protocol.openPrim(+108)
+	at javax.microedition.io.Connector.openPrim(+233)
+	at javax.microedition.io.Connector.open(+15)
+	at javax.microedition.io.Connector.open(+6)
+	at javax.microedition.io.Connector.open(+5)
+	at de.hgnut.GnuUtil.b.b(+37)
+	at de.hgnut.GnuUtil.b.run(+4)
+
+
+####################################################
+
+
+dateien werden mit falscher endung gespeichert: parism.jpg.jpeg
+
+#######################################################
+
+wenn er downloaded, kann man nicht abbrechen, auch den den exit button klicken nutzt nix 
+
+######################################################

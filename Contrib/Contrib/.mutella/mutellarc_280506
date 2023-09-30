@@ -1,0 +1,127 @@
+[Version]
+CurrentVersion = 0.4.5
+
+[Bandwidth]
+BandwidthConnects = -1
+BandwidthDownload = -1
+BandwidthTotal = -1
+BandwidthUpload = 200
+BandwidthTransfer = 1024
+
+[Connections]
+EnableUltrapeerMode = true
+ForceUltrapeerMode = true
+LeafModeConnects = 0
+MaxConnPerSubnetA = -1
+MaxConnPerSubnetB = -1
+MaxConnPerSubnetC = -1
+MaxConnections = 1500
+MaxIncomingConns = 700
+MaxLeaves = 0
+MinConnections = 200
+QuietMode = false
+
+[GWebCaches]
+GWebCache1 = http://www.gnucleus.net/gcache/gcache.php
+GWebCache2 = http://cache.mynapster.com/index.php
+GWebCache3 = http://gwebcache.bearshare.net/gcache.php
+GWebCache4 = http://kisama.ath.cx:8080/
+GWebCache5 = http://gwc1c.olden.ch.3557.nyud.net:8090/gwc/
+GWebCache6 = http://krill.shacknet.nu:20095/gwc
+GWebCache7 = http://t.az.is.teh.r0x0r.gtkg.de/
+GWebCache8 = http://tribaldance.ibiza.bishopston.net:3558/
+GWebCache9 = http://loot.alumnigroup.org/
+GWebCache10 = http://gwc.oogynetworks.com/
+GWebCache11 = http://pokerface.ibiza.bishopston.net:3558/
+GWebCache12 = http://mcache.firstlight.dk/mcache.php
+GWebCache13 = http://www.deepnetexplorer.co.uk/webcache/index.asp
+GWebCache14 = http://www.deepnetexplorer.co.uk/webcache/
+GWebCache15 = http://gwebcache.bearshare.net/Gcache.PHP
+GWebCache16 = http://gwebcache.bearshare.net/
+GWebCache17 = http://gwebcache.bearshare.net/gcache.php
+GWebCache18 = http://gwebcache.bearshare.net/GCAChe.PHP
+GWebCacheFollowRedirect = false
+
+[LocalHost]
+AcceptRemoteIpHeader = true
+DynDnsFirewall = 
+Firewall = false
+ForceIP = 0.0.0.0
+ForcePort = 0
+LocalIP = 85.214.59.105
+LocalPort = 8080
+ReachableForPush = true
+SaveStatePeriod = 10
+SpeedDynamic = 9744
+SpeedStatic = 0
+
+[Paths]
+DownloadPath = ~/mutella
+SharePath = /server/mutella/share
+
+[RemoteUI]
+AllowedRemoteNets = {85.214.59.105}
+RemoteDefSortOrder = size
+RemoteDir = /remote
+RemoteEnable = true
+RemoteLogAccess = true
+RemoteMaxResInGrp = 4
+RemotePass = zoozle
+RemoteSettings = true
+RemoteTemplatePath = /server/mutella/template
+RemoteUICharset = ISO-8859-1
+RemoteUser = zoozle
+
+[SearchFilters]
+BlackList = 
+BlackListActive = false
+WordFilter = 
+WordFilterActive = false
+
+[SearchOptions]
+GroupStrict = false
+MaxFileSize = 209715200
+MaxResults = 25600
+MaxSearches = 6400
+MinFileSize = 1
+RequeryPeriod = 300
+SaveSearches = true
+StrictSearch = false
+
+[ShareOptions]
+MaxReplies = 64
+ReplyFilePath = true
+ReplyIfAvail = true
+ShareDotFiles = false
+ShareDownloadDir = true
+ShareFilter = 
+
+[SocketUI]
+SocketEnable = true
+SocketEnableExec = false
+SocketPath = ~/.mutella/socket
+
+[TerminalUI]
+ColorScheme = ~/.mutella/termclr
+MaxResultsDisplayed = 1000
+Paginate = true
+ShowGroups = true
+StartupScript = ~/.mutella/termrc
+UseANSIColor = true
+
+[Timeouts]
+ConnectTimeout = 30
+PushTimeout = 60
+SpeedTimeout = 60
+TransferTimeout = 60
+
+[TransferOptions]
+MaxDownloads = 10
+MaxPerFileUploads = 10
+MaxPerHostDownloads = 10
+MaxPerHostUploads = 50
+MaxUploads = 100
+MinDownloadSpeed = -1
+MinUploadSpeed = -1
+RetryDelay = 10
+WhiteList = 

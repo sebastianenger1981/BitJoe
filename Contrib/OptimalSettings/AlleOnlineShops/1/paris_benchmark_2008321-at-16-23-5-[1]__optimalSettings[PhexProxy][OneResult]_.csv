@@ -1,0 +1,9 @@
+Anfragen an Phex;1;
+Load beim Abholen [Dual Core];;
+Load max. [Dual Core];3,20;
+Load Proxy Ende;0,10;
+Load Proxy max.;0,10;
+Dauer (s);35;
+Anzahl der Suchanfragen ohne Treffer;0;
+Mittelwert Quellen;117,00;
+Mittelwert Treffer;98,00;

@@ -1,0 +1,113 @@
+
+
+[Version]
+CurrentVersion = 0.4.5
+
+[Bandwidth]
+BandwidthConnects = -1
+BandwidthDownload = -1
+BandwidthTotal = -1
+BandwidthUpload = 100
+
+[Connections]
+EnableUltrapeerMode = false
+ForceUltrapeerMode = false
+LeafModeConnects = 101
+MaxConnPerSubnetA = -1
+MaxConnPerSubnetB = 40
+MaxConnPerSubnetC = 20
+MaxConnections = 5000
+MaxIncomingConns = -1
+MaxLeaves = 1
+MinConnections = 100
+QuietMode = false
+
+[GWebCaches]
+GWebCache1 = http://www.gnucleus.net/gcache/gcache.php
+GWebCache2 = http://www.alpha64.info/alpha64/skulls.php
+GWebCache3 = http://galvatron.dyndns.org:59009/gwcache
+GWebCacheFollowRedirect = true
+
+[LocalHost]
+AcceptRemoteIpHeader = true
+DynDnsFirewall = false
+Firewall = false
+ForceIP = 0.0.0.0
+ForcePort = 0
+LocalIP = 85.214.39.76
+LocalPort = 6348
+ReachableForPush = true
+SaveStatePeriod = 10
+SpeedDynamic = 4722
+SpeedStatic = 66
+
+[Paths]
+DownloadPath = ~/mutella
+SharePath = 
+
+[RemoteUI]
+AllowedRemoteNets = {127.0.0.1}
+RemoteDefSortOrder = size
+RemoteDir = /remote
+RemoteEnable = false
+RemoteLogAccess = true
+RemoteMaxResInGrp = 4
+RemotePass = 
+RemoteSettings = true
+RemoteTemplatePath = /usr/share/mutella/remote/template
+RemoteUICharset = ISO-8859-1
+RemoteUser = 
+
+[SearchFilters]
+BlackList = 
+BlackListActive = true
+WordFilter = 
+WordFilterActive = true
+
+[SearchOptions]
+GroupStrict = false
+MaxFileSize = 2097152
+MaxResults = 30000
+MaxSearches = 3000
+MinFileSize = 1
+RequeryPeriod = 5
+SaveSearches = true
+StrictSearch = false
+
+[ShareOptions]
+MaxReplies = 64
+ReplyFilePath = true
+ReplyIfAvail = true
+ShareDotFiles = false
+ShareDownloadDir = true
+ShareFilter = 
+
+[SocketUI]
+SocketEnable = true
+SocketEnableExec = false
+SocketPath = /server/mutella/socket
+
+[TerminalUI]
+ColorScheme = /server/mutella/termclr
+MaxResultsDisplayed = 1
+Paginate = true
+ShowGroups = true
+StartupScript = /server/mutella/termrc
+UseANSIColor = true
+
+[Timeouts]
+ConnectTimeout = 20
+PushTimeout = 50
+SpeedTimeout = 50
+TransferTimeout = 60
+
+[TransferOptions]
+MaxDownloads = 1
+MaxPerFileUploads = 1
+MaxPerHostDownloads = 1
+MaxPerHostUploads = 1
+MaxUploads = 1
+MinDownloadSpeed = -1
+MinUploadSpeed = -1
+RetryDelay = 10
+WhiteList = 

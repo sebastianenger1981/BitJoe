@@ -1,0 +1,17 @@
+Kenntnisse TCP/IP Protokoll / Kommunikationsprotokolle
+
+Java + Sockets ?
+
+PHP + HTML? 
+
+Perl Kenntnisse ?
+
+SQL Kenntnisse ?
+
+Teamarbeit:
+	- Kommentieren von Quellcodes
+	- Arbeiten an einer gemeinsamen Lösung?
+	- Probleme mit jüngeren Leuten zusammenzuarbeiten? stichwort: entwicklungsleitung durch basti. 
+	- English und Sprachkenntnisse 
+
+would you sell bussiness intelligence?

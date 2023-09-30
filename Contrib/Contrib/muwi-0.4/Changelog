@@ -1,0 +1,55 @@
+
+Mutellad and MuWI Changelog:
+============================
+
+2002/06/22 - v0.4
+ * mutella-0.4 is available, so here comes muwi-0.4
+
+2002/06/01
+ * mutellad: changed the stop reading from mutella criterum -> faster.
+ * mutellad: removed bug in AutoAdaptHDSpace
+ * muwi: if you invoke the form, muwi now jumps to to last entry you worked on.
+
+2002/05/15 - v0.4rc1
+ * new version muwi-0.4rc1 (waiting for mutella-4.0)
+
+2002/05/01
+ * mutellad: implemented mu-conadapt and mu-dfadapt.
+ * muwi: support for the default colors defined in the .mutella/termclr
+ * muwi: changes in the css
+ * muwi: added support for mutella versions > 0.3.3
+ * muwi: configuration is now done in one file (.mutella/mutelladrc)
+ * much more ....
+
+2002/03/04 
+ * muwi: Added new command "fullhelp". Try it.
+
+2002/02/28 
+ * muwi: "color" command isn't allowed any more.
+ * muwi: send message if command was "color" or "system".
+
+2002/02/25 
+ * muwi: Removed bug in output, when using text browers like w3m.
+ * muwi: Searchinterface is now more userfriendly.
+
+2002/02/14 
+ * Changed date typo in Changelog.
+ * Rewritten parts of mutellad to suppert the new option "restart" (see README)
+ * mutellad now cleans up ok. No zombie-processes remains.
+ * beatified the debug output of mutellad.
+ * muwi no use the CGI-Carp Module to display errors in the Browser.
+
+2002/02/11 - v0.2
+ * add mu-conadapt, a tool that optimizes the MaxConnections using ping
+ * made $DownloadPath in muwi configurable
+
+2002/02/09
+ * add inital configuration to mutellad
+   - set UseANSIColor false
+   - set Paginate false
+ * add small --help help to mutellad
+ * add favicon support to muwi
+
+2002/02/04 - v0.1
+ * initial release of mutellad and muwi
+

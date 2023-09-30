@@ -1,0 +1,149 @@
+
+
+
+# future bitjoe: 
+- mss vom user handy versenden incl bj software
+- update check
+- online games
+- sms 
+
+
+
+29.8.2008:
+	- Bestellen link eingefügt
+	- /anmeldung-pro-user darf sich nur dann sms senden, wenn er auch bezahlt hat
+
+
+8.8.2008:
+	- bitjoe /anmeldung-pro-user vollständig erstellt, erste tests zeigen, dass es erfolgreich funktioniert 
+
+15.7.2008:
+	- service_paymentenhanced angepasst
+
+14.7.2008:
+	- wwwroot/service_paymentenhanced erstellt - erweiterte zahlmöglichkeiten vom handy aus
+
+2.7.2008:
+	- faq, software.html udn funktioniert.html angepasst
+
+26.6.2008:
+	- /service/checkversion.php - für proxy api call vorbereitet - gibt update informationen aus
+	- /service/newaccount.php - für proxy api call vorbereitet - erstellt neuen account
+	- config.inc.php: angepasst für logging erweitert, CHECKVERSION_DE / _EN definiert und angepasst für BITJOEHANDY_STANDART_VOLUME_SUCCESS # wieviele erfolgreiche suchversuche hat ein gratis user, der sich mittels bitjoe handy angemeldet hat
+	- functions.inc.php: ReadFile_() erstellt
+	- logging.inc.php: neue logging funktionen für /service api calls vorbereitet
+	- wappush.inc.php: deutsche wappush werden über billigere route route2 geschickt auslandswappush über route1 - http://www.mobile-marketing-system.de/preise/sms-mms-versand-und-empfang/
+
+24.6.2008:
+	- html.inc.php / payment.inc.php / config.inc.php: angepasst für 3 tages flatrate
+	- functions.inc.php: GetFlatrateValidUntilDateInDays erstellt nun ein datum plus X tage
+	- apihandler.php angepasst für 3 tages flatrate
+	- /service_handypayment/ - bug fixed und angepasst für 3 tages flatrate
+	- service_paypal: htaccess ausgestellt / angepasst für 3 tages flatrate
+
+22.6.2008:
+	- apihandler.php leitet nun auf /login/ weiter
+
+18.6.2008:
+	- /hilfe software und funktioniert youtube video reingestellt, weil zuviel spinner meine nummer anrufen
+
+17.6.2008:
+	- Anmeldung vom handy aus - Dokument Version 1 erstellt
+	- sms.inc.php: eingebaut, dass sms nach deutschland als sms low cost plus versendet werden (0,045€ statt 0,079€) und nur internationale sms als direkt plus (0,079€) versendet werden
+
+
+16.6.2008:
+	- Handy Payment für 2,99€ vorbereitet bei Micropayment
+	- apihandler.php angepasst: für 2,99€ tarif 
+	- payment.inc.php config.inc.php html.inc.php angepasst für neuen 2,99€ tarif
+	- suchvolumen für volumentarife angepasst/erhöht
+	- /tarif/index.php erstellt
+	- /login/tarif.php angepasst
+	- html.inc.php: Link zu faq.html auf rel="nofollow" gesetzt
+
+
+15.6.2008:
+	- wappush.inc.php: es wird nun eingetragen, ob eine wappush erfolgreich an den user versendet wird:
+		$TABLE1				= BJPARIS_TABLE;
+		$SqlUpdateBJPARIS 	= "UPDATE `$TABLE1` SET `web_got_wappush` = \"1\"  WHERE CONVERT( `$TABLE1`.`web_mobilephone_full` USING utf8 ) = \"$MobilePhoneBeauty\" LIMIT 1;";
+		$MySqlExec 			= doSQLQuery($SqlUpdateBJPARIS);
+
+	- Neue Anmeldung:	###Achtung: die Captchas kommen vom NL BitJoe Suchserver - dort den Webserver nicht ausschalten!!!### 
+		checksettings.php: fehler behoben
+		html.inc.php: neue anmeldescreens programmiert
+		/login/index.php internetsettings.php und internetsettings2.php erstellt
+
+	- anmeldung.php angepasst: gibt nun aus wieviel erfolgreiche wappush versendet wurden
+	- html.inc.php: metakeys verbessert, link zu bitjoe home mit title tag versehen
+	- software funktioniert und /hilfe den metakeys und home link angepasst
+
+14.6.2008:
+	- apihandler.php: fixed access bug
+	- kontignent für 01705535440 erhöht
+	- /hilfe angepasst und eingetragen, dass kürzere suchwörter mehr treffer bringen als lange
+	- funktion.html und software.html angepasst und eingetragen, dass kürzere suchwörter mehr treffer bringen als lange
+
+13.6.2008:
+	- wappush.inc.php: loggt jetzt alle gesendeten wappushs mit
+	- sms.inc.php: loggt jetzt jede sms mit
+	- 01706063695 hat vom handy aus bezahlt, hab ihn manuell auf 30/70 gestellt
+	- signup.php: wappush und sms werden nun separat versendet
+	- wappush.inc.php: fopen-timeout eingebaut
+	- sms.inc.php: fopen timeout eingebaut
+
+11/12.6.2008:
+	- neue anmeldung programmiert - noch nicht getestet
+	
+9.6.2008:
+	- Account: 01735626684 hatte probleme bei gutschrift des betrages über 2xvolumelow -> habe Gutschrift über 100successfull und 300 overall gewährt
+	- /srv/server/wwwroot/service_micropayment_api dort mal das .htaccess rausgenommen
+	- account: 017668142204 geupdated auf 50/150 weil technisches problem micropayment
+
+8.6.2008:
+	- html.inc.php: neus Bild für Startseite, Text auf Startseite nach unten gelegt
+
+7.6.2008:
+	- software funktioniert /hilfe Interneteinstellunge überarbeitet
+	- faq.html: wie richtige ich mein internet auf handy ein hinzugefügt
+	- html.inc.php: IndexPage() Links zur Interneteinstellunge geändert
+
+6.6.2008:
+	- support.html: added software zusenden anfragen, mehrere br hinzugefügt
+	- support.php: fixed no handynummer bug, added software zusenden support | fixed from, name
+	- /login/resendsoftware.php: nochmal software zusenden eingebaut
+	- html.inc.php: ResendSoftwarePage() erstellte
+	- html.inc.php: überall die links zu /login/resendsoftware.php eingebaut
+	- logging.inc.php: resendsoftware logging eingebaut
+	- wappush.inc.php: SendWappushSimple eingebaut - versendet nur wappush ohne sms
+	- config.inc.php: angepasst für logging resendsoftware
+	- tipdestages.txt: sonderzeichen ordentlich ausgegeben
+	- html.inc.php: <img src="http://status.icq.com/26/online1.gif" rel="nofollow"/> ICQ Support <b>459793094</b>  auf jeder seite hinzugefügt
+	- software.html funktioniert.html /hilfe den 2.punkt hinzugefügt dass man browsercache leeren soll bevor man download der BJ software macht
+	- faq.html angepasst und browser cache leeren hinzugefügt
+	- software, funktioniert, /hilfe fixed interneteinstellungslinks
+	- html.inc.php: IndexPage() Added Interneteinstellunge herbekommen
+	- ICQ Support Nummer erstellt
+
+#########
+
+5.6.2008:
+	- wappush.inc.php: mobile-marketing als standart wappush versender / mobilant rausgenommen
+	- html.inc.php: NachAnmeldungSimple() sonderzeichen gequotet
+	- html.inc.php: IndexPage() kurze beschreibung über das 60 Downloads Bild eingebaut
+	- software.html hilfe/ und funktioniert.html kurze beschreibung eingebaut
+	- html.inc.php: zeichensatz utf8 in allen metakeys installiert
+	- html.inc.php: IndexPage(): Description geändert
+	- Outlook alle Swissrefresh Emails eingestellt und werden abgerufen
+
+########
+
+4.6.2008:
+	- html.inc.php: NachAnmeldungSimple() erstellt und bei signup.php eingebaut - gibt kurze info wieder, dass dem user sms und wappush zugeschickt wird
+	- signup.php: NachAnmeldungSimple() eingebaut statt NachAnmeldung();
+	- wappush.inc.php: AT , CH und O2 nutzern werden nicht über mobilant sondern über mobile-marketing-systems per wappush gesendet
+	- html.inc.php + bitjoe.css: neues bild auf Anmeldebutton gesetzt
+	- neues bitjoe.flv video eingebaut mit besserer auflösung/schärfe
+	- wappush.inc.php: Wappush Text auf "BitJoe Download Software" geändert
+	- server/cron/resend_sms.php: erstellt - versendet allen usern nochmal die sms mit den zugangsdaten
+
+

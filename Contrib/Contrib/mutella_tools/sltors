@@ -1,0 +1,71 @@
+#!/bin/sh
+#
+#  Link files to $MUTELLASHAREDIR ( defaulted to /temp/uploads/Remote_Shared )
+#
+#  Usage: $0 FILES
+#  Usage: $0 -pre   "Filename_pre_add" FILES
+#         $0 -cdrip FILES
+#
+#  In the first one, it just symlinks in the files, same name
+#  In the second one, It adds a Pre-fix to the name of the symlink
+#  In the third and best one, it Looks at the directory of the File, say:
+#    /temp/cdrips/Alice Cooper/Flush The Fashion/01 - Talk Talk
+#  And makes the Prefix "Alice Cooper - Flush The Fashion - " For you.
+#   Used with Grip, this is great to have short names in the Main storage,
+#    and expand them out for Mutella
+# 
+#  NOTE1:  Before it does anything, it removes any Non-readable files from
+#          the Shared Directory, there assumed to be Broken Symlinks
+#
+#  2003-11-30  Eric Aksomitis (aksomitis@mail.com)
+#
+
+[ -z "$MUTELLASHAREDIR" ] && MUTELLASHAREDIR="/temp/uploads/Remote_Shared"
+
+if [ "$1" = "-pre" ] ; then
+  PREFIX="$2"
+  shift
+  shift
+fi
+
+if [ "$1" = "-cdrip" ] ; then
+  ISCDRIP=1
+  shift
+fi
+
+for FILE in $MUTELLASHAREDIR/* ; do
+  if [ -r "$FILE" ] ; then
+    DO=NOTHING
+  else
+    echo "Removing $FILE"
+    rm -f "$FILE"
+  fi
+done
+
+while [ -n "$1" ] ; do
+  FILE="$1"
+  BASEFILE=`basename "$FILE"`
+  FILEDIR=`dirname "$FILE"`
+  FILEDIR=`cd "$FILEDIR" ; pwd`
+  NEWNAME="$FILEDIR/$BASEFILE"
+  shift
+  if [ -n "$ISCDRIP" ] ; then
+   OLDPWD="`pwd`"
+   cd "$FILEDIR"
+   PREFIX=`basename  "$FILEDIR"`
+   TEMP=`cd .. ; basename "\`pwd\`" `
+   PREFIX="$TEMP - $PREFIX - "
+   echo "Using Prefix: $PREFIX"
+   cd "$OLDPWD"
+  fi
+    
+  if [ -e "$FILE" ] ; then
+    rm -f "$MUTELLASHAREDIR/$BASEFILE" "$MUTELLASHAREDIR/$PREFIX$BASEFILE"
+  else
+    echo "FILE DOES NOT EXIST: $FILE"
+    exit 1
+  fi
+
+  ln -s "$NEWNAME" "$MUTELLASHAREDIR/$PREFIX$BASEFILE"
+
+done

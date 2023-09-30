@@ -1,0 +1,20 @@
+
+error = [31m
+extra = [32m
+flag1 = [34m
+flag2 = [33m
+header = [1m
+id = [1m
+ip = [35m
+known = [35m
+message = [34m
+name = [31m
+num = [36m
+percent = [33m
+sha1 = [33m
+size = [34m
+speed = [32m
+status = [34m
+time = [35m
+value = [34m
+variable = [35m

@@ -1,0 +1,161 @@
+
+######## todos:
+ultrapeers.pm ultrapeers installer überarbeiten
+
+
+############################### 17.7.2006 ##############################
+
+SortRank.pm: 
+	- Fix, dass ips doppelt in einem Treffer auftauchen
+
+LicenceTransfer.pm:
+	- Fixxing aller Bugs
+	- Funktionstest erfolgreich
+	- Verschlüsselung klappt
+	- Funktion zum Testen der SQL Installation: noch nicht getestet
+
+IO.pm:
+	- Funktionen zum Schreiben von Dateiein WriteFile() geschrieben
+	- Funktionen zum Lesen einer Datei in einen Scalar, Array geschrieben, Rückgabe jeweils eine Referenz
+
+############################### 18.7.2006 ##############################
+
+MutellaProxy.pl:	
+	- Fix: wenn bevor Result Query invalid gesendet wird, versuche ergebnisse aus dem cache zu holen, wenn nicht erfolgreich dann query invalid
+	- fix wieder rausgenommen
+
+SortRank.pm: 
+	- Sortierung nach Speed in den einzelnen Treffern
+
+ResultCleaner.pm:
+	- Eingebaut, dass er Checkt, ob Eintrag erfolgreich gelöscht wurde
+
+
+############################### 24.7.2006 ##############################
+
+
+Generell:
+	- mit GWebcache experimentiert
+	- auf zoozle einen gwebcache installiert
+
+IO.pm:	
+	- Timeout auf 120 Sekunden eingestellt
+
+
+############################### 25.7.2006 ##############################
+
+
+	package MutellaProxy::Ultrapeers erstellt
+	Dient dem automatischen hinzufügen der ultrapeers
+	sub GetAndInstallUltraPeerHostListFromGwebCache(){}: query an webcache senden und hosts installation
+	sub GetAndInstallUltraPeerHostList(){}: phex ultrapeerliste nehmen und installieren
+	AddUltraPeers.pl: automatisch alle 300 sec ultrapeers installieren
+
+
+############################### 26.7.2006 ##############################
+
+
+IO.pm:	
+	- Timeout für TCP socket eingebaut
+ 
+LicenceManagement.pm:
+	- Eingebaut, das wenn Fehler mit SQL Socket entsteht, er ein neues Socket aufmachen soll
+
+SortRank.pm:
+	- Approximatives Matching Eingebaut
+
+LicenceGenerator.pm LicenceManagement.pm LicenceTransfer.pm:
+	- Eingebaut, das wenn der SQL Socket verschwindet, ein neuer aufgemacht wird und die Funktion nochmal aufgerufen wird
+
+Ultrappers.pm:
+	- InstallKnowHostsFromFile() installiert alle bekannten Hosts aus host.save in den mutella
+
+CryptoLibrary.pm:
+	- Fixed broken Sql Socket bug
+
+
+############################### 27.7.2006 ##############################
+
+	Programm geschrieben, das überwacht ob, AddUltraPeer, MutellaProxy und der 
+	Mutella ordentlich laufen, wenn nicht mail und neustart der beendeten programme
+
+LicenceTransfer.pm:
+	- fixed small bug
+
+SortRank.pm, IO.pm, Parser.pm:
+	- SizeFilter eingebaut
+
+Ultrapeers.pm:
+	- NSLOOKUP eingebaut - nur valide IPs werden als ULTRAPEER an den Mutella übergeben
+
+
+############################### 31.7.2006 ##############################
+
+
+Ultrapeers.pm:
+	- NSlookup aus einigen Funktionen rausgenommen
+
+SortRank.pm:
+	- Bugfix für das Problem, dass es zur Exception beim Handy kommt, wenn Fileindex falsch ausgegeben wird
+	
+Parser.pm:
+	- CheckShareRatio() programmiert, schmeisst alle UP raus, die nur M oder K shares
+
+
+############################### 4.8.2006 ##############################
+
+
+SortRank.pm:
+	- Sichergestellt, das das Handy immer Gültige Filename/Peerinfos bekommt
+	
+ResultCache.pm:
+	- Cache nun abhängig vom Dateityp, sprich ein Bildsauger bekommt anderen Cache als Videosauger
+
+ResultCleaner.pm:
+	- Eingebaut, dass von x bis zahlenwert die einträge im mutella gelöscht werden : nützlich für den Massentest
+
+
+############################### 12.8.2006 ##############################
+
+
+SortRank.pm:
+	- komplette neuprogrammierung
+
+Filter.pm:
+	- Sizefilter korriegiert
+
+
+############################### 3.12.2006 ##############################
+
+
+IO.pm:
+	- WriteFile()/writeSocket() Code Cleanup
+	- WriteFile() better randomized Filename generation
+
+Gzip.pm:
+	- Neuerstellung:
+		+ compress_zlib; decompress_zlib; compress_string_zlib;	=> comprimiere file/string mit Compress::Zlib
+		+ compress_gzipprog; decompress_gzipprog; compress_string_gzipprog; => comprimiere file/string mit gzip programm - eventuell schneller
+
+GzipMutellaProxy:
+	- GzipString() komprimiert einen übergebenen String und liefert das comprimierte Gegenstück zurück
+
+
+############################### 5.12.2006 ##############################
+
+	- Gzip.pm: compression and decompression of string works
+
+
+############################## 20.1.2007: ############
+
+	- IO.pm: CreateProxySocket( $port ) mit portübergabe
+	- Auswahl, auf welchem port der Proxy laufen soll
+
+############################## 8.2.2007: ############
+
+	- gzipmutellaproxy.pl gzipped of fehlercodes
+
+
+################################ 26.3.2007: ##########
+
+- SortRank.pm: same technic as phexsortrank

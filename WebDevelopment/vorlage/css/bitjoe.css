@@ -1,0 +1,65 @@
+/* Generelle Einstellungen für die gesamte Webseite gültig */
+* {
+	margin: 0px;
+	padding: 0px;
+	font-family: Arial, Verdana, sans-serif;
+}
+
+.nav {
+font-size: 12px;
+color: #485467;
+}
+
+.login {
+font-size: 9px;
+color: #999999;
+}
+
+.login-input {
+border:1px solid grey;
+height: 14px;
+width: 75px;
+font-size: 11px;
+color: #999999;
+}
+
+.login-input2 {
+border:1px solid grey;
+height: 14px;
+width: 50px;
+font-size: 11px;
+color: #999999;
+}
+
+.login-submit {
+height: 15; 
+width: 50; 
+border-top: 1px none; 
+border-left: 1px none; 
+border-right: 1px solid grey; 
+border-bottom: 1px solid grey; 
+font-size: 9px; 
+color: #999999; 
+background: transparent;
+}
+
+.newuser-submit {
+background-image:url(../images/button2.png);
+background-repeat: no-repeat;
+height: 30px;
+width: 220px;
+border-top: 0px;
+border-left: 0px;
+border-right: 0px;
+border-bottom: 0px;
+cursor: hand;
+}
+
+.small-text {
+color: #666666;
+font-size: 9px;
+}
+
+.tip {
+color: #c90735;
+}

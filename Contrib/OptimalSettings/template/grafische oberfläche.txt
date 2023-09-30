@@ -1,0 +1,109 @@
+[11:45] Chip: probier mal: 
+1. software runterladen und installieren
+
+
+http://heanet.dl.sourceforge.net/sourceforge/vnc-tight/tightvnc-1.2.9-setup.exe
+
+2. starten 
+3. adresse eingeben (auch :1 gehört dazu) 
+
+81.169.141.129:1
+
+pass: ssad
+
+[14:09] Chip: öm
+[14:09] Chip: mom
+		vncpasswd - passwort für vnc server setzen
+[14:09] Chip: zunächst musst den server killen ..
+[14:10] Chip: mit vnc4server -kill :1
+[14:11] Chip: danach: vnc4server -geometry 1024x768 -depth 24
+[14:12] Chip: ä ne
+[14:12] Chip: vnc4server -geometry 800x600 -depth 24
+[14:12] Chip: dann kommt ne passwortabfrage .. also da kannst das passwort festlegen
+[14:12] Chip: danach einfach den vncserver starten mit: vnc4server
+[14:13] Chip: das wars
+
+
+temp:
+
+PATH=/usr/java/jre1.6.0_02/bin:$PATH
+export PATH
+echo $PATH
+
+
+Eine dauerhafte Umstellung der Umgebungsvariablen ist etwas komplizierter und muss je nach Linux-Distribution unterschiedlich erfolgen. Unter SuSE Linux 7.x/8.x wird im Verzeichnis '/etc' eine neue Datei mit dem Namen 'profile.local' und folgendem Inhalt erzeugt:
+
+JAVA_BINDIR=/usr/java/jre1.6.0_02/bin
+JAVA_HOME=/usr/java/jre1.6.0_02
+JDK_HOME=/usr/java/jre1.6.0_02
+JRE_HOME=/usr/java/jre1.6.0_02
+PATH=`echo $PATH|sed 's|:/usr/lib/java/bin|:/usr/java/jre1.6.0_02/bin|'`
+export JAVA_BINDIR
+export JAVA_HOME
+export JDK_HOME
+export JRE_HOME
+export PATH
+
+
+
+
+##########################################
+
+http://debiananwenderhandbuch.de/gui.html
+http://de.gentoo-wiki.com/VNC-Server
+
+1.) apt-get install kde
+2.) apt-get install x11
+3.) apt-get install xserver-xfree86 xserver-common xfonts-base oder apt-get install xserver-xorg-core xserver-xorg x11-common xfonts-base
+4.) apt-get install vncserver vncviewer xtightvncviewer vnc4-common vnc4server
+5.) /etc/init.d/kdm|xdm start
+6.) startx
+
+7.)	als nobody
+	vncpasswd												vnc4passwd
+	vncserver -kill :1
+	vncserver -geometry 1024x768 -depth 16 -fp /usr/share/fonts/X11/misc/ :1				vnc4server -geometry 1024x768 -depth 16 -fp /usr/share/fonts/X11/misc/ :1
+	vncserver -geometry 800x600 -depth 8 :1
+	tightvncserver -geometry 1024x768 -depth 16 :1
+8. spass haben
+9.) für jeden neuen phex auf einem server:
+	a.)neuen linux user anlegen + sicheres pass setzen 
+	b.)vncserver -geometry 1024x768 -depth 16 -fp /usr/share/fonts/X11/misc/ :NUMBEROFPHEX
+	c.)mit vnc einloggen auf IP:NUMBEROFPHEX
+	d.)beide phex müssen andere ports bekommen, beendet werden und danach neugestartet
+
+
+
+apt-get install sun-java5-jre
+
+
+in /etc/apt/sources.list  eintragen: 
+deb http://ftp.de.debian.org/debian/ testing main contrib non-free 
+# deb http://ftp.de.debian.org/debian sid main non-free
+
+http://packages.debian.org/unstable/libs/sun-java6-jre
+
+apt-get install sun-java6-jre
+apt-get install icewm
+
+
+http://packages.debian.org/testing/libs/sun-java6-bin
+
+
+http://download.opensuse.org/repositories/Java:/addon:/test/openSUSE_10.2/i586/java-1_6_0-sun-1.6.0-3.1.i586.rpm
+
+"libstdc++-libc6.2-2.so.3" ist in packet "compat" unter suse zu finden
+
+
+statt kde icewm installieren! 
+
+
+
+By editing the /etc/kde3/kdm/kdmrc file;
+comment: ServerArgsLocal = -nolisten tcp
+
+and,
+
+edit /etc/X11/xinit/xserverrc file
+
+remove -nolisten tcp

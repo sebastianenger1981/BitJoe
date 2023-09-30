@@ -1,0 +1,50 @@
+24.132.11.194:6348	BearShare 5.2.4.7	Ausgehend 	Super-Kumpel	133 (19)	291 / 0 / 0		1m 53s	Verbunden 
+87.204.67.76:6348	BearShare 5.2.3.5 (Polska)	Ausgehend 	Super-Kumpel	96 (24)	338 / 61 / 0		1m 50s	Verbunden 
+83.6.218.214:6346	BearShare 5.2.4.8 (Polska)	Ausgehend 	Super-Kumpel	107 (21)	281 / 0 / 0	4/13,6 MB	1m 46s	Verbunden 
+85.178.36.76:6346	BearShare 5.2.1.2 (Deutsch)	Ausgehend 	Super-Kumpel	94 (20)	415 / 0 / 0	1184/5,28 GB	1m 47s	Verbunden 
+24.231.25.134:6348	BearShare Pro 5.2.4.7	Ausgehend 	Super-Kumpel	102 (20)	289 / 12 / 16	0/0 bytes	1m 42s	Verbunden 
+68.186.165.42:6348	BearShare 5.2.4.12	Ausgehend 	Super-Kumpel	110 (21)	395 / 0 / 0	1/3,5 MB	1m 42s	Verbunden 
+89.176.190.115:6348	BearShare 5.2.2.2	Ausgehend 	Super-Kumpel	115 (19)	376 / 73 / 0		1m 41s	Verbunden 
+85.232.236.163:6346	BearShare 5.2.1.2 (Polska)	Ausgehend 	Super-Kumpel	99 (14)	391 / 61 / 0		1m 40s	Verbunden 
+71.203.31.15:5712	BearShare 5.2.4.7	Ausgehend 	Super-Kumpel	172 (22)	383 / 56 / 0	0/0 bytes	1m 40s	Verbunden 
+82.39.157.90:6346	BearShare 4.7.0.80	Ausgehend 	Super-Kumpel	89 (21)	392 / 0 / 0	220/1011,4 MB	1m 38s	Verbunden 
+69.192.131.149:6348	BearShare 5.2.3.15	Ausgehend 	Super-Kumpel	36 (9)	392 / 104 / 16	1643/7,08 GB	1m 38s	Verbunden 
+81.152.240.96:6348	BearShare 5.2.1.9	Ausgehend 	Super-Kumpel	66 (15)	356 / 102 / 26	305/2,56 GB	1m 36s	Verbunden 
+68.206.107.123:6348	BearShare Lite 5.2.4.2	Ausgehend 	Super-Kumpel	164 (20)	377 / 0 / 7		1m 38s	Verbunden 
+24.72.217.245:6348	BearShare 5.2.0.5	Ausgehend 	Super-Kumpel	79 (17)	518 / 0 / 260	10/876,0 MB	1m 37s	Verbunden 
+213.190.61.241:6348	BearShare 5.2.2.2	Ausgehend 	Super-Kumpel	50 (15)	384 / 52 / 20	17/89,5 MB	1m 35s	Verbunden 
+70.179.193.50:6346	BearShare 4.6.3.3	Ausgehend 	Super-Kumpel	144 (20)	382 / 0 / 8	107/519,9 MB	1m 36s	Verbunden 
+70.225.165.90:6348	BearShare 5.2.1.6	Ausgehend 	Super-Kumpel	123 (18)	389 / 106 / 13	441/2,12 GB	1m 36s	Verbunden 
+86.141.161.177:6346	BearShare 5.1.0.27	Ausgehend 	Super-Kumpel	70 (16)	359 / 78 / 7	967/6,22 GB	1m 28s	Verbunden 
+81.217.156.140:6346	BearShare 4.6.3.3 (Deutsch)	Ausgehend 	Super-Kumpel	71 (15)	317 / 108 / 96		1m 21s	Verbunden 
+82.82.235.179:6348	BearShare 5.2.4.8 (Deutsch)	Ausgehend 	Super-Kumpel	60 (15)	328 / 100 / 64	90/483,7 MB	1m 21s	Verbunden 
+82.52.137.248:6348	BearShare 5.2.4.7	Ausgehend 	Super-Kumpel	0 (0)	242 / 110 / 111		59s	Verbunden 
+87.4.22.133:6348	BearShare 5.2.3.11	Ausgehend 	Super-Kumpel	33 (9)	206 / 0 / 0	1423/5,45 GB	49s	Verbunden 
+83.28.30.67:6348	BearShare 5.2.4.8 (Polska)	Ausgehend 	Super-Kumpel	5 (3)	201 / 0 / 7		44s	Verbunden 
+69.125.114.46:6348	BearShare 5.2.3.12	Ausgehend 	Super-Kumpel	21 (5)	206 / 0 / 1		47s	Verbunden 
+24.12.135.2:6348	BearShare 5.2.1.2	Ausgehend 	Super-Kumpel	33 (8)	201 / 0 / 1		47s	Verbunden 
+84.101.189.106:6348	BearShare 5.2.2.2 (Français)	Ausgehend 	Super-Kumpel	22 (5)	202 / 0 / 5		45s	Verbunden 
+88.111.114.46:6348	BearShare 5.2.4.7	Ausgehend 	Super-Kumpel	24 (6)	194 / 0 / 9		44s	Verbunden 
+64.252.135.44:6348	BearShare 5.2.1.2	Ausgehend 	Super-Kumpel	19 (6)	195 / 31 / 6		41s	Verbunden 
+172.178.5.134:6348	BearShare 5.2.2.2 (Deutsch)	Ausgehend 	Super-Kumpel	18 (5)	191 / 0 / 13	2841/12,94 GB	40s	Verbunden 
+68.99.148.215:50576	LimeWire/4.10.9	Ausgehend 	Super-Kumpel	0 (0)	183 / 105 / 35		37s	Verbunden 
+66.253.234.251:6348	BearShare 5.2.2.2	Ausgehend 	Super-Kumpel	22 (6)	176 / 27 / 4	65/314,1 MB	36s	Verbunden 
+81.183.13.255:6348	BearShare 5.2.1.6	Ausgehend 	Super-Kumpel	20 (6)	169 / 1 / 32		35s	Verbunden 
+84.134.95.83:6348	BearShare Lite 5.2.4.2	Ausgehend 	Super-Kumpel	8 (2)	165 / 2 / 20		33s	Verbunden 
+172.173.119.221:6346	BearShare Lite 5.2.1.1	Ausgehend 	Super-Kumpel	14 (4)	167 / 0 / 15		34s	Verbunden 
+68.76.217.160:6346	BearShare 5.2.2.1	Ausgehend 	Super-Kumpel	0 (0)	118 / 92 / 0		19s	Verbunden 
+80.43.19.32:6348		Ausgehend 	Kumpel	0 (0)	0 / 0 / 0		0s	Verbinde... 0.6 Handschlag.
+68.60.76.46:6348	BearShare 5.2.2.2	Ausgehend 	Super-Kumpel	0 (0)	142 / 99 / 0		26s	Verbunden 
+84.112.168.53:6348	BearShare 5.2.4.12 (Polska)	Ausgehend 	Super-Kumpel	4 (1)	136 / 37 / 26		23s	Verbunden 
+82.83.156.115:6348	BearShare 5.2.4.8 (Deutsch)	Ausgehend 	Super-Kumpel	0 (0)	123 / 99 / 0		20s	Verbunden 
+24.217.84.55:6348	BearShare 5.2.2.2	Ausgehend 	Super-Kumpel	1 (0)	108 / 49 / 0		18s	Verbunden 
+24.21.35.15:6346	BearShare 5.0.2.3	Ausgehend 	Super-Kumpel	0 (0)	98 / 54 / 0		16s	Verbunden 
+72.240.86.126:6348	BearShare 5.2.4.7	Ausgehend 	Super-Kumpel	0 (0)	89 / 54 / 0		14s	Verbunden 
+212.120.83.204:6348	BearShare 5.2.4.3	Ausgehend 	Super-Kumpel	0 (0)	87 / 54 / 0		13s	Verbunden 
+87.8.171.205:6348	BearShare 5.2.2.2	Ausgehend 	Super-Kumpel	0 (0)	84 / 52 / 0		12s	Verbunden 
+24.147.61.5:6348	BearShare Pro 5.2.2.2	Ausgehend 	Super-Kumpel	0 (0)	73 / 53 / 0		9s	Verbunden 
+82.250.35.27:6348		Ausgehend 	Kumpel	0 (0)	0 / 0 / 0		0s	Verbinde... 0.6 Handschlag.
+217.162.122.11:6348	BearShare 5.2.2.2 (Deutsch)	Ausgehend 	Super-Kumpel	0 (0)	39 / 0 / 0		5s	Verbunden 
+69.161.89.28:6348		Ausgehend 		0 (0)	0 / 0 / 0		0s	Verbinde... 
+68.148.120.206:6348		Ausgehend 		0 (0)	0 / 0 / 0		0s	Verbinde... 
+81.171.27.102:6348		Ausgehend 		0 (0)	0 / 0 / 0		0s	Verbinde... 

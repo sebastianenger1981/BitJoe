@@ -1,0 +1,130 @@
+[17:29:03] *** data5005 hat TheCerial zum Gruppen-Chat eingeladen
+ ***
+[17:29:13] data5005 : Phex:
+Spamfilter aktivieren bei suche. (high)
+Ipfilter (normal)
+Funktionen f¸r delay der UP-anfragen (high)
+max. X (default=30) Quellen pro datei ausliefern ( X besten nach speed) --> in GUI konfigurierbar (high)
+wenn genug Treffer + Quellen, dann Suche = stopp (low)
+
+Handy:
+Dateil‰nge begrenzen auf 50 zeichen + dateiendung (normal)
+Balken neben dem Filename auf basis des scores anlegen (max. 20px). Ab score x (zum test erst mal 50 einstellen) soll der Balken voll sein. An sonsten abgestuft in 5er schritten (normal)
+
+Distributet:
+Phex Direkt anfragen! verschl¸sselt, aber nicht komprimiert. (normal)
+Ranking : Quellenpunkte   x  Prozent matching  (normal)
+[17:33:39] data5005 : Phex:
+Spamfilter aktivieren bei suche. (high)
+Ipfilter (normal)
+Funktionen f¸r delay der UP-anfragen (high)
+max. X (default=30) Quellen pro datei ausliefern ( X besten nach speed) --> in GUI konfigurierbar (high)
+max. X (default=15) Treffer ausliefern (nach Quellen) --> in GUI konfigurierbar (high)
+wenn genug Treffer + Quellen, dann Suche = stopp (low)
+
+Handy:
+Dateil‰nge begrenzen auf 50 zeichen + dateiendung (normal)
+Balken neben dem Filename auf basis des scores anlegen (max. 20px). Ab score x (zum test erst mal 50 einstellen) soll der Balken voll sein. An sonsten abgestuft in 5er schritten (normal)
+
+Distributet:
+Phex Direkt anfragen! verschl¸sselt, aber nicht komprimiert. (normal)
+Ranking : Quellenpunkte x Prozent matching  (normal)
+[17:43:58] TheCerial : whitelist.conf im phex verzeichnis direkt
+[17:44:11] TheCerial : IP
+[17:44:12] TheCerial : IP
+[17:44:13] TheCerial : IP
+[17:45:04] TheCerial : 1.1.1.1
+[17:45:22] data5005 : # speed related Things
+my $SpeedRankingPointsforModem  = 0.85;
+my $SpeedRankingPointsforISDN  = 1.05;
+my $SpeedRankingPointsforDSLLite = 1.25;
+my $SpeedRankingPointsforDSL1000 = 1.35;
+my $SpeedRankingPointsforDSL2000 = 1.4;
+my $SpeedRankingPointsforDSL3000 = 1.45;
+my $SpeedRankingPointsforDSL4000 = 1.5;
+my $SpeedRankingPointsforDSL6000 = 1.55;
+my $SpeedRankingPointsforT1   = 1.6;
+my $SpeedRankingPointsforDSL16000 = 1.65;
+my $SpeedRankingPointsforT3   = 1.7;
+[17:49:49] data5005 : Phex:
+Spamfilter aktivieren bei suche. (high)
+Ipfilter (normal)
+Funktionen f¸r delay der UP-anfragen (high)
+max. X (default=30) Quellen pro datei ausliefern ( X besten nach speed) --> in GUI konfigurierbar (high)
+max. X (default=15) Treffer ausliefern (nach Quellen) --> in GUI konfigurierbar (high)
+wenn genug Treffer + Quellen, dann Suche = stopp (low)
+
+Handy:
+Dateil‰nge begrenzen auf 50 zeichen + dateiendung (normal)
+20 Zeichen bei speichern der Datei als default (low)
+Balken neben dem Filename auf basis des scores anlegen (max. 20px). Ab score x (zum test erst mal 30 einstellen) soll der Balken voll sein. An sonsten abgestuft in 3er schritten (normal)
+Versuche Treffer abzuhohlen: nur noch 2 Versuche --> 1. Versuch =30 sekunden; 2. Versuch=45 Sekunden (low)
+
+Distributet:
+Phex Direkt anfragen! verschl¸sselt, aber nicht komprimiert. + Whitelist f¸r IPs (normal)
+Ranking : Quellenpunkte x Prozent matching  (normal)
+[17:58:23] TheCerial : ds
+[17:58:23] TheCerial : df
+[17:58:24] TheCerial : sdf
+[17:58:24] TheCerial : sdf
+[17:58:25] TheCerial : sdf
+[17:58:25] TheCerial : sdff
+[17:58:25] TheCerial : sdff
+[17:58:25] TheCerial : sdf
+[17:58:26] TheCerial : sdff
+[17:58:26] TheCerial : sdff
+[17:58:26] TheCerial : sdf
+[17:58:27] TheCerial : sdf
+[17:58:27] TheCerial : sdf
+[17:58:27] TheCerial : sdf
+[17:58:27] TheCerial : sdf
+[17:58:28] TheCerial : sdf
+[17:58:28] TheCerial : sdf
+[17:58:28] TheCerial : dsf
+[17:58:35] data5005 : Phex:
+- Spamfilter aktivieren bei suche. (high)
+- Ipfilter (normal)
+- Funktionen f¸r delay der UP-anfragen (high)
+- max. X (default=30) Quellen pro datei ausliefern ( X besten nach speed) --> in GUI konfigurierbar (high)
+- max. X (default=15) Treffer ausliefern (nach Quellen) --> in GUI konfigurierbar (high)
+- wenn genug Treffer + Quellen, dann Suche = stopp (low)
+
+Handy:
+- Dateil‰nge begrenzen auf 50 zeichen + dateiendung (normal)
+- 20 Zeichen bei speichern der Datei als default (low)
+- Balken neben dem Filename auf basis des scores anlegen (max. 20px). Ab score x (zum test erst mal 30 einstellen) soll der Balken voll sein. An sonsten abgestuft in 3er schritten (normal)
+- Versuche Treffer abzuhohlen: nur noch 2 Versuche --> 1. Versuch =30 sekunden; 2. Versuch=45 Sekunden (low)
+
+Distributet:
+- Phex Direkt anfragen! verschl¸sselt, aber nicht komprimiert. + Whitelist f¸r IPs (normal)
+- Ranking : Quellenpunkte x Prozent keywordmatching  
+--> bei Ergebnissauslieferung --> truncated Points
+--> Quellenpunkte kann max. 30x1.7 sein | Prozent keywordmatching ist max 1
+(normal)
+- Beim filtern, doppelte IP's Rausschmeiﬂen, dabei Port ignorieren (very low)
+[18:02:43] TheCerial : $file = susbst($QuellString, 0,20);
+[18:04:19] TheCerial : 10 "Berlin   ".jpg
+[18:04:26] TheCerial : "Berlin".jpg
+[18:20:49] data5005 : Phex:
+- Spamfilter aktivieren bei suche. (high)
+- Ipfilter (normal)
+- Funktionen f¸r delay der UP-anfragen (high)
+- max. X (default=30) Quellen pro datei ausliefern ( X besten nach speed) --> in GUI konfigurierbar (high)
+- max. X (default=15) Treffer ausliefern (nach Quellen) --> in GUI konfigurierbar (high)
+- wenn genug Treffer + Quellen, dann Suche = stopp (low)
+
+Handy:
+- Dateil‰nge begrenzen auf 50 zeichen + dateiendung (normal)
+- 20 Zeichen bei speichern der Datei als default (low)
+- ¸bersch¸ssige Leerzeichen entfernen (low)
+- Balken neben dem Filename auf basis des scores anlegen (max. 20px). Ab score x (zum test erst mal 30 einstellen) soll der Balken voll sein. An sonsten abgestuft in 3er schritten (normal)
+- Versuche Treffer abzuhohlen: nur noch 2 Versuche --> 1. Versuch =30 sekunden; 2. Versuch=45 Sekunden (low)
+
+Distributet:
+- Phex Direkt anfragen! verschl¸sselt, aber nicht komprimiert. + Whitelist f¸r IPs (normal)
+- Ranking : Quellenpunkte x Prozent keywordmatching  
+--> bei Ergebnissauslieferung --> truncated Points
+--> Quellenpunkte kann max. 30x1.7 sein | Prozent keywordmatching ist max 1
+(normal)
+- Beim filtern, doppelte IP's Rausschmeiﬂen, dabei Port ignorieren (very low)
+[18:34:21] TheCerial : denk dran die datei weiter zu leiten

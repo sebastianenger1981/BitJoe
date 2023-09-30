@@ -1,0 +1,399 @@
+BenQ-Siemens EF61 # MIDI MP3, SMAF, imelody  # 3gp # 
+sony_ericsson w810i # MP3 AAC  # 3GP MPEG4 # 
+sony_ericsson k800i # MP3 AAC, AAC+, eAAC+,WMA  # MPEG4 3GP, Real # 
+nokia n80 # MP3 AAC, AAC+, eAAC+, Real V8, WAV, WMA, M4A, AWB  # MP4 3GPP, *.3gp # 
+nokia 6280 # polyphone MIDI-, MP3-, AAC/eAAC+, AMR, Video-Klin  # 3GPmp4 # 
+nokia n70 # MP3 AAC, AAC+, eAAC+, Real V8, WAV, WMA, M4A, AWB  # MP4 3GPP, *.3gp # 
+sony_ericsson k750i # Wav MP3, AMR,MP4, M4a, Midi  # MPEG4 3GP, H.263 # 
+lg_electronics chocolate # MIDI MP3  # mpeg4 # 
+samsung sgh-d600 # MP3 AAC, AAC+,AMR,MIDI, MP4  # Mpeg43GPP,H.264 # 
+samsung sgh-e900 # MP3 AAC, AAC+, e-AAC+,  # WMA MPEG4, H.263 # 
+sony_ericsson w800i # MP3 AMR,Midi  # 3GP MPEG4 # 
+Haier A600 # MP3 MIDI  # MPEG4 3GP # 
+Qtek 8500 # AMR AAC, WAV, WMA, MP3, MIDI  # MPEG4 JPEG AVI, H.263 # 
+sony_ericsson k610i # mp4 mp3, m4a, 3gp, 3ga, amr, awb, wav, mid, ra, r  # mp4 .3gp, .rv, .rm, .wmv # 
+sony_ericsson w850i # MP3 AAC  # 3GP MPEG4 # 
+nokia 6233 # MP3 AAC, eAAC+ MIDI  # 3gp H.263 video, MPEG-4 und AMR # 
+nokia 6131 # MP3 MP4, AAC, AAC+, eAAC+, WMA, H.263, H.264  # 3pg # 
+motorola razr_v3i # MP3  # MPEG4 # 
+nokia n93 # MP3 AAC, AAC+, eAAC+, WMA  # 3gpRealMedia # 
+samsung sgh-d800 # MP3 AAC, AAC+,MMF,AMR,MIDI,WMA  # Mpeg43GPP,H.264 # 
+nokia n73 # MP3 AAC, AAC+, eAAC+, WMA,  # MP4 3GPP, *.3gp # 
+motorola razr_v3 # MP3  # MPEG4 # 
+nokia 6230i # MP3 AAC, MIDI, AMR, WAV, M4A  # 3gp # 
+Samsung SGH-X820 # MP3 AAC, AAC+, e-AAC+, MPEG4, H.263  # Mpeg43GPP,H.264 # 
+benq-siemens ef81 # MP3 AAC++  # MPEG4 RealVideo 8/9, h.263 und 3GPP # 
+samsung sgh-d900 # MP3 AAC, AAC+, e-AAC+, MPEG4, H.263  # Mpeg43GPP,H.264 # 
+samsung sgh-z400 # MP3 AAC, AAC+, e-AAC+,  # MPEG H.263 # 
+motorola razr_v3x # AAC+ MPEG4, WMV, WMA, MP3 und  # MPEG4 Real Audio # 
+nokia n91 # MP3 AAC, AAC+, eAAC+, Real V8, WAV, WMA, M4A, AWB  # 3gpRealMedia # 
+sony_ericsson k790i # MP3 AAC, AAC+, eAAC+  # MPEG4 3GP, Real # 
+sony_ericsson v630i # Wav MP3, AMR  # MPEG4 # 
+samsung sgh-d830 # MP3 AAC, AAC+, e-AAC+, MPEG4, H.263  # Mpeg43GPP,H.264 # 
+samsung sgh-d820 # MP3 AAC, AAC+,MMF,AMR,MIDI  # Mpeg43GPP,H.264 # 
+Vodafone VPAcompactIII # MIDI WAV, AAC, MP3, AMR  # avi mpeg4 # 
+samsung sgh-x820 # MP3 AAC, AAC+, e-AAC+, MPEG4, H.263  # Mpeg43GPP,H.264 # 
+nokia 6111 # MIDI MP3, Nokia-rtf, M4F, AAC  # 3GP # 
+sony_ericsson w300i # Wav MP3, AMR, MIDI  # 3gp # 
+sony_ericsson k700i # Wav MP3, AMR,Midi,MP4  # MPEG4 # 
+sony_ericsson w700i # MP3 ACC  # 3GP MPEG4 # 
+benq-siemens s88 # MIDI MP3  # MPEG4 Real Video 8 # 
+nokia n72 # MP3 AAC, AAC+, eAAC+, Real V8, WAV, WMA, M4A, AWB  # MP4 3GPP, *.3gp # 
+motorola razr_v3i_dg # MP3  # MPEG4 # 
+sony_ericsson m600i # MP3 AAC  # - # 
+sony_ericsson w900i # MIDIwav, mp3  # 3gp # 
+Motorola MotoRIZRZ3 # MP3 AAC, AAC+, eAAC+  # 3GPP # 
+o2 xda_trion # MIDI WAV, AAC, MP3, AMR  # mpeg # 
+t-mobile mda_vario_2 # AMR/AAC/WAV/WMA/MP3  # .avi mp4, h263 # 
+nokia 6020 # midi  # H.263 # 
+nokia n92 # MP3 AAC, AAC+, eAAC+, Real V8, WAV, WMA, M4A, AWB  # 3gpRealMedia # 
+lg_electronics kg810 # MIDI MP3  # mpeg4 # 
+nokia n71 # MP3 AAC, AAC+, eAAC+, Real V8, WAV, M4A, AWB  # MP4 3GPP, *.3gp # 
+samsung sgh-x660 # Mp3 MIDI, i-Melody, AMR, SMAF  # 3pg # 
+samsung sgh-d500 # mp3mp4, mid, amr, mmf  # 3gp # 
+motorola slvr_l7 # MP3 MP4, MID, AMR  # 3gp # 
+o2 xda_neo # MIDI WAV, AAC, MP3, AMR  # mpeg # 
+Motorola MotoRAZRMAXX # AAC/WMA/eAAC+/AAC+/WAV/MP3/XMF  # MPEG4 Real Audio # 
+nokia e60 # MP3 AAC  # mpeg # 
+benq-siemens s68 # MIDI WAV  # - # 
+nokia 3250 # MP3 WMA, M4A, AAC  # 3gp # 
+samsung sgh-e770 # MP3 AAC, AAC+  # MPEG4 H.263 # 
+sony_ericsson w710i # MP3 AAC  # 3GP MPEG4 # 
+siemens c75 # MIDI WAV, SFR  # 3gp # 
+siemens sl75 # MIDI MP3  # 3gp # 
+benq-siemens el71 # MIDI MP3  # 3gp # 
+nokia 6270 # MIDI MP3, Nokia-rtf, M4F, AAC  # 3GP # 
+sony_ericsson k610im # mp4 mp3, m4a, 3gp, 3ga, amr, awb, wav, mid, ra, r  # mp4 .3gp, .rv, .rm, .wmv # 
+sony_ericsson z710i # MP3 AAC  # 3GP MPEG4 # 
+sony_ericsson d750i # Wav MP3, AMR  # MPEG43gp # 
+samsung sgh-i750 # mp3  # MPEG4 JPEG AVI, H.263 # 
+nokia n90 # MP3 AAC, AAC+, eAAC+, Real V8, WAV, M4A, AWB  # MP4 3GPP, *.3gp # 
+vodafone vpa_compact_iii # MIDI WAV, AAC, MP3, AMR  # avi mpeg4 # 
+samsung sgh-p300 # mp3mp4, mid, amr, mmf  # 3gp # 
+nokia e70 # MP3/AAC/MPEG4  # 3GPP H.263 video # 
+motorola v980 # AMR MPEG4,WAV,WMA,MP3,AAC,MIDI,XMF  # 3GP # 
+nokia 6234 # MP3 AAC, MIDI  # 3gp H.263 video, MPEG-4 und AMR # 
+sony_ericsson p990i # MP3WAV  # mpeg # 
+benq-siemens me75 # MIDI WAV, SFR  # 3gp # 
+benq-siemens al21 # MIDI  # - # 
+motorola slvr_l6 # MP3  # MPEG4 .3gpp, H.263 # 
+nokia 7360 # mp3  # H.263 # 
+qtek 8500 # AMR AAC, WAV, WMA, MP3, MIDI  # MPEG4 JPEG AVI, H.263 # 
+nokia 6125 # MIDI MP3, Nokia-rtf, M4F, AAC  # 3GP # 
+BenQ-Siemens SL91 # MIDI MP3, AAC++, Real Audio 8  # 3gp # 
+benq-siemens ef71 # MP3 AAC++  # MPEG4 RealVideo 8/9, h.263 und 3GPP # 
+siemens s75 # MIDI MP3  # MPEG4 Real Video 8 # 
+o2 xda_mini_s # MIDI WAV, AAC, MP3, AMR  # mpeg # 
+samsung sgh-e730 # MP3 AAC, AAC+  # MPEG4 H.263 # 
+sony_ericsson k510i # Wav MP3, AMR  # MPEG4 # 
+benq-siemens ef91 # MIDI MP3  # MPEG4 Real Video 8 # 
+nokia 7370 # MP3 AAC, MIDI  # H.263 # 
+nokia 6103 # MP3  # 3gp # 
+samsung sgh-p900 # MP3 AAC, AAC+, H.263  # MPEG4 / H.263 / H.264 # 
+lg_electronics kg320s # MP3 WMA,  AAC, AAC+, AAC++  # 3gp MP4 # 
+siemens s65 # SP-MIDI MIDI, WAV  # H.263 MPEG4, 3GP # 
+benq-siemens sl91 # MIDI MP3, AAC++, Real Audio 8  # 3gp # 
+samsung sgh-d520 # MP3 AAC, AAC+,MMF,AMR,MIDI  # Mpeg43GPP,H.264 # 
+nokia 6230 # MP3 AAC, MIDI  # 3gp # 
+motorola razr_v3im # MP3  # MPEG4 # 
+benq-siemens sl75_pink # MIDI MP3  # 3gp # 
+benq-siemens cf75 # MIDI WAV  # MPEG4 H.263, 3GP # 
+benq-siemens m75 # MIDI MP3, AAC  # MPEG4 H.263 und Real Video 8 # 
+samsung sgh-z510 # aac mid, mmf, mp3  # 3gp mp4 # 
+motorola v975 # MIDI WMA, AAC, MP3 und XMF  # 3gp # 
+samsung sgh-z540 # aac mid, mmf, mp3  # 3gp mp4 # 
+sony_ericsson k300i # Midi MP3, wav,  # 3gp # 
+t-mobile mda_compact_2 # MIDI WAV, AAC, MP3, AMR  # H.263 MPEG4 # 
+nokia 6680 # True SP-Midi, MIDI, AMR, WAV, MP3  # 3gp .mp4, MPEG-4 Video, H.263 # 
+vodafone vpa_compact_ii # MIDI WAV, AAC, MP3, AMR  # avi mpeg4 # 
+samsung sgh-x800 # MP3 AAC, AAC+  # MPEG 4 # 
+sony_ericsson w550i # Wav MP3, AMR, MIDI  # 3GP # 
+motorola e770v # MP3 MIDI  # 3GPP H.263, MPEG4 # 
+motorola v235 # MP3MIDI,WAV  # mpeg4 # 
+samsung sgh-z500 # aac mid, mmf, mp3  # 3gp mp4 # 
+samsung sgh-p200 # MP3 / AAC / ACC+  # MPEG4 / H.263 # 
+samsung sgh-z540v # aac mid, mmf, mp3  # 3gp mp4 # 
+nokia 6136 # MIDI MP3, Nokia-rtf, M4F, AAC  # 3GP # 
+sony_ericsson k600i # Wav MP3, AMR  # MPEG4 # 
+motorola motorazr_maxx # AAC/WMA/eAAC+/AAC+/WAV/MP3/XMF  # MPEG4 Real Audio # 
+t-mobile mda_vario # AMR/AAC/WAV/WMA/MP3  # .avi mp4, h263 # 
+samsung sgh-x700 # MP3 AAC, AAC+  # MPEG 4 # 
+samsung sgh-z710 # MP3 AAC,  AAC+, WMAyyyyyyyyyyyyyyyyyyyyyyyyyyyyyy  # H.263 Mpeg4, RealVideo # 
+nokia 7260 # Midi AMR  # 3gp # 
+sony_ericsson k608i # Wav MP3, AMR  # MPEG4 # 
+BenQ-Siemens E71 # MIDI MP3, SMAF, imelody  # 3gp # 
+nokia e50 # MP3 AAC  # mpeg # 
+motorola pebl_u6 # MP3  # MPEG4 # 
+benq-siemens sxg75 # MIDI MP3, AAC, WMA, WAV, AAC+  # MPEG4 H.263 # 
+samsung sgh-e720 # MP3 AAC, AAC+,MP4  # MPEG H.263 # 
+nokia 6630 # mp3  # 3gp # 
+nokia 6151 # MP3 AAC, MIDI  # 3gpp # 
+motorola v360 # MIDI Mp3  # MPEG 4 # 
+nokia 8800 # MP3 AAC  # 3gp # 
+nokia 5500 # MP3 eAAC, MIDI, AMR  # 3gp # 
+samsung sgh-e350 # MP3 MIDI, i-Melody, AMR, SMAF  # 3gp # 
+SonyEricsson K790i # MP3 AAC, AAC+, eAAC+  # MPEG4 3GP, Real # 
+motorola motokrzr_k1 # AAC/AAC+/MP3  # MPEG4 Real Audio # 
+motorola motorizr_z3 # MP3 AAC, AAC+, eAAC+  # 3GPP # 
+motorola e1000 # MP3 MIDI  # 3GPP H.263, MPEG4 # 
+sony_ericsson j220i # Midi  # - # 
+nokia 7380 # MIDI MP3, AAC  # 3gp # 
+sony_ericsson z550i # Mp3  # 3GP MPEG4 # 
+motorola v550 # MP3 AAC, MIDI  # mpeg4 # 
+nokia 5140i # mp3midi  # 3gp # 
+samsung sgh-s400i # mp4 mid, amr, mmf, acc  # 3gp # 
+samsung sgh-i320 # mp3mp4, mid, amr, mmf  # MPEG4 H.263, WMV # 
+motorola pink_razr_v3 # MP3  # MPEG4 # 
+nokia 6101 # MP3  # 3gp # 
+nokia 6080 # MIDI MP3, Nokia-rtf, M4F, AAC  # 3gp # 
+samsung sgh-e530 # MP3- AAC-, AAC+  # MPEG4 H.263 # 
+motorola c139 # Midi  # mpeg4 # 
+motorola a1000 # MIDI MP3  # mpeg4 # 
+t-mobile mda_pro # mp3  # MPEG4 JPEG AVI, H.263 # 
+sony_ericsson v600i # Wav MP3, AMR  # MPEG4 # 
+nokia 9300i # MIDI WAV, AAC, MP3, AMR  # MPEG4 # 
+t-mobile mda_3 # mp3  # MPEG4 JPEG AVI, H.263 # 
+samsung sgh-e870 # MP3 AAC, AAC+  # MPEG4 H.263 # 
+samsung sgh-z560 # aac mid, mmf, mp3  # 3gp mp4 # 
+benq-siemens m81 # MIDI MP3, AAC  # MPEG4 H.263 und Real Video 8 # 
+samsung sgh-e760 # MP3 AAC, AAC+  # MPEG4 H.263 # 
+BenQ-Siemens S700 # mp3 midi  # mpeg4 # 
+motorola a780 # MP3; WAV  # 3gp MPEG-4, # 
+samsung sgh-i300 # MIDI MP3, AAC, AAC+  # MPEG4/ H.263/ H.264/ WMV # 
+samsung sgh-zm60 # amr smaf, midi, mmf, mp3  # H.263 # 
+benq-siemens s700 # mp3 midi  # mpeg4 # 
+samsung sgh-e800 # mmfmidi  # - # 
+benq-siemens ef61 # MIDI MP3, SMAF, imelody  # 3gp # 
+samsung sgh-z140v # mp3 AAC+, AAC-  # H.263 MPEG4 # 
+benq-siemens cl75 # MIDI  # MPEG H.263 # 
+sony_ericsson s700i # MP3 WAV. MIDI  # MPEG4 # 
+samsung sgh-d730 #  MP3/AAC/MPEG  # 3gpmpeg4,realvideo4 # 
+samsung sgh-z150 # aac mid, mmf, mp3  # 3gp mp4 # 
+motorola v1070 # AAC+ MPEG4, WMV, WMA, MP3 und  # MPEG4 Real Audio # 
+benq-siemens s81 # MIDI MP3, SMAF, imelody  # mpeg # 
+o2 xda_mini # MIDI WAV, AAC, MP3, AMR  # mpeg4 # 
+siemens cx75 # MIDI MP3  # MPEG4 H.263 # 
+Samsung SGH-D830 # MP3 AAC, AAC+, e-AAC+, MPEG4, H.263  # Mpeg43GPP,H.264 # 
+samsung sgh-x670 # Mp3 MIDI, i-Melody, AMR, SMAF  # mpeg4 # 
+benq-siemens c72 # MIDI  # mpeg4 # 
+nokia 3230 # MP3 AAC, MIDI, WMA, WAV  # 3GP # 
+grundig x5000 # MIDI MP3  # AVI ASF, MOV # 
+samsung sgh-e620 # MP3 MIDI, i-Melody, AMR, SMAF  # mPEG4 # 
+motorola rokr_e1 # mp3aac  # mp4 # 
+sharp v903 # mp3 AAC  # MPEG4 # 
+sony_ericsson j230i # Midi  # - # 
+benq-siemens a58 # MIDI MP3  # - # 
+htc strtrk # AMR AAC, WAV, WMA, MP3, MIDI  # MPEG4 AVI, H.263 # 
+nokia 6070 # mp3 midi, poly  # 3gp # 
+haier a600 # MP3 MIDI  # MPEG4 3GP # 
+benq-siemens e61 # MIDI MP3, SMAF, imelody  # 3gp # 
+motorola mpx220 # MP3 WMA, MIDI  # MPEG4 # 
+samsung sgh-z320i # mp3 acc, acc+, e-acc+  # MPEG H.263 # 
+sony_ericsson z800i # MP3 WAV, MIDI  # 3gp # 
+lg_electronics p7200 # SP-MIDI MIDI, i-Melody,SMAF  # 3gp # 
+motorola e398 # MIDI MP3, iMelody  # MPEG4 # 
+palmone treo_650 # MIDI  # 3gp # 
+motorola v220 # MP3MIDI,WAV  # mpeg4 # 
+benq-siemens p51 # mp3  # MPEG4 JPEG AVI, H.263 # 
+siemens m65 # SP-MIDI MIDI, WAV  # H.263 MPEG4 # 
+elson esl_808 # MIDI MP3, WAV, i-Melody  # Mpeg 4 3gp # 
+samsung sgh-p910 # MP3 AAC, AAC+, H.263  # MPEG4 / H.263 / H.264 # 
+lg_electronics s5200 # SP-MIDI MIDI, i-Melody,SMAF  # mpeg4 # 
+xcute dv2 # MIDI MP3  # mpeg4 # 
+samsung sgh-i310 # MIDI MP3, AAC, AAC+  # MPEG4/ H.263/ H.264/ WMV # 
+nokia 9300 # MIDI WAV, AAC, MP3, AMR  # MPEG4 # 
+samsung sgh-z700 # MP3 AAC,  AAC+  # H.263 Mpeg4, RealVideo # 
+sony_ericsson v800 # MP3 WAV, MIDI  # 3gpmpeg4 # 
+motorola slvr_l2 # MP3  # - # 
+sony_ericsson p910i # MP3WAV  # mpeg # 
+qtek 9090 # mp3  # MPEG4 JPEG AVI, H.263 # 
+nokia 6260 # MIDI MP3, Nokia-rtf  # 3GP # 
+nokia 6600 # MIDI AMR, WAV, SP  # 3gpp # 
+nokia 6170 # WAV SP-MIDI, MP3, AMR, MIDI  # 3GPP H.263, MPEG4 # 
+Samsung SGH-P200 # MP3 / AAC / ACC+  # MPEG4 / H.263 # 
+samsung sgh-d720 #  MP3/AAC/MPEG  # 3gp # 
+benq-siemens ef51 # MP3 AAC, AAC+, eAAC+, AMR, WMA  # MPEG4 RealVideo 8/9, h.263 und 3GPP # 
+e-plus pocket_pda # MIDI WAV, AAC, MP3, AMR  # mpeg4 # 
+o2 xda_exec # mp3  # MPEG4 JPEG AVI, H.263 # 
+benq-siemens a38 # MIDI  # - # 
+benq-siemens e71 # MIDI MP3, SMAF, imelody  # 3gp # 
+sony_ericsson k310i # Wav MP3, AMR  # MPEG4 # 
+benq-siemens cl71 # MIDI MP3  # 3gp # 
+samsung sgh-x640 # MIDI i-Melody, AMR, SMAF  # - # 
+panasonic vs3 # mp3 wav  # 3gp # 
+sharp 770sh # mp3 AAC  # h.263 # 
+benq-siemens sl65 # WAV Midi  # MPEG4 # 
+lg_electronics u880 # AAC AAC+, mpeg 4, mp3  # 3gp # 
+motorola c980 # MP3 AAC, MIDI, XMF, AMR  # MPEG4 WMA, WMV, 3gp # 
+vodafone vpa_4 # mp3  # MPEG4 JPEG AVI, H.263 # 
+samsung serene # MIDI i-Melody, AMR, SMAF  # - # 
+samsung sgh-e600 # MMF  # 3gp # 
+samsung sgh-z600 # mp3 acc, acc+, wma  # MPEG H.263 # 
+mobiado professional_executive_model_limited_edition # MIDI MP3, AAC  # H.263 MPEG4, 3GP # 
+nokia 6822 # wav midi  # 3gp # 
+nokia 7270 # MP3 AAC, MIDI  # H.263 # 
+benq-siemens c81 # MIDI MP3, SMAF, imelody  # H.263 MPEG4 # 
+samsung sgh-zv10 # Mp3 AMR, MMF, Midi  # 3gp # 
+samsung sgh-d510 # mp3  # 3gp # 
+alcatel no_1_elle # SP-MIDI MIDI, AAC (option), AMRnb  # 3gp H263/AMR, MPEG4, mp4 # 
+sagem my_v-85 # AAC MP3  # 3gp # 
+nokia 7610 # MP3 AAC  # 3GPP # 
+hagenuk jazz # MIDI MP3, AAC  # 3gp # 
+nokia 9500 # MIDI WAV, AMR, MP3  # 3GP # 
+siemens cf110 # Midi  # - # 
+sagem my400x # MIDI AMR, WAV, SP  # - # 
+sharp tm200 # SMAF. MIDI iMelody, wav  # H263 (Record & Play) MPEG4(Pl # 
+mobiado professional_executive_model # MIDI MP3, AAC  # H.263 MPEG4, 3GP # 
+sharp gx30 # MIDISMAF  # 3gp # 
+sony_ericsson p900 # mp3 midi  # 3gp # 
+motorola moto_q # iMelody MIDI, MP3, AAC, WAV, WMA, WAX, QCELP  # H.263 MPEG-4, GSM-AMR, AAC, WMV # 
+samsung sgh-e860v # mp3; WAV  # 3gp # 
+samsung sgh-z300 # mp3 AAC+, AAC-  # mpeg4 # 
+motorola a1010 # MIDI MP3  # mpeg4 # 
+samsung sgh-d700 # MIDI & WAV  # mpeg4 # 
+samsung sgh-e340 # MP3 MIDI, i-Melody, AMR, SMAF, ACC  # mpeg4 # 
+panasonic vs6 # mp3 wav  # Mpeg4H263 # 
+siemens sx1 # Midi WAV, AMR, MMF, AIF, IMel, MP3  # mpeg4 # 
+siemens cx65 # SP-MIDI MIDI, WAV  # H.263 MPEG4 # 
+nokia 6681 # True SP-Midi, MIDI  # 3gp # 
+nokia 3220 # SP-MIDI AMR  # mpeg # 
+vodafone vpa_compact # MIDI WAV, AAC, MP3, AMR  # H.263 MPEG4 # 
+benq-siemens cf61 # MP3 AAC++,WMA  # MPEG4 RealVideo 8/9, h.263 und 3GPP # 
+sony_ericsson t290i # midi  # - # 
+sharp 550sh # mp3 AAC  # h.263 # 
+samsung sgh-zv30 # MP3 MMF, AMR, Midi  # H.263 # 
+sharp gx25 # mp3  # 3GP MPEG4 # 
+nokia 6670 # True SP-Midi, MIDI, MP3  # 3GPP MPEG-4, H.263, Real Video # 
+sharp gx15 # Midi  # mpeg4 # 
+motorola rokr_e2 # mp3aac  # mp4 # 
+nokia 6820 # Midi  # H.263 # 
+sony_ericsson k500i # Midi MP3, wav,  # 3gp # 
+benq-siemens sk65 # SP-MIDI MIDI, WAV  # mpeg # 
+motorola v600 # MIDI Mp3  # - # 
+samsung sgh-z520 # aac mp3  # MPEG H.263 # 
+samsung sgh-e710 # Midi  # H.263 # 
+benq-siemens p50 # mp3  # MPEG4 JPEG AVI, H.263 # 
+e-plus pda_iv # mp3 Midi  # MPEG4 JPEG AVI, H.263 # 
+samsung sgh-z130 # MP3 AAC, AAC+, H.263  # MPEG4 # 
+nokia 6620 # MIDI AMR, WAV, SP  # 3gp # 
+nokia 7650 # midi  # 3gp # 
+siemens s65v # SP-MIDI MIDI, WAV  # H.263 MPEG4, 3GP # 
+benq-siemens cx70 # MP3 MIDI, WAV, AAC  # 3GPP MPEG4 # 
+sagem myx6-2 # iMelody WAVE, MIDI, mp3, AAC,  # H.263 Real, MPEG4 # 
+samsung sgh-z350 # mp3 acc, acc+, e-acc+  # MPEG H.263 # 
+samsung sgh-x810 # MP3 AAC, AAC+  # MPEG 4 # 
+t-mobile sda_music #  WMA MP3, WAV, AMR-NB, Midi,  # *mp4; *.3gp; *.avi # 
+alcatel one_touch_s853 # MP3 WAV, MIDI  # 3gp # 
+nokia 7710 # MP3 AAC, AMR  # MPEG4 H.263 und Real Video 8 # 
+siemens sg75 # MIDI MP3, AAC, WMA, WAV, AAC+  # MPEG4 H.263 # 
+sharp gx29 # mp3  # 3GP MPEG4 # 
+sagem my700x # mp3  # H.263 MPEG4, 3GP # 
+samsung s341i # MidiiMelody  # H.263 # 
+samsung sgh-e750 # MP3 AAC, AAC+  # MPEG4 H.263 # 
+samsung sgh-s342i # Midi mmf  # mpeg4 # 
+pantech pg_3500 # mp3 mid  # 3gp mpg # 
+samsung sgh-e300 # Midi  # 3gp # 
+alcatel one_touch_c750 # MIDI SP-MIDI, ADPCM, AAC, AMR, PCM  # H263/AMR MPEG4 # 
+motorola w220 # MIDI Mp3  # - # 
+motorola a910 # Mp3 AMR, Midi  # 3GP Mpeg4 # 
+samsung sgh-d300 # mp3mp4, mid, amr, mmf  # - # 
+nokia 7280 # MIDI  # 3gp # 
+samsung sgh-e310 # Midi  # mpeg # 
+xcute dv1 # MIDI MP3  # mpeg4 # 
+samsung sgh-i300x # MIDI MP3, AAC, AAC+  # MPEG4/ H.263/ H.264/ WMV # 
+benq-siemens cxt70 # SP-MIDI MIDI, WAV  # 3GPP MPEG-4, H.236, Real Vide # 
+nokia 5140 # Midi  # 3gp # 
+nokia 6220 # Midi  # H.263 # 
+sony_ericsson z1010 # MIDIMP3, AAC(DRM)  # mpeg4 # 
+sony_ericsson s600i # MP3 WAV. MIDI  # MPEG4 # 
+sony_ericsson j300i # MP3 WAV, MIDI  # MP4 # 
+mitsubishi m430i # SP-midi SMF Version 0 & 1, MF  # 3 GP (AMR AAC, MP4, H263) # 
+hagenuk cosmex_8090 # MP3 AAC, AAC+ und RealAudio  # H.263 MPEG 4 sowie RealVideo # 
+sharp v902sh # mp3 acc  # MPEG 4 # 
+panasonic x300 # Midi  # H.263 # 
+toshiba ts803 # MP3 AAC  # H.263 Real, MPEG4 # 
+samsung sgh-e810 # Midi  # H.263 # 
+toshiba ts921 # MP3 AAC  # H.263 Real, MPEG4 # 
+samsung sgh-z330 # MP3 AAC, AAC+  # MPEG H.263 # 
+grundig gr980 # mp3  # MPEG4 JPEG AVI, H.263 # 
+e-plus pda_3 # wav mid, mp3  # MPEG4 3GP, AVI # 
+sagem myx-8 # iMelody Midi, Wave, AMR, MP3  # MPEG4 3GP # 
+motorola e680 # MIDI MP3  # mpeg4 # 
+panasonic x800 # Midi MP3  # h.263 # 
+nokia 3650 # MIDI WAV, AMR  # 3gp # 
+benq-siemens sfg75 # MIDI MP3, AAC, WMA, WAV, AAC+  # MPEG4 H.263 # 
+medion md_95100 # midi  # avi # 
+philips 960 # MP3 AAC  # 3GPP H.263 # 
+Motorola MotoKRZRK1 # AAC/AAC+/MP3  # MPEG4 Real Audio # 
+samsung sgh-z107 # midi mmf  # mp4 # 
+sagem x301 # iMelody Midi, wave, AMR, MP3, ACC  # - # 
+samsung sgh-d410 # MP3 WAV, MIDI  # 3gp # 
+motorola v1000 # MP3MIDI,WAV  # mpeg4 # 
+mobiado professional # MIDI MP3, AAC  # H.263 MPEG4, 3GP # 
+motorola e550 # MP3 Midi, iMelody  # MPEG4 # 
+benq-siemens cxt65 # SP-MIDI MIDI, WAV  # Mpeg4 # 
+benq-siemens cx70_emoty # MP3 MIDI, WAV, AAC  # 3GPP MPEG4 # 
+samsung sgh-e850 # SMAF iMelody, MIDI, AMR  # 3gp # 
+sony_ericsson p800 # Midi Mp3  # mpeg4 # 
+pantech gu_1100 # MIDIwav, mp3, acc, acc+  # H.263 MPEG4 # 
+motorola a925 # MP3 ACC, Midi, WMA  # MPEG4 / H.263 # 
+sony_ericsson f500i # Midi MP3, wav,  # 3gp # 
+nokia 7200 # Midi AMR  # H.263 # 
+alcatel one_touch_552 # MIDI SP-MIDI, AMR, I-melody,  # H263/AMR MPEG4 # 
+sagem mys-7 # MIDI SP-MIDI, AMR, I-melody,  # MPEG4 # 
+lg_electronics u8100 # SP-MIDI MIDI, WAV,MP3, i-Melo  # Mpeg4 H263 # 
+medion md_97100 # iMelody MIDI, WAVE  # - # 
+sharp gx17 # Midi  # mpeg4 # 
+philips xenium_9%4098 # ADPCM AMR, Midi, SP-Midi  # - # 
+samsung sgh-z110 # Mp3 Midi, mmf  # mp4 # 
+nokia 7700 # MP3 AAC, AMR  # 3gp # 
+sendo x2 # SP-MIDI MIDI, RMF, XMF, SMAF,  # 3 GP (AMR MPEG4, H263) # 
+benq-siemens cxv65 # SP-MIDI MIDI, WAV  # H.263 MPEG4 # 
+sony_ericsson k508i # Midi MP3, wav,  # 3gp # 
+it-plusplus easy_5 # -  # - # 
+siemens st60 # Midi  # 3gp # 
+typhoon myguide_m500 # MP3 Midi, WMA, WAV  # mPEG4 # 
+grundig g550i # MP3 AAC, AAC+, MFI, MIDI, SMF, SP-MIDI,  # MPEG4 H263 # 
+typhoon myphone_m500 # MP3 Midi, WMA, WAV  # mPEG4 # 
+sharp gx20 # Midi  # moeg4 # 
+vitaphone 1100 # -  # - # 
+siemens cxi70 # SP-MIDI MIDI, WAV  # 3pg # 
+motorola a920 # MP3 Midi  # mpeg4 # 
+tevion multimedia-handy # midi mp3  # mpeg4 # 
+nokia 7600 # MP3 AAC, Midi  # 3gp # 
+benq-siemens u15 # WAV MP3, AAC  # mpeg4 # 
+sendo x # SP-MIDI MIDI, RMF, XMF, SMAF,  # mpeg # 
+nokia 3660 # Midi Amr  # 3GP # 
+alcatel one_touch_565 # MIDI SP-MIDI, AMR, I-melody,  # H263/AMR MPEG4 # 
+sharp 703 # mp3 AAC  # MPEG4 # 
+sagem myw-7 # Midi MP3  # H.263+AMR # 
+motorola e680i #  MP3 WMA, RealAudio/Video, MIDI, WAV, AAC  # RV H.263, MPEG4 # 
+samsung sgh-z105 # Midi  # H.263 # 
+panasonic a210 # Midi  # - # 
+samsung sgh-e610 # Midi  # mpeg # 
+samsung sgh-x140 # MIDI  # - # 
+lg_electronics u8180 # AAC mpeg 4, mp3  # MPEG4 H.263 # 
+samsung sgh-e100 # Midi  # - # 
+grundig x3000 # MP3 AAC, AAC+, MFI, MIDI, SMF, SP-MIDI,  # MPEG4 H263 # 
+samsung sgh-n710 # MP3 AAC, AAC+  # - # 
+nokia 6650 # Midi  # 3gp # 
+o2 x3 # mp3 midi  # mpeg4 # 
+sagem x300 # MIDI AMR, WAV, SP  # - # 
+alcatel one_touch_c651 #  ADPCM AMR, i-Melody, MIDI, SMAF, SP-MIDI  # 3gp (H263/AMR MPEG4), .mp4 # 
+nokia 3620 # Midi  # 3gp # 
+motorola v560 # MP3 AAC, MIDI  # mpeg4 # 
+nec e338 # MIDI MP3, AAC, WMA, WAV  # MPEG4 Video WMV # 
+sendo k1 # mp3 wav  # - # 
+nec n410i # MFi AMR, SMF (SP-MIDI, MIDI),  # 3GP # 
+tcm_%28tchibo%29 kompakt-handy_204 # midi  # - # 
+haier z3000 # MP3 MIDI  # MPEG4 3GP # 
+alcatel one_touch_155 # Midi  # - # 
+nec e353 # MIDI-MP3, WMA, WAV, AAC, ASF  # mpeg4 # 
+tcm_%28tchibo%29 klapp-handy_2 # midi  # - # 
+alcatel one_touch_835 # mp3 Midi  # mpeg # 
+philips 759 # Midi AMR  # mpeg # 
+alcatel one_touch_c555 # MIDI SP-MIDI, i-Melody, AMR  # JPEG GIF, aGIF, BMP, WBMP, PN # 
+lg_electronics g7200 # MIDI  # mpeg4 # 
+tcm_%28tchibo%29 kompakt-handy_2 # Midi  # - # 
+alcatel one_touch_556 # mp3  # mpeg4 # 
+sendo s1 # SP-MIDI MIDI, RMF, XMF, SMAF,  # - # 

@@ -1,0 +1,185 @@
+
+Mutellad and MuWI Readme
+========================
+
+Mutellad and muwi offer an unsecure client/server and web-interface to mutella
+(http://mutella.sourceforge.net/). 
+
+"mutellad" works as a wrapper around mutella. It creates a socket on the 
+system which must be defined in mutellad and muwi. As mutellad starts mutella 
+for the current user, it will use his configuration.
+See also the INSTALL and the CONFIG section.
+
+"muwi" is the client for the mutellad. Use it to communicate with mutella. 
+It can also be run as cgi. Then it returns a HTML Page. 
+Some commands are filtered because of mutella's unsafe "system" command. Take
+a look at the code. It's not too difficult.
+See also the INSTALL and the CONFIG section.
+
+"mu-conadapt" is now obsolete. Is is implemented in mutellad.
+mutellad can automatically adapts the MaxConnections of mutella.
+It pings a host (default: heise.de) that should be near to you (maybe your DNS)
+and calculates the optimal number of MaxConnections and sent them to mutella.
+
+
+
+INSTALL:
+========
+Unpack the tar.gz file, copy mutellad to a location you like. Copy muwi to 
+your cgi-bin path and edit the path where muwi can find the config file 
+(~/.mutella/mutelladrc). You have to write p.e. /home/xyz/.mutella/mutelladrc.
+Maybe you have to give read rights for all users to .mutella dir.
+If you like a favicon, copy muwi.ico to your public_html dir and edit the path
+in the config file.
+
+
+
+CONFIG:
+=======
+1) Run mutella, so that ~/.mutella directory will be created. Exit mutella.
+
+2) Run the mutellad (./mutellad or ./mutellad --debug for test purpose).
+   Mutellad should have generated a default mutelladrc in ~/.mutella/
+
+3) If you want to use muwi as cgi or if you want that someone else on your 
+   machine can use muwi in a terminal, set permission for other to read 
+   ~/.mutella/ and ~/.mutella/mutelladrc . Maybe your HOME directory must be
+   executable for other too.
+
+4) Edit ~/.mutella/mutelladrc by hand or use muwi to do this. 
+
+
+
+CONFIG-EXAMPLES:
+================
+
+-----------------------------------------------------------------------------
+1) First run of mutella.
+
+$ /usr/local/bin/mutella
+IMPORTANT EVENT:
+  Directory '~/.mutella' does not exist and will be created
+IMPORTANT EVENT:
+  Directory '~/mutella' does not exist and will be created
+IMPORTANT EVENT:
+  Directory '~/mutella/part' does not exist and will be created
+
+Creating default '~/.mutella/termrc' file
+Edit it to modify Mutella startup behaviour
+
+You are currently using Mutella v0.4
+  Enjoy!
+Event 810c1f8:
+  received at: 13:21:59
+  Directory '~/.mutella' does not exist and will be created
+Event 810c4b8:
+  received at: 13:21:59
+  Directory '~/mutella' does not exist and will be created
+Event 810c158:
+  received at: 13:21:59
+  Directory '~/mutella/part' does not exist and will be created
+> exit
+bye
+
+$
+
+-----------------------------------------------------------------------------
+2) Run the mutella-deamon. It starts mutella.
+
+$ ./mutellad
+$ ls -la /tmp/mutella.sock
+srwxrwxrwx    1 user     user            0 Feb  5 16:49 /tmp/mutellad.sock
+
+$
+
+-----------------------------------------------------------------------------
+If you want to see the communication with the clients start the mutellad
+with the  --debug  option. Then the server won't fork to the background.
+
+$ ./mutellad --debug
+
+Started mutella on PID: 21167
+
+You are currently using Mutella v0.3.3
+  Enjoy!
+mutella < help
+[...]
+
+$
+
+-----------------------------------------------------------------------------
+3) Set right permissions
+
+$ chmod o+x /home/mutella
+$ chmod o+r /home/mutella/.mutella
+$ chmod o+r /home/mutella/.mutella/mutelladrc
+$ 
+-----------------------------------------------------------------------------
+
+
+
+
+
+MORE EXAMPLES:
+==============
+
+-----------------------------------------------------------------------------
+mutellad supports the "restart" command send by muwi. If receiving this 
+command, mutellad sends "exit" to mutella and starts himself again!
+
+$ ./mutellad --debug
+
+[...]
+
+mutella < exit
+mutella > Sending answer of 19 bytes.
+Restarting mutella and mutellad!
+Can't ignore signal CHLD, forcing to default.
+
+Started mutella on PID: 21192
+
+You are currently using Mutella v0.3.3
+  Enjoy!
+
+[...]
+
+
+-----------------------------------------------------------------------------
+All users that can access that socket from a terminal may issue commands to 
+mutella via muwi:
+
+$ ./muwi help
+ help
+Available comands:
+==================
+help    Displays a help message. Type 'Help <command>' for more specific info
+?       Synonym for 'Help'
+exit    Exits Mutella
+info    Displays various information regarding current network activities
+hosts   Displays current content of the hosts cache
+find    Adds a query to the search list
+list    Lists current searches
+[...]
+
+
+-----------------------------------------------------------------------------
+To run muwi as a cgi, point your browser to the url where you installed it:
+http://your.domain/cgi-bin/muwi
+If this fails, read the webserver error_log. 
+
+-----------------------------------------------------------------------------
+
+
+TIPS
+====
+
+-----------------------------------------------------------------------------
+get   3) `Italiensk%20for%20nybegynnere/Italiensk for nybegynnere divx 1of1.a
+
+vi' 704M REF:15
+
+If you get somthing like this ( I mean such a wrapped line in muwi cgi) just 
+edit the TerminalCols Variable of mutella to something like 150 (default: 80)
+
+-----------------------------------------------------------------------------
+

@@ -1,0 +1,8 @@
+Order deny,allow
+Deny from all
+Allow from service.micropayment.de
+Allow from proxy.micropayment.de
+Allow from access.micropayment.de
+Allow from 193.159.183.234
+Allow from 193.159.183.235
+Allow from 193.159.183.236

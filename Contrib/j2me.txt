@@ -1,0 +1,19 @@
+1.)KToolbar starten
+
+2.)File -> Open Project -> BJ
+
+3.)Project -> Settings: 
+	Reiter:		Api Selection:
+			aktivieren: Target-Plattform: Custom; MIDP2; CLDC 1.1; PDA-Profile
+
+			Required
+			aktivieren: Midlet-Configuration: CLDC-1.1.; MircoEdition Profile: MIDP-2.0
+
+			Midlets: 
+			aktivieren Key: "MIDlet-1"; Name: "BitJoe"; Icon: "BitJoe.png"; Class: "de.hgnut.Main"
+					
+			Permissions: siehe Bild "permissions.jpg"; Hinweis: connector.ssl brauchen wir nicht mehr !
+
+4.)Edit -> Preferences:
+	Reiter:		Security Section auf trusted stellen 
+			NetWork: HTTP 1/1 einstellen

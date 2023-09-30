@@ -1,0 +1,330 @@
+#!/usr/bin/perl -I/server/mutella/MutellaProxy
+
+#########################################
+##### Author:		Sebastian Enger / B.Sc
+##### CopyRight:	BitJoe GmbH
+##### LastModified	27.07.2006
+##### Function:		Sortierung und Punktevergabe für die Ergebnisse
+##### Todo:			hits vergabe / nach speed sortieren
+########################################
+
+# Hinweis: bei einer neueren Version von Sort::Array kann es sein, das beim sortieren nicht ein zusätzliches zeichen angehängt wird,
+# sodass das chop entfernt werden muss im mutellaproxy.pl !
+
+package MutellaProxy::SortRank;
+
+use Sort::Array qw( Sort_Table );
+use String::Approx 'amatch';
+use MutellaProxy::Debug;
+use File::Basename;
+use strict;
+
+my $VERSION = '0.22.1';
+
+my $KeywordMatchingMultiply		= 5;
+my $NegativMatchingQuantifier	= -100;
+my $ApproxMatchingQuantifier	= "40%";
+my $MaxSourcesForOneHit			= 20;
+my $MaxScanningDepth			= 1000;
+
+
+sub new(){
+	
+	my $self = bless {}, shift;
+	return $self;
+		
+}; # new(){}
+
+
+sub SortRank(){
+	
+	my $self			= shift;
+	my $ResultHashRef	= shift;
+	my $SearchQuery		= shift;
+	my $FileTypeHashRef = shift;
+
+	my $KeyWordMatching			= 0;
+	my $SortedHashRef			= {};
+	my $SortedHashRefCounter	= 0;
+	my @UNSORTED				= ();
+	my @SORTED					= ();
+	my $multiply;
+
+	##### Merke: $FileTypeHashRef kommt von MutellaProxy::LicenceManagement->CheckLicence() machts so, 
+	#####	dass in $FileTypeHashRef die Values immer Kleinbuchstaben sind zb. Ref->{1} = 'jpg'
+
+	# wenn keine ergebnisse
+	if ( keys %{$ResultHashRef} == 0 ) {
+		print "SortRank.pm: Keine Gültigen Ergebnisse\n";
+		my @EMPTY = ();
+		return ( \@EMPTY );
+	} else {
+		print "SortRank.pm: Gültigen Results von Parser.pm: " . keys %{$ResultHashRef};
+		print "\n";
+	};
+	
+	# Gib Fehlerstatus zurück, wenn kein Suchbegriff übergeben wurde
+	if ( length($SearchQuery) == 0 ) {
+		warn "invalid SearchQuery";	# Später Fehlerstatusmeldungen absetzen
+		my @EMPTY = ();
+		return ( \@EMPTY );
+	};
+
+
+	# funzt: lösche den 
+	my $TemporarySearchQuery = $SearchQuery;
+	foreach my $undef ( 0..length($FileTypeHashRef->{1}) ){
+		chop($TemporarySearchQuery);
+	}; # foreach my $undef
+
+
+	my %TempHashRef = %{$ResultHashRef};
+
+
+	while( my ($key, $value) = each( %{$ResultHashRef} ) ) {
+
+		
+		my $FileName	= %{$ResultHashRef}->{ $key }->{ 'FN' };
+		my $Speed		= %{$ResultHashRef}->{ $key }->{ 'SP' };
+		my $SHA1		= %{$ResultHashRef}->{ $key }->{ 'SH' };
+		my $Size		= %{$ResultHashRef}->{ $key }->{ 'SZ' };
+		my $FileIndex	= %{$ResultHashRef}->{ $key }->{ 'FI' };
+		my $PeerHost	= %{$ResultHashRef}->{ $key }->{ 'PH' };
+
+		if ( length($FileName) > 0 && length($Speed) > 0 && length($SHA1) == 32 && length($Size) > 0 && length($FileIndex) > 0 && $PeerHost =~ /(\d{0,255})+(\.)(\d{0,255})+(\.)(\d{0,255})+(\.)(\d{0,255})+(\:)(\d{1,})/ ) {
+		
+			# Wenn der FileType des aktuell gefundenen Files mit dem FileType der Lizenzfunktion übereinstimmt
+			my ( $OnlyFileName , $OnlyFileTyp ) = split(/[(\w)|(\d)]+(\.([^.]+?)$)/i, %{$ResultHashRef}->{ $key }->{ 'FN' } );
+			if ( ( lc($OnlyFileTyp) eq $FileTypeHashRef->{1} ) || ( lc($OnlyFileTyp) =~ /$FileTypeHashRef->{1}/ ) ) {
+				
+				my $TempFileName = $FileName;
+
+				$TempFileName =~ s/\./ /ig;
+				$TempFileName =~ s/\-/ /ig;
+				$TempFileName =~ s/\,/ /ig;
+				$TempFileName =~ s/\+/ /ig;
+
+				my $matched = 0;
+				eval {
+					$matched = amatch($FileName, $ApproxMatchingQuantifier, $TemporarySearchQuery);
+				};
+
+				# Wenn der Suchbegriff dem FileName entspricht
+				if ( $FileName eq $TemporarySearchQuery ) {
+					$NegativMatchingQuantifier = 0;
+				} elsif ( lc($TemporarySearchQuery) eq lc($FileName) ) {
+					$NegativMatchingQuantifier = 0;
+				} elsif ( $FileName =~ /$TemporarySearchQuery/ig ) {
+					$NegativMatchingQuantifier = 0;
+				} elsif ( $matched == 1 ) {
+					$NegativMatchingQuantifier = 0;
+
+				} else {
+					
+					foreach my $SinglePartOfFilename ( split(' ', $TempFileName ) ) {
+						foreach my $SinglePartSearchQuery ( split(' ', $TemporarySearchQuery ) ) {
+							if ( lc($SinglePartOfFilename) eq lc($SinglePartSearchQuery) ) {
+								$NegativMatchingQuantifier = 0;
+							} elsif ( eval { $SinglePartOfFilename =~ /$SinglePartSearchQuery/ig } ) {
+								$NegativMatchingQuantifier = 0;
+							} else {
+								# negativ modifier works here
+
+							};	# if ( lc($SinglePartO...
+						}; # foreach my $SinglePartSearchQuery ...
+					}; # foreach my $SinglePartOfFilename ...
+					
+				}; # if ( $FileName eq $TemporarySearchQuery ) {}
+
+
+				my $KeyWordMatching = 0;
+
+				if ( length($OnlyFileName) != 0 ) {
+					$KeyWordMatching = GetKeyWordMatching( length($SearchQuery) / length($OnlyFileName) ); 
+				};
+
+				
+				$SortedHashRef->{ $SortedHashRefCounter }->{ 'PH' } = $PeerHost .';'. $FileIndex .';'. $FileName . ';' . $Speed . "\t\t";
+				# $SortedHashRef->{ $SortedHashRefCounter }->{ 'PH' } = $PeerHost;
+				$SortedHashRef->{ $SortedHashRefCounter }->{ 'FN' } = $FileName;				
+				$SortedHashRef->{ $SortedHashRefCounter }->{ 'SH' } = $SHA1;
+				$SortedHashRef->{ $SortedHashRefCounter }->{ 'SZ' } = $Size;
+				$SortedHashRef->{ $SortedHashRefCounter }->{ 'FI' } = $FileIndex;
+				$SortedHashRef->{ $SortedHashRefCounter }->{ 'SP' } = $Speed;
+				$SortedHashRef->{ $SortedHashRefCounter }->{ 'RK' } = ($KeyWordMatching + $Speed + $NegativMatchingQuantifier);
+				
+				delete $ResultHashRef->{ $key };
+				undef $ResultHashRef->{ $key };
+				
+
+				while( my ($NextKey, $NextValue) = each( %{$ResultHashRef} ) ) {
+				
+					my $FileNameNext	= %{$ResultHashRef}->{ $NextKey }->{ 'FN' };
+					my $SpeedNext		= %{$ResultHashRef}->{ $NextKey }->{ 'SP' };
+					my $SHA1Next		= %{$ResultHashRef}->{ $NextKey }->{ 'SH' };
+					my $SizeNext		= %{$ResultHashRef}->{ $NextKey }->{ 'SZ' };
+					my $FileIndexNext	= %{$ResultHashRef}->{ $NextKey }->{ 'FI' };
+					my $PeerHostNext	= %{$ResultHashRef}->{ $NextKey }->{ 'PH' };
+							
+					if ( $SHA1 eq $SHA1Next ) {
+						
+						my @IsDoublePeer = split("\t\t", $SortedHashRef->{ $SortedHashRefCounter }->{ 'PH' });
+						my $IsDoublePeer;
+						my $BadCount = 0;
+
+						for ( my $i=0; $i<=$#IsDoublePeer; $i++ ) {
+							my ( $peer, $index, $name ) = split(";", $IsDoublePeer[$i] );
+							if ( $peer eq $PeerHostNext || $peer == $PeerHostNext ) {
+								$BadCount++;
+							}; # if ( $peer eq $PeerHostNext 
+						}; # for ( my $i=0; $i<=$#IsDoublePeer; $i++ ) {}
+
+						# wenn die ips $peer und $PeerHostNext sind nicht gleich
+						if ( $BadCount == 0 ) {
+						
+							if ( ( $PeerHostNext =~ /(\d{0,255})+(\.)(\d{0,255})+(\.)(\d{0,255})+(\.)(\d{0,255})+(\:)(\d{1,})/ ) && ( $FileIndexNext =~ /(\d)/ ) ) {
+								# print "$PeerHostNext und $FileIndexNext\n";
+								$SortedHashRef->{ $SortedHashRefCounter }->{ 'PH' } .= $PeerHostNext .';'. $FileIndexNext .';'. $FileNameNext . ';' . $SpeedNext . "\t\t";					
+							};
+
+							# erhöhe den Ranking Wert des aktuellen Eintrages um den Speed des folgenden Eintrages mit gleicher SHA1 
+							$SortedHashRef->{ $SortedHashRefCounter }->{ 'RK' } += $SpeedNext; 
+							$SortedHashRef->{ $SortedHashRefCounter }->{ 'SZ' } = $SizeNext;
+							$SortedHashRef->{ $SortedHashRefCounter }->{ 'SH' } = $SHA1Next;
+							
+						};	# if ( $BadCount == 0 ) {}
+
+						delete $ResultHashRef->{ $NextKey };
+						undef $ResultHashRef->{ $NextKey };
+									
+					}; # if ( $SHA1 eq $SHA1Next ) {}
+
+				};	# while( my ($NextKey,$NextValue) = each( %{$SortedHashRef} ) ) {}
+	
+				$SortedHashRefCounter++;	
+
+			};	# if ( ( lc($OnlyFileTyp) eq $FileTypeHashRef->{1} )
+
+		}; # if ( length($FileName) > 0 && length($Spe
+		  
+	};	# while( my ($key,$value) = each( %{$ResultHashRef} ) ) {}
+
+	# Hash löschen
+	%{$ResultHashRef} = ();
+
+	print "SortRank.pm: Keys vor allen Sortierungen: " .  keys %{$SortedHashRef};
+	print "\n";
+
+
+##### DEBUG
+	if ( keys %{$SortedHashRef} == 0 ) {
+		my $tmp = $SearchQuery;
+		$tmp =~ s/ /+/ig;
+		use Data::Dumper;
+		open(RH,">/server/mutella/NOHITS/NoHits-$tmp.txt");
+		flock(RH, 2);
+			my $st = Dumper(%TempHashRef);
+			print RH $st;
+		close RH;
+	};
+######
+
+
+	# Einzelne Sortierung der Ergebnisse nach Speed für ein File
+	while( my ($key, $value) = each( %{$SortedHashRef} ) ) {
+	
+		my $PH = %{$SortedHashRef}->{ $key }->{ 'PH' };
+		my $SZ = %{$SortedHashRef}->{ $key }->{ 'SZ' };
+		my $SH = %{$SortedHashRef}->{ $key }->{ 'SH' };
+		my $RK = %{$SortedHashRef}->{ $key }->{ 'RK' };
+		
+		my ( @Temporary ) = split("\t\t", $PH);
+		my $SortBySpeed;
+		$PH ='';   # WICHTIG!!!
+
+		my @SortBySpeed = Sort_Table(
+			cols      => '4',
+			field     => '4',
+			sorting   => 'descending',
+			structure => 'csv',
+			separator => ';',
+			data      => \@Temporary,
+		);
+
+		my $SourcesCounter = 0;
+
+		# Setzte die nach Speed sortierten Einträge wieder zusammen
+		# Ignoriere dabei falsche Werte ( if-Anweisungen )
+		for ( my $j=0 ; $j<=$#SortBySpeed ; $j++ ) {
+			my ( $peer, $index, $filename, $speed ) = split(";", $SortBySpeed[$j] );	# im dateinamen darf kein ";" vorkommen
+		
+				if ( $peer.';'.$index.';'.$filename ne ';;' ) {
+					if ( $MaxSourcesForOneHit >= $SourcesCounter ){
+						$PH .= $peer.';'. $index.';'. $filename. "\r\n";
+						$SourcesCounter++;
+					}; # if ( $SourcesCounter >=
+				}; # if ( $peer.';'.$inde
+
+		}; # for ( my $j=0 ; $j<=$#SortBySpeed ; $j++ ) {}
+				
+		if ( ( length($PH) != 0 ) && ( length($SZ) != 0 ) && ( length($SH) != 0 ) ) {
+			push(@UNSORTED, "$RK###$PH###$SZ###$SH\n"); 
+		};
+
+	}; # while( my ($key, $value) = each( %{$SortedHashRef} ) ) {
+
+
+	# Fix für 1-Result-Bug - 24.ß8.2006
+	if ( keys %{$SortedHashRef} == 1 ) {
+		# Wenn nur ein Ergebnis vorliegt, funktioniert die untere Sortierung mittels Sort_Table nicht korrekt
+		# darum wird hier ein Dummy Element eingefügt, welches später wieder entfernt wird. 
+		# Dieses Dummy Element ist von nöten, damit @SORTED = Sort_Table() korrekt funktioniert, wenn nur 1 Ergebnis vorliegt.
+		push(@UNSORTED, "-3333###-3333###-3333###-3333\n"); 	
+	};
+
+
+	# eigentliche Sortierung nach SortRank durchführen
+	@SORTED = Sort_Table(
+		cols      => '4',
+		field     => '1',
+		sorting   => 'descending',
+		structure => 'csv',
+		separator => '###',
+		data      => \@UNSORTED,
+	);
+
+
+	%{$SortedHashRef}	= ();
+	undef %{$SortedHashRef};
+	
+	print "SortRank.pm: $#SORTED SORTED \n";
+	
+	return ( \@SORTED );
+
+}; # sub SortRank(){}
+
+
+sub GetKeyWordMatching(){
+
+	my $int = shift;
+	return sprintf ("%.2f", $int) * $KeywordMatchingMultiply;
+		
+}; # GetKeyWordMatching(){}
+
+
+		 # FormatCheck
+		# print "##################### \n";
+		# print "DATEINAME:$FileNameForMatching \n";
+		# print "ONLYFN:	 $OnlyFileName\n";
+		# print "DATEITYP: $OnlyFileTyp \n";
+			
+		# für jeden Formatwunsch des Clients, teste den dateinamen des aktuell gefunden Files mit jedem formatwunsch
+		# foreach my $key ( each( %{$FileTypeHashRef} ) ) {
+		#	if (  ( lc($OnlyFileTyp) eq $FileTypeHashRef->{ $key } ) && ( length($FileTypeHashRef->{ $key }) != 0 ) && ( length($OnlyFileTyp) != 0 ) ) {
+		#		$AllowedFileTypeFlag++;
+		#	};
+		#};  # foreach my $key ( each( %{$FileTypeHashRef} ) ) {}
+		##### FormatCheck: <ende
+
+
+return 1;

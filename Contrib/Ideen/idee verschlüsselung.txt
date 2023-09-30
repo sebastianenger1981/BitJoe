@@ -1,0 +1,13 @@
+
+
+einfach den gezippten content nehmen und davon dann den md5 wert nehmen und speichern
+
+dann einfach den 32 stelligen md5 wert nehmen und 2er paar bilden, an den fseek positionen der 2er paare
+dann einfache textaustauschung vornehmen, die reversibel sind ( xor )
+
+auf handy seite dann den vorgang entsprechend umkehren
+
+
+
+
+
