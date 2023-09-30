@@ -1,0 +1,16 @@
+	---- Howto Phex restart ----
+
+1.)TightVNC als Client installieren
+2.)Connection mittels TightVNC herstellen:
+	- 87.106.63.182:1
+	- 81.169.141.129:1
+	- 87.106.63.182:1
+	- passwort für alle 3 Server: "derder"
+
+3.)Nach dem Einloggen, die offene Konsole/Shell auswählen, es ist meist der erste Tab, indem das Programm perl phexrestart.pl läuft
+4.)In den entsprechenden Tab der Konsole/Shell wechseln und dort gleichzeitig: "STRG + C" drücken, bis der phex verschwindet: dieser wird dann nach ca 2-5 sekunden neu gestartet(je nach auslastung der server)
+	Hinweis:	Als Verzeichnis, in dem die Datei phex.jar liegt ist global: "/server/phexproxy/PhexSources/phex_3.0.2.100_20071909/lib". Wenn der Ordner nicht vorhanden ist, dann anhand meines Beispieles durch
+			die Verzeichnisse navigieren
+			Sollte mittels STRG + C das perl Programm phexrestart.pl ebenfalls beendet worden sein,dann dieses mittels "perl phexrestart.pl" wieder neu starten, damit der phex neu gestartet wird
+			Mittels "ls -lh" kann man sich unter Linux den Inhalt eines Verzeichnisses angucken. Generell sollte sich jeder von uns Linuxgrundkenntnisse aneignen.
+5.)Bei Problemen mich anrufen

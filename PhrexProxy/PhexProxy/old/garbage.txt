@@ -1,0 +1,456 @@
+
+
+
+
+
+
+
+
+
+#	my $SortHashRefCount = keys(%{$SortedHashRef});
+#	print "AFTER: I have $SortHashRefCount Single Source Results\n";
+#	print "AFTER: Results with multiple sources: " . keys(%{$SortedHashRefResults}); print "\n";
+
+	print "DEBUG: Vor single ergebnis zusammensetzung \n";
+
+	my $SortHashRefCount = keys(%{$SortedHashRef});
+	for ( my $NextKey=0; $NextKey<=$SortHashRefCount; $NextKey++ ) {
+
+		my $FileNameNext	= %{$SortedHashRef}->{ $NextKey }->{ 'FN' };
+		my $SpeedNext		= %{$SortedHashRef}->{ $NextKey }->{ 'SP' };
+		my $SHA1Next		= %{$SortedHashRef}->{ $NextKey }->{ 'SH' };
+		my $SizeNext		= %{$SortedHashRef}->{ $NextKey }->{ 'SZ' };
+		my $FileIndexNext	= %{$SortedHashRef}->{ $NextKey }->{ 'FI' };
+		my $PeerHostNext	= %{$SortedHashRef}->{ $NextKey }->{ 'PH' };
+
+		next if ( exists($DoubleSourcesSHA1Values->{ $SHA1Next }) );	# SHA1 Werte, die mehrere Quellen je Treffer haben, nicht mehr beachten
+		next if ( length($FileNameNext) <= 0 );
+		next if ( length($SpeedNext) <= 0 );
+		next if ( length($SHA1Next) < 32 );
+		next if ( length($SizeNext) <= 0 );
+		next if ( length($PeerHostNext) <= 0 );
+
+	#	print "SINGLE $SHA1Next\n";
+
+		my $SpeedPoints	= GetSpeedPoints($SpeedNext);
+	#	my $StatusA		= PhexProxy::Filter->SpamFilter( $FileNameNext, $TemporarySearchQuery );
+
+		if ( !exists($SortedHashRefResults->{ $SHA1Next }) ) {			# diese Anweisung auf Grund der oberen exists($DoubleSourcesSHA1Values unnötig, trotzdem sichere Programmierlogik
+		
+			$SortedHashRefResults->{ $SHA1Next }->{ 'PH' }		= $PeerHostNext .';'. $FileIndexNext .';'. $FileNameNext . ';' . $SpeedPoints . "\t\t";		
+			$SortedHashRefResults->{ $SHA1Next }->{ 'SZ' }		= $SizeNext;
+			$SortedHashRefResults->{ $SHA1Next }->{ 'SH' }		= $SHA1Next;
+			$SortedHashRefResults->{ $SHA1Next }->{ 'RK' }	= $SpeedPoints; 
+
+			# markiere den Eintrag als bearbeitet - diesen Eintrag nicht nochmal verwenden
+			$DoubleSourcesSHA1Values->{ $SHA1Next } = "";
+
+		}; # if ( !exists($SortedHashRefResults->{ $SHA1Next }) ) {
+
+		#} elsif ( exists($SortedHashRefResults->{ $SHA1Next }) ) {
+
+		#	$SortedHashRefResults->{ $SHA1Next }->{ 'PH' } .= $PeerHostNext .';'. $FileIndexNext .';'. $FileNameNext . ';' . $SpeedPoints . "\t\t";		
+		#	$SortedHashRefResults->{ $SHA1Next }->{ 'RK' } += $SpeedPoints; 
+		#	$SortedHashRefResults->{ $SHA1Next }->{ 'SZ' } = $SizeNext;
+		#	$SortedHashRefResults->{ $SHA1Next }->{ 'SH' } = $SHA1Next;
+
+	#	$SortedHashRef->{ $NextKey } = "";
+	#	delete $SortedHashRef->{ $NextKey };
+
+	}; # for ( my $NextKey=0; $NextKey<=$SortHashRefCount; $NextKey++ ) {
+
+
+# php
+function shellSort($arr_sort){
+   $pet=1;
+   do{
+        $pet = 3*$pet+1;
+   }while($pet <count($arr_sort));
+   do{
+        $pet /=3;
+        for($i=$pet;$i<count($arr_sort);$i++)
+        {
+                $temp = $arr_sort[$i];
+                $j = $i - $pet;
+                while($j >=0 && $temp < $arr_sort[$j])
+                {
+                        $arr_sort[$j + $pet] = $arr_sort[$j];
+                        $j -= $pet;
+                }
+                $arr_sort[$j + $pet] = $temp;
+        }
+   }while($pet >1);
+   return $arr_sort;
+}
+
+
+
+#my $IsSpeedModem				= 56;	
+#my $IsSpeedISDN					= 64;
+#my $IsSpeedDSL					= 1024;		# 1024kbits=128KBs
+#my $IsSpeedCable				= 2048;		# 2048kbits=256KBs
+#my $IsSpeedT1					= 4096;		# 4096kbits=512KBs
+#my $IsSpeedT3					= 6144;		# 6144kbits=768KBs
+
+#	# hier erst noch testen, ob amacht ordentlich funzt, solange ist matched = 1 gesetzt
+	#		my $matched = 1;
+	#	#	eval {
+	#	#		$matched = amatch($FileName, $ApproxMatchingQuantifier, $TemporarySearchQuery);
+	#	#	};
+	#
+	#		################################################
+	#		# Wenn der Suchbegriff dem FileName entspricht
+	#		
+	#		if ( $FileName eq $TemporarySearchQuery ) {
+	#			$NegativMatchingQuantifier = 0;
+	#		} elsif ( lc($TemporarySearchQuery) eq lc($FileName) ) {
+	#			$NegativMatchingQuantifier = 0;
+	#		} elsif ( eval { $FileName =~ /$TemporarySearchQuery/ig } ) {
+	#			$NegativMatchingQuantifier = 0;
+	#		} elsif ( $matched == 1 ) {
+	#			$NegativMatchingQuantifier = 0;
+	#
+	#		} else {
+	#			
+	#			foreach my $SinglePartOfFilename ( split(' ', $TempFileName ) ) {
+	#				foreach my $SinglePartSearchQuery ( split(' ', $TemporarySearchQuery ) ) {
+	#					if ( lc($SinglePartOfFilename) eq lc($SinglePartSearchQuery) ) {
+	#						$NegativMatchingQuantifier = 0;
+	#					} elsif ( eval { $SinglePartOfFilename =~ /$SinglePartSearchQuery/ig } ) {
+	#						$NegativMatchingQuantifier = 0;
+	#					} else {
+	#						# negativ modifier works here
+	#						# eg: no match so substract -100 points from PageKount
+	#
+	#					};	# if ( lc($SinglePartO...
+	#				}; # foreach my $SinglePartSearchQuery ...
+	#			}; # foreach my $SinglePartOfFilename ...
+	#			
+	#		}; # if ( $FileName eq $TemporarySearchQuery ) {}
+			
+			########################################
+			#### teste, ob die dateigröße ok ist
+			#### teste, ob es kein spamfile ist
+			#### teste, ob es keine ungültige IP ist
+	#		my ( $ToCheckIP, $Port ) = split(':', $PeerHost );
+	#		my $StatusA = PhexProxy::Filter->SpamFilter( $FileName, $TemporarySearchQuery );
+	#		my $StatusB = PhexProxy::Filter->SizeFilter( $FileTypeHashRef->{1}, $Size );
+	#		my $StatusC	= PhexProxy::IPFilter->SimpleFilter( $ToCheckIP );
+	#		if ( $StatusA == 1 && $StatusB == 1 && $StatusC == 1 ) {
+	#		if ( $StatusA == 1 && $StatusB == 1 ) {
+	#		if ( $StatusB == 1 ) { # StatusB=Size
+		#	}; # if ( $StatusB == -1 ) {
+
+	#	if ( $StatusA == 1 ) {
+		#		$SortedHashRefResults->{ $SHA1Next }->{ 'RK' }	= $SpeedPoints; 
+		#	} else {
+		#		$SortedHashRefResults->{ $SHA1Next }->{ 'RK' }	= -10000; # null punkte für spam results
+		#	#	print "DEBUG: $FileNameNext from $PeerHostNext is classified as spam \n"; sleep 3;
+		#	}; # if ( $StatusA == 1 ) {
+
+		# ORG: $SortedHashRef->{ $SortedHashRefCounter }->{ 'RK' } = ($KeyWordMatching + $SpeedPoints + $NegativMatchingQuantifier);
+
+
+
+
+
+### my $ParisSocket = $ParisSocketsHashRef->{$COUNT}->{'SOCKET'};			# ACCESS A HASHREF
+### DOESNT WORK! my $ParisSocket = $ParisSocketsHash{'SOCKET'.$COUNT};		# Access a HASH
+
+
+
+
+#SearchString = "find"+"##"+
+#      Constant.SELECTED_FILE_FAMILY+","+Constant.SELECTED_FILE_TYPE+"##"+
+#      "IMEI"+"##"+
+#      Constant.LIZENZ_KEY+"##"+
+#      Constant.VERSION+"##"+
+#      to_search+"##"+
+#      "JAVAVERSION"+"##"+
+#      "HandyModell"+"##"+
+#     "PROVIDER"+"\r\n";
+ 
+#zweitens resultat abholen:
+ 
+#resultString = "result"+"##"+
+#      Constant.SELECTED_FILE_FAMILY+","+Constant.SELECTED_FILE_TYPE+"##"+
+#      "IMEI"+"##"+
+#      Constant.LIZENZ_KEY+"##"+
+#      Constant.VERSION+"##"+
+#      to_search+"##"+
+#      id+"##"+"\r\n";
+
+
+# eventuell noch einbauchen dass $SortedHashRef->{ $Key }->{ 'PH' } jeder einzelne eintrag davon als Peer extrahiert wird und in ein HashRef geschrieben wird,
+# dann dieses nehmen und checken, ob der eintrag $PEERSNEXT[$StartAtSource] schon als eintrag im HashRef 
+
+
+# 161#42189#2DLDVBTWNIIP2EJNRNKSGKU4MAXAZQDT#74.72.92.178:23310;644;paris.jpg
+# if ( $content =~ m/[\d{1,}].[#{1}].[\d{4,}].[#{1}].[\w{32}].[#{1}]/i ) {	# start of one result
+
+#	# new: 19.10.2007
+#	my %seen = ();
+#	@AllResultContent = grep { ! $seen{$_} ++ } @AllResultContent;
+		
+
+			#	my ( $RANK, $SIZE, $SHA1, $PEERHOST ) = split("#", $content );		
+			#	# print "SHA1: '$content' \n"; select(undef,undef,undef, 0.3);
+			#
+			#	if ( length($RANK) > 0 && length($SIZE) > 0 && length($SHA1) == 32 ) {
+			#	
+			#		$SortedHashRef->{ $SortedHashRefCount }->{ 'SZ' } = $SIZE;
+			#		$SortedHashRef->{ $SortedHashRefCount }->{ 'SH' } = $SHA1;
+			#		$SortedHashRef->{ $SortedHashRefCount }->{ 'RK' } = $RANK;
+			#		$SortedHashRef->{ $SortedHashRefCount }->{ 'PH' } = $PEERHOST;
+			#		
+			#		$SortedHashRefCount++;
+			#
+			#	}; # if ( length($RANK) > 0 && length($SIZE) > 0 && length($SHA1) == 32 && length($PEERHOST) > 0 ) {
+
+
+#			open(WH,">/server/phexproxy/nach.txt");
+#			print WH Dumper $SortedHashRef;
+#			close WH;
+
+# old $ParisSocketsHash{'QUERYID'.$COUNT.$MD5}	= $GZIP->gzip_decompress_string( $TempQueryId );	# speichere den QueryID
+
+
+	#		} else {	# speichere, wie oft schon erfolglos ergebnisse ausgeliefert wurden
+		#			
+		#			my $TmpNoResultCounter	= $IO->ReadFileIntoScalar("$TmpFilePath/$MD5");
+		#			$TmpNoResultCounter		= ${$TmpNoResultCounter};
+		#			$TmpNoResultCounter++;
+		#			$IO->WriteFile("$TmpFilePath/$MD5", $TmpNoResultCounter);
+		#
+		#		}; # if ( length($TempString) => 10) {
+
+			#	my $SHA1			= %{$SortedHashRef}->{ $Key }->{ 'SH' };
+			#	my $Size			= %{$SortedHashRef}->{ $Key }->{ 'SZ' };
+			#	my $PeerHost		= %{$SortedHashRef}->{ $Key }->{ 'PH' };
+			#	my $Rank			= %{$SortedHashRef}->{ $Key }->{ 'RK' };
+
+	
+	
+	
+	
+	#	use PhexProxy::IO;
+#	PhexProxy::IO->WriteFile("/srv/server/phexproxy/PhexProxy/sorted.txt", \@SORTED );
+	
+
+	my $RC		= 0;
+	my $RK_LAST = "";
+	my $PH_LAST = "";
+	my $SZ_LAST = "";
+	my $SH_LAST = "";
+
+	foreach my $entry ( @SORTED ) {
+				
+		next if ( $RC > 10 );
+		my ( $RANK, $PEERHOST, $SIZE, $SHA1 ) = split('###', $entry );
+		chop($SHA1) if ( length($SHA1) == 33 );		# fix für PhexProxy::SortArray->Sort_Table();
+		next if (  $RANK == -3333 ); next if ( $PEERHOST == -3333 );  next if ( $SIZE == -3333 ); next if ( $SHA1 == -3333 ); 
+
+		if ( $RANK == $RK_LAST && length($PEERHOST) > length($PH_LAST) ) {
+			
+			$RK_LAST = $RANK;
+			$PH_LAST = $PEERHOST;
+			$SZ_LAST = $SIZE;
+			$SH_LAST = $SHA1;
+
+		} elsif( $RANK != $RK_LAST ) {
+
+			my $SizeKB = ( $SZ_LAST / 1024 );
+			my $SizeMB = ( $SizeKB / 1024 );
+			
+			$SizeKB = sprintf ("%.2f", $SizeKB);
+			$SizeMB = sprintf ("%.2f", $SizeMB);
+			
+			print "RESULT: $RC+1\n";
+			print "DEBUG: RANK: '$RK_LAST' \n";
+			print "DEBUG: SIZE: '$SZ_LAST' Bytes und $SizeKB KB| $SizeMB MB \n";
+			print "DEBUG: SHA1: '$SH_LAST' \n";
+			print "DEBUG: HOST: '$PH_LAST' \n";
+			print " ############ \n";
+
+			print "RESULT: $RC\n";
+			print "DEBUG: RANK: '$RANK' \n";
+			print "DEBUG: SIZE: '$SIZE' Bytes und $SizeKB KB| $SizeMB MB \n";
+			print "DEBUG: SHA1: '$SHA1' \n";
+			print "DEBUG: HOST: '$PEERHOST' \n";
+			print " ############ \n";
+		
+			open(WH,">>/srv/server/phexproxy/PhexProxy/sorted.txt");
+					print WH "RESULT: $RC\n";
+					print WH "DEBUG: RANK: '$RANK' \n";
+					print WH "DEBUG: SIZE: '$SIZE' Bytes und $SizeKB KB| $SizeMB MB \n";
+					print WH "DEBUG: SHA1: '$SHA1' \n";
+					print WH "DEBUG: HOST: '$PEERHOST' \n";
+					print WH " ############ \n\n";
+					print WH "RESULT: $RC+1\n";
+					print WH "DEBUG: RANK: '$RK_LAST' \n";
+					print WH "DEBUG: SIZE: '$SZ_LAST' Bytes und $SizeKB KB| $SizeMB MB \n";
+					print WH "DEBUG: SHA1: '$SH_LAST' \n";
+					print WH "DEBUG: HOST: '$PH_LAST' \n";
+					print WH " ############ \n";
+			close WH;
+			
+			$RK_LAST = $RANK;
+			$PH_LAST = $PEERHOST;
+			$SZ_LAST = $SIZE;
+			$SH_LAST = $SHA1;
+			
+			sleep 2;
+
+			$RC++;
+
+		}; # if ( $RANK == $RK_LAST && length($PEERHOST) < length($PH_LAST) ) {
+
+	};	# foreach my $entry ( @SORTED ) {	
+
+	
+	
+	
+	
+	use PhexProxy::IO;
+	PhexProxy::IO->WriteFile("/srv/server/phexproxy/PhexProxy/sorted.txt", \@UNSORTED );
+	
+
+	my $FinalString = "";
+	my $LastSHA1	= "";
+
+	foreach my $sorted ( @SORTED ) {
+	
+		# needed: "$RK###$PH###$SZ###$SH\n"
+		my ( $RANK, $PEERHOST, $SIZE, $SHA1 )	= split('###', $sorted );
+		if ( $SHA1 eq $LastSHA1 ) {
+			$FinalString .= $PEERHOST . "\n";
+		} else {
+			$FinalString .= "$RANK###$PEERHOST###$SIZE###$SHA1\n";
+		};
+
+		$LastSHA1 = $SHA1;
+
+	}; # foreach my $sorted ( @SORTED ) {
+	
+
+	@SORTED			= ();
+	@UNSORTED		= ();
+	my @FinalString = split("\n", $FinalString);
+	my $TempString	= "";
+
+	for ( my $a=0; $a<=$#FinalString; $a++ ) {
+		
+		# print "FINAL=$FinalString[$a] \n"; sleep 1;
+		my $next = $a++; $next = $next++;
+		my $last = $a--;
+		if ( $FinalString[$a] =~ /^#/ ) {
+			$TempString .= $FinalString[$last];
+			$TempString .= $FinalString[$a];
+
+		#	print "\n last=$FinalString[$last] \n\n" && sleep 10 if ( $FinalString[$last] =~ /#/ && $FinalString[$last] !~ /^#/ );
+		#	print " \n aktuell= $FinalString[$a] \n\n";
+		} else {
+			$TempString .= $FinalString[$a];
+		};
+
+	}; # for ( my $a=0; $a<=$#FinalString; $a++ ) {
+
+	my @TempString = join("\n", $TempString);
+
+
+		#	###42189###2DLDVBTWNIIP2EJNRNKSGKU4MAXAZQDT
+		#	150###67.38.33.77:11941;633;paris.jpg
+		#	204.210.147.231:16552;2919;paris.jpg
+		#	166.82.57.3:3159;3127;paris.jpg
+		#	66.227.180.61:34008;677;paris.jpg
+		#	68.103.204.196:35657;646;paris.jpg
+		#	71.215.208.23:51618;3935;paris.jpg
+		#	###42189###2DLDVBTWNIIP2EJNRNKSGKU4MAXAZQDT
+		#	150###67.38.33.77:11941;633;paris.jpg
+		#	204.210.147.231:16552;2919;paris.jpg
+		#	166.82.57.3:3159;3127;paris.jpg
+		#	66.227.180.61:34008;677;paris.jpg
+		#	68.103.204.196:35657;646;paris.jpg
+		#	71.215.208.23:51618;3935;paris.jpg
+		#	24.117.77.100:20789;716;paris.jpg
+
+
+
+###	richtig:
+		#	###42189###2DLDVBTWNIIP2EJNRNKSGKU4MAXAZQDT
+		#	150###67.38.33.77:11941;633;paris.jpg
+		#	204.210.147.231:16552;2919;paris.jpg
+		#	166.82.57.3:3159;3127;paris.jpg
+		#	66.227.180.61:34008;677;paris.jpg
+		#	68.103.204.196:35657;646;paris.jpg
+		#	71.215.208.23:51618;3935;paris.jpg
+		#	###42189###2DLDVBTWNIIP2EJNRNKSGKU4MAXAZQDT
+		#	150###67.38.33.77:11941;633;paris.jpg
+		#	204.210.147.231:16552;2919;paris.jpg
+		#	166.82.57.3:3159;3127;paris.jpg
+		#	66.227.180.61:34008;677;paris.jpg
+		#	68.103.204.196:35657;646;paris.jpg
+		#	71.215.208.23:51618;3935;paris.jpg
+		#	24.117.77.100:20789;716;paris.jpg
+
+### falsch
+		#	216###216.168.126.188:37850;429;paris.jpg
+		#	###42189###2DLDVBTWNIIP2EJNRNKSGKU4MAXAZQDT216.168.126.188:37850;429;paris.jpg
+		#	24.66.120.170:11395;641;paris.jpg
+
+
+# 350	;!$#%&	6KZ7DNIKSGXMGW37OUQRRWWFCHHCDNGC	;!$#%&	625	;!$#%&	7254	;!$#%&	201.92.103.14:42753	;!$#%&	britneyraiva_x17online[1].jpg	\n
+
+#	my %seen = (); #	my @FinalSorted = grep { ! $seen{$_} ++ } @FinalString;
+
+# later write cache with full results:
+# schreibe: 1#$Speed,$SHA1,$Size,$Fileindex,$PeerHost,$FileName
+#			2#$Speed,$SHA1,$Size,$Fileindex,$PeerHost,$FileName
+#			3#$Speed,$SHA1,$Size,$Fileindex,$PeerHost,$FileName
+
+
+
+	#################### @SORTED nachsortieren !!! anhand gleicher sha1 werte daten zusammenführen 
+
+
+	# print Dumper @SORTED; sleep 6;
+
+
+#	for ( @SORTED ) {
+#		my ( $RK, $PH, $SZ, $SH )	= split('###', $_ ); # $RK###$PH###$SZ###$SH\n
+#		$SortedResults->{ $RK }		.= "$RK###$PH###$SZ###$SH\t\t"; 		
+#	}; # for ( @SORTED ) {
+#
+#	
+#	my $sort_by_numeric_value = sub {
+#		my $hash = shift;
+#		[ sort {$hash->{$b} <=> $hash->{$a}} keys %$hash ];
+#	};
+#
+#	tie my %sorted_values, 'Tie::Hash::Sorted',
+#		'Hash'         => $SortedResults,
+#		'Sort_Routine' => $sort_by_numeric_value;
+#
+#	my @Return		= ();
+#
+#	while( my ($key, $value) = each( %sorted_values ) ) {
+#		
+#		my $ReturnCount = 0;
+#		my @Content		= split("\t\t", $value );
+#
+#		foreach my $content (@Content) {
+#
+#			push(@Return, $content) if ( $MaxSourcesForOneHitSorted > $ReturnCount );
+#			$ReturnCount++;
+#
+#		}; # foreach my $content (@Content) {
+#
+#	}; # while( my ($key, $value) = each( %sorted_values ) ) {
+
+
+			#	if ( ( length($PH) > 0 ) && ( length($SZ) > 0 ) && ( length($SH) == 32 ) && ( length($peer) > 0 ) && ( length($index) > 0 ) && ( length($filename) > 0 ) ) {
+			#			
+			#			print "PEERHOST=$peer \n"; sleep 2;
+			#			push(@UNSORTED, "$RK###$PH###$SZ###$SH\n"); 
+			#			
+			#	}; # if ( ( length($PH) > 0 ) && ( length($SZ) > 0 ) && ( length(

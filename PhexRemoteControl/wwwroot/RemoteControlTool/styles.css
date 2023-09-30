@@ -1,0 +1,57 @@
+.announcement {
+	BORDER-RIGHT: #9dadbc 4px solid; PADDING-RIGHT: 0px; BORDER-TOP: #9dadbc 4px solid; PADDING-LEFT: 10px; PADDING-BOTTOM: 10px; MARGIN: 8px 0px 10px; BORDER-LEFT: #9dadbc 4px solid; WIDTH: 100%; PADDING-TOP: 10px; BORDER-BOTTOM: #9dadbc 4px solid
+}
+BODY {
+	FONT-SIZE: 10pt; FONT-FAMILY: Tahoma,Arial,Helvetica
+}
+A:link {
+	COLOR: #0000c6; TEXT-DECORATION: underline
+}
+A:visited {
+	COLOR: #0000c6; TEXT-DECORATION: underline
+}
+A:hover {
+	COLOR: #c60000; TEXT-DECORATION: underline
+}
+IMG {
+	BORDER-RIGHT: medium none; BORDER-TOP: medium none; BORDER-LEFT: medium none; BORDER-BOTTOM: medium none
+}
+#table3 {
+	FONT-SIZE: 10pt; FONT-FAMILY: Tahoma,Arial,Helvetica; BORDER-COLLAPSE: collapse
+}
+#table2 {
+	FONT-SIZE: 10pt; FONT-FAMILY: Tahoma,Arial,Helvetica; BORDER-COLLAPSE: collapse
+}
+#table1 {
+	FONT-SIZE: 10pt; FONT-FAMILY: Tahoma,Arial,Helvetica; BORDER-COLLAPSE: collapse
+}
+#nav1 {
+	TEXT-DECORATION: none
+}
+#msg {
+	FONT-SIZE: 10pt; COLOR: #ff0000; TEXT-ALIGN: center; TEXT-DECORATION: bold
+}
+
+#blue {
+	FONT-SIZE: 10pt; COLOR: green; TEXT-ALIGN: center; TEXT-DECORATION: bold
+}
+
+#red {
+	FONT-SIZE: 12pt; COLOR: red; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+
+#gratismsg {
+	FONT-SIZE: 8pt; TEXT-ALIGN: center; TEXT-DECORATION: none
+}
+STRONG.norm {
+	FONT-WEIGHT: normal
+}
+H2 {
+	FONT-WEIGHT: bold; FONT-SIZE: 1.2em; MARGIN: 0px; COLOR: #333333; FONT-FAMILY: Tahoma,Arial,Helvetica; LETTER-SPACING: 0px
+}
+H1 {
+	FONT-WEIGHT: bold; FONT-SIZE: 1.3em; MARGIN: 0px; COLOR: #333333; FONT-FAMILY: Tahoma,Arial,Helvetica; LETTER-SPACING: -1px
+}
+#pass {
+	FONT-SIZE: 8pt; FONT-FAMILY: Tahoma,Arial,Helvetica
+}

@@ -1,0 +1,4 @@
+-libraryjars C:\WTK22\lib\jsr75.jar;C:\WTK22\lib\midpapi20.jar;C:\WTK22\lib\cldcapi11.jar
+-injars C:\WTK22\apps\BitJoe\bin\BitJoe.jar
+-outjar C:\DOKUME~1\ic\LOKALE~1\Temp\BitJoe.jar
+-keep public class * extends javax.microedition.midlet.MIDlet 

@@ -1,0 +1,19 @@
+
+
+8.1.2008:
+- PhexRemoteControl 1.Version
+
+9.1.2008:
+- PhexRemoteControl 2.Version mit Service Alive Tests
+- PhexRemoteControl 2.Version mit Service Alive Tests und SMS Benachrichtigung
+- Website angepasst nun bessere Darstellung auf dem Handy
+
+17.1.2008:
+- neuen phex runnging test eingebaut und getestet
+
+21.1.2008:
+- Free Server Memory Support
+
+26.1.2008:
+- h1 + red bei errormeldung server down
+- sms messages angepasst

@@ -1,0 +1,3 @@
+Main-Class: phex.Main
+Class-Path: lang/ ext/ jaxb.jar forms-1.1.0.jar looks-2.1.4.jar common
+ s-logging.jar commons-httpclient-3.0.1.jar commons-collections-3.2.jar MRJAdapter.jar

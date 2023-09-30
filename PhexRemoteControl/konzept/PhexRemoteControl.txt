@@ -1,0 +1,58 @@
+	#### Remote control für phex ####
+
+Aufgabe: - Webinterface zum Fernsteuern der PhexRechner
+	+ Überwachung: 
+		- uptime phex,
+		- memory usage phex
+		- current load
+		- working status (testweise suchanfrage einführen in phex und überprüfen: "sending.println("id "+input[1]+" already exsists");" )
+	+ Phex starten/stoppen/restarten
+
+Server:
+	- Phex ( +load dispatcher, +filefilter,+delete old entries)
+	- Paris.pl:	3381
+	- Distributed Paris:	7773
+	- Neu: PhexRemoteControl.pl: 3387
+		+ connection timeout von 60 sec
+		+ verschlüsselte communication
+		+ bzip2 + compressed communication: bandbreiteschonende communikation ( Später HandyOberfläche für PhexRemoteControl.php )
+
+Client:
+	- PhexRemoteControl.pl: horcht auf Port und führt verschlüsselt + bzip2 oben genannte Aufgaben durch
+		+ Linux / Windows Version ( Linux priorität )
+
+	- PhexRemoteControl.php: https als standartprotokoll 
+		+ Webinterface|HandyWebinterface für PhexRemoteControl.pl
+		+ Kommunikation mit Webinterface<->PhexRemoteControl.pl verschüsselt
+		+ Config file für Webinterface(server PhexRemoteControl.pl eintragen, passwort für tcp crypto communication,admin mail+sms benachrichtigunge,Mail/SMS Benachrichtigungen, passwd füür webinterface login, data dir)
+		+ Logging Funktion: Was wurde wann wie von wem gemacht, verteilen der logs an admin email)
+		+ ( Content Distributal: Gib im Webinterfache eine Url,eine Datei etc an,die dann an alle Phex Sharing Ordner verteilt werden: "Schaffen von Download Content": im Fall von Phex als Ultrapeer modus - Frage ist diese Idee sinnvoll? )
+		+ Programmierung OO / Auf Systemspezifische Funktionen verzichten, möglichst nur PHP Code verwenden
+		+ vor auslieferung der Html Seite: html code alle unnötigen zeichen entfernen -> platzsparende Handyversion
+		+ für handyversion KEIN Javascript verwenden!!!!
+	- PhexRemoteControl.pl started phex a.) neu in neuem Thread oder killt phex mittels "kill -HUP $PID" oder killt phex normal(und check vorher ob phexrestart.pl läuft!)
+
+Zusammenfassung:
+
+Es soll dem Administrator ein Tool an die Hand gegeben werden, mit dem er mittels einfacher Weboberfläche alle Phex einfach kontrollieren und warten kann. Ein ausführliches Logging protokolliert alle aktionen des Administrators
+zwegs kontrolle. Mit Hilfe dieses Tools soll es dann möglich sein, dass ein Administrator statt 60 ssh verbindungen nur noch dieses eine Webinterface brauch, um die Server phextechnisch zu warten und somit seine Arbeitskraft zu 
+optimieren (Prozessoptimierung).
+
+
+Meine Vorstellung:
+
+- Vorrsaussetzung: Idee wird für sinnvoll/nötig empfunden
+- Konzept Technik: Basti
+- Konzept Html Webinterface + Webinterface Handy: Torsten ( CSS, Javascript(alle Checkboxes aktivieren etc), Html struktur), Focus: Speicherschonend - zb Css Klasse, Variablen etc haben nur 1 Zeichen
+
+
+Zeitplan:
+
+- Konzept Technik:		5 h
+- Konzept Html:			20 h
+
+- Programmierung Webinterface:	16 h ( wenn alle Daten von Torsten!)
+- Programmierung Client:	50 h
+- Testing:			5 h
+
+- Einsatzbereit im Produktivbereich: nach 2 Wochen

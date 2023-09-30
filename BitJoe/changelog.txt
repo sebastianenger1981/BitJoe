@@ -1,0 +1,296 @@
+20.10.2008:
+Dateinamen verkürtzung auf 150 zeichen verlängert bei überschreitung auf 100.
+
+08.08.2008:
+Leerzeile wieder entfernt da bei unterschiedlichen handys unterschiedlich
+dargestellt wird und sich auch die possition unterscheidet.
+
+06.08.2008:
+spacer beim Kundendaten verückt da der beim Handy immer an der faschen
+Stelle erscheint.
+
+05.08.2008:
+fehler beim speichern mit gleichen dateinamen beseitigt datei wird
+jetzt überschrieben.
+Totaler umbau der kontodaten wenn jetzt ein nutzer ohne Kundendaten
+sein Koto aufladen will werden die kontodaten übermittelt.
+
+04.08.2008:
+Auswahl wurde geändert zu Menü.
+Beim zurück Button (Konto aufladen) nach suchergebnisse komnt man jetzt zurück
+zum Listscreen. Wenn man Konto aufladen vom Menü aus aufruft komnt man
+dahin zurück. Possition Gutschein einlösen mit Konto aufladen getauscht.
+Beim anmeldescreen Leerzeile um eine position höher gerückt.
+Zurück bei kontoscreen nach aufladescreen geht jetzt zum richtigen screen zurück.
+Nach Konto aufladen wird nochmals der gewählte string unter Bitte warten angezeigt.
+Beim download wird der gleiche string angezeigt wie beim Suchen.
+Bei benuzterdate ändern sicherheitsabrage eingebaut falls im rcordStore schon
+was steht.
+
+03.08.2008:
+Trefferohne endung werden nicht mehr angezeigt. allerdings wird jetzt
+ein leerer listscreen angezeigt fals nur falsche treffer vorhanden ist.
+
+29.07.2008:
+Daten von swiss refesh zur signierung bearbeitet und ins wtk importiert.
+signierung über swiss refresh jetzt möglich. Sollen die anderen Daten
+die angezeigt werden auch Verändert werden?
+
+25.07.2008:
+Caching bei Konto aufladen wieder entfernt. bitte warten eigebaut! 
+Anmeldung: Leerzeile hinzugefügt und texte verändert. Leerzeichen wieder
+eingebaut.
+Einstellungen: Texte angepasst.
+Konto aufladen: Laufschrift angepasst.
+Vor dem suchen: neuer screen bei eventueller zusatz nachricht eigebaut.
+Bei nur fake quellen: wird der list screen nur 4 sekunden angezeigt
+danach Wir Konto aufladen angezeigt.
+Suchscreen: suchdauer kann über das protkoll eingestellt werden falls
+nicht wird die standartdauer benutzt.
+KB MB werden groß geschrieben auf eine stelle hinterm  komma begrentzt. 
+
+24.07.2008:
+Protokolländerung für den suchscreen wergen zusatz nachricht und
+suchdauer.
+
+23.07.2008:
+Beim Listscreen werden jetzt kb und mb angezeigt.
+
+22.07.2008:
+Fake treffer reaktion eingebaut - Konto aufladen.
+Anmeldudung schlissen durch zurück ersetzt.
+Flatrate Text anzeigen.
+Aufschrift Konto daten ändern von Klammern und leerzeilen befreit.
+ue durch unicode ersetzt bei oe kritisch wegen bitjoe.
+
+4.7.2008-19.07.2008:
+RecordStor verändert auser der md5 werte werden jetzt auch Benutzername
+und Passwort im recordstore gespeichert.
+Passwort komnt beim ersten Suchen vom Protokoll, dazu wird Standart up_mD5
+und standart SEC_MD5 gesendet.
+Fake quellen können nun empfangen werden.
+Erweiterung der Handy menüs.
+Nutzerdatren werden angezeigt. user + pass können nur gemeinsam geändert
+werden.
+
+26.06.2008:
+GUI nach Basti's wüschen geändert um usabilty zu verbessern.
+StartScreen verändert.
+
+21-23.06.2008:
+Werbetexte zum dateidownload per random hinzugefügt.
+2.99 3 Tage flarate eingebaut. Protokolle mit Batie 
+angepasst.
+
+16.06.2008:
+Bezahlung per tel: Preis und Anzahl der suchen geändert.
+
+10.06.2008 - 13.06.2008:
+Absturtz beim zurück button wärend des dowloads verhindert.
+Jedoch noch nicht ganz zufrieden da es etwas dauert bis
+der vorgang unterbrochen wird und der user das sieht.
+
+09.06.2008:
+gezip von tinyline geändert, gesamtes tinyline Packet entfernt
+und duch eigene gzip Klassen ersetzt.Wegen Blackberry. 
+
+04.06.2008:
+UP_MD5 war auf dem handy falsch. da heat sich beim zusammensetzen
+ein leerzeichen eingeschmugelt. Fehler wurde behoben.
+
+03.06.2008:
+Protokoll angepasst Handy version wird jetzt mitgeschickt.
+
+02.06.2008:
+AGB ist jetzt selektiert.
+Stimme zu button eingebaut.
+Rechtschreibfehler verbessert.
+Link aus Menu screen auf agb wieder entfernt.
+Form Gutschein wird geprüft eingebaut.
+Anfuf button geändert.
+Dateinamen eingegben statt BitJoe -dateinammen eingeben.
+
+29.05-31.05.2008:
+Kompatipiltätsprüfung eingebaut mit torsten zusammen
+festgestellt das das kein Sinn macht da bei nicht
+Kompatibilität das programm sowiso nicht startet.
+Kompatiblitätsprüfumg wieder enfernt.
+
+23.05.2008 - 28.05.2008
+AGB's eingebaut und nochmals nach Schweizer Rechtsanwatlt
+so gut es ging, angepasst.
+
+19.05.2008 - 22.05.2008
+Gesamte Gui nochmals überarbeitet damit Sie wieder so ist wie von 
+anfang an. Aus useabiltity gründen. weswegen Sie zuvor schonmal 
+geändert wurde aber damals niemand mein einfaches konzept kapiert 
+hatte.
+Dyndns eingebaut! 
+
+15.52008-16.52008:
+Agb wird jetzt aus einer text Datei gelesen. leider immer noch
+nicht zufrieden mit dem aussehen der agb.
+
+14.5.2008:
+Agb nach den wünschen von torsten umgebaut.
+
+8.5.2008:
+Fehlermedung eingebaut. Loging vor und nach download ausgebaut.
+Filename wird jetzt richtig vorgeschlagen.
+
+
+7.5.2008:
+Gutscheinsystem eingebaut.
+
+5.5 - 6.5.2008:
+bei id 0 bekomnt der user einen Alarm Bildschirm mit der
+entsprechenden Nachricht und der anmelde Screen geht an
+der entsprechende RecordStore wird gelöscht. Hier müssen später
+noch die fehlercodes duch die 0 ersetzt werden.
+
+Filetypes jetzt von vornherein gechekt.
+
+3.5 - 4.5. 2008:
+Zusätliche Dateitypen eingebaut und Reihenfolge geändert.
+Protokoll nochams beim result abholen angepasst.
+
+2.5.2008:
+Reihenfolge Auswahl der Dateiart sowie zusammenlegung von mp3
+und Kligelton. 
+
+30.4.2008:
+Handynummer abfrage speicherung im RecordStore als md5
+Systemzeit wird abgefragt und im Record store gespeichert als md5
+wird nur beim ersten start abgefragt.
+
+29.4.2008:
+
+aus Abbrechen wurde zurück, Agb Eingebaut und als gelesen im
+RecordStore gespeichert.
+
+26.4.2008:
+
+Message Text wird jetzt im StatusScreen angezeigt.
+
+24.4.2008:
+
+bug IllegalArgumentException bei Klingeltönen entfernt
+Allowed_FILE_Type herausgenommen und mehrere Klassen
+demensprechend angepasst.
+endungen werden jetzt richtig angezeigt auch beim speichern!
+
+21.4.2008 - 22.4.2008
+
+MultipeleChoice wird jetzt auch im 
+RecordStore gespeichert!
+
+18.4.2008 - 19.4.2008
+
+Protkoll angepasst
+Multichoice eingebaut wird aber noch nicht im
+Record store eingebaut.
+
+13.3.2008
+thm endung eingebaut. Bei BitJoe sucht "suche" 
+rausgenommen. Bei BitJoe läd lade entfernt.
+
+3.3.2007 - 6.3.2008
+
+resume eigebaut,
+Beschriftung geändert,
+Bilder eingesetzt,
+Versionsnummer erhöht,
+Schlissen und beenden wärend des
+Downloads
+
+08.03.2007 - 09.03.2007:
+
+Main.java:
+search ist nun synchronized leere do while Schleife wartet jetzt
+eine Sekunde +try catch block um wait.
+
+ProxySearchConnection:
+wait() wird durch Thread.currentThread().sleep(time) ersetzt.
+Jetzt klappt es auch nach dem obfuscaten.  
+
+03.02.2007 - 08.02.2007:
+
+package com.tinyline.util.GZIPInputStream hinzugefügt
+
+
+Misc.Constant.java:
+Konstante PROXY_PORT verändert.
+
+GnuUtil.GnuConnection.java:
+import von com.tinyline.util.GZIPInputStream.
+überladen der Methode readLine(...) übergabeparameter
+ist jetzt ein GZIPInputStream.
+
+GnuUtil.ProxySearchConnection.java:
+import von com.tinyline.util.GZIPInputStream.
+in readResults() wird der GZIPInputStream initilisiert
+und dreimal die überschribene Methode in GnuConnection.java
+readLine(...) mit übergabewert GZIPInputStream geändert.
+GZIPInputStream am Ende der Methode schliesen.
+in doSearch wird noch die alte Methode readLine
+benutzt so das diese nicht gelöscht werden kann.
+ 
+
+
+29.01.2007:
+
+Misc.Constant.java:
+command alertOkComand und alertCancelComand hinzugefügt.
+dateiExsist Alert hinzugerügt.
+init() dateiExist command added und Timeout forever.
+
+Gui.SaveScreen.java:
+konstrukter: 
+listener an Alert dateiExist gehängt.
+run():
+Überprüfen ob Dateiname schon vohanden!
+Wenn ja Alert dateiExist wird aufgerufen.
+zwei else if eingebaut zur abfrage ob alertOkComand oder alertCancelComand
+mit jeweils entsrechender reaktion.  
+
+27.01.2007:
+
+Main.java: 
+guiActionPerformed() ganz am Ende "Constant.FILENAME = null;"
+Auskomentiert da sonst null pointer Exception beim zweiten
+durchlauf.
+
+25.01.2007:
+
+Gui.StatusScreen.java:
+new GuiAction(..) Übergabewert geändert von 0 zu Constant.index
+jedoch hier ohne wirkung.
+
+GnuUtil.GnuConnection.java:
+runDownload(..)
+int variable z von 0 zu Constant.index --> richtige Datei wird jetzt heruntergeladen
+Änderung aus BitJoe_mod übernommen --> Direktes speichern auf der Festplatte 
+
+Misc.FileBrowser.jaVA.
+die Methoden: openFileForWrite(..), appendToOpendFile(..), closeOpendFile(..),deleteOpendFile(..)
+aus BitJoe_mod übernommen so das das byte Array nun wegfällt und direkt
+auf der Fesplate gespeichert wird
+  
+
+24.01.2007:
+
+Misc.Constant.java:
+static varable index hinzugefügt
+
+Gui.ListScreen.java:
+Constant.index wird ein int zugeordnet this.getSelectedIndex
+new GuiAction(..) Übergabewert geändert von 0 zu Constant.index
+
+Gui.Savescreen.java:
+new GuiAction(..) Übergabewert geändert von 0 zu Constant.index
+Jetzt wird der richtige Namen zwar angezeigt aber immer noch falsche
+Datei runtergeladen
+ 
+Dateityp Auswählen rausgenommen und
+in dem fall auf 0 gesetzt.
+Sonderzeichen im suchstring ersetzt.
